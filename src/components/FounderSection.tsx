@@ -2,14 +2,14 @@ import { motion } from 'motion/react';
 
 const FounderSection = () => {
   return (
-    <section className="bg-brand-cream py-spacing-section overflow-hidden">
+    <section className="bg-brand-cream py-spacing-section overflow-hidden pb-20">
       <div className="mb-20">
         <div className="flex gap-12 whitespace-nowrap animate-marquee border-y border-brand-muted py-8">
-           {[...Array(10)].map((_, i) => (
-             <span key={i} className="font-primary text-6xl text-brand-green/20 uppercase tracking-tighter font-extrabold">
-               — MEET THE VISIONARY — MEET THE VISIONARY
-             </span>
-           ))}
+          {[...Array(10)].map((_, i) => (
+            <span key={i} className="font-primary text-6xl text-brand-green/20 uppercase tracking-tighter font-extrabold">
+              — MEET THE VISIONARY — MEET THE VISIONARY
+            </span>
+          ))}
         </div>
       </div>
 
@@ -17,9 +17,9 @@ const FounderSection = () => {
         <div className="flex flex-col lg:flex-row items-center gap-16">
           <div className="flex-1 order-2 lg:order-1">
             <motion.div
-               initial={{ opacity: 0, x: -30 }}
-               whileInView={{ opacity: 1, x: 0 }}
-               viewport={{ once: true }}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
             >
               <p className="text-2xl md:text-3xl font-primary text-brand-green leading-relaxed mb-8 italic font-bold uppercase tracking-tight">
                 "Our philosophy is simple—combine world-class medical science with a premium aesthetic experience that transforms not just how you look, but how you feel."
@@ -33,7 +33,7 @@ const FounderSection = () => {
               </div>
             </motion.div>
           </div>
-          
+
           <div className="flex-1 order-1 lg:order-2">
             <div className="relative aspect-square max-w-md mx-auto">
               <div className="absolute inset-0 bg-brand-gold/10 rounded-full scale-110 animate-pulse" />

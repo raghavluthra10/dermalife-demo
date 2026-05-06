@@ -32,8 +32,8 @@ export default function App() {
         {/* <BlogSection /> */}
         <FounderSection />
         <PressSection />
-        <StoreHighlight />
-        <SalonBanner />
+        {/* <StoreHighlight /> */}
+        {/* <SalonBanner /> */}
         <BookingForm />
       </main>
       <Footer />

@@ -31,9 +31,9 @@ const GoogleReviews = () => {
           </a>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="flex overflow-x-auto pb-8 md:pb-0 gap-6 no-scrollbar snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-4">
           {reviews.map((rev, i) => (
-            <div key={i} className="bg-white p-8 rounded-3xl border border-brand-muted/50 flex flex-col justify-between h-full shadow-sm">
+            <div key={i} className="bg-white p-8 rounded-3xl border border-brand-muted/50 flex flex-col justify-between h-full shadow-sm min-w-[85%] sm:min-w-[320px] md:min-w-0 snap-center">
               <div>
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 bg-brand-green/20 rounded-full flex items-center justify-center font-bold text-brand-green uppercase">
