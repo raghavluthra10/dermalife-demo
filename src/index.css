@@ -11,10 +11,10 @@
   --color-brand-dark: #1C1C1C;
   --color-brand-muted: #E5E1DA;
 
-  --spacing-section: clamp(5rem, 10vw, 8rem);
+  /* Industry Standard Section Spacing */
+  --spacing-section: clamp(6rem, 12vw, 10rem);
 
   --animate-marquee: marquee 40s linear infinite;
-  --animate-marquee-slow: marquee 60s linear infinite;
   --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 
   @keyframes marquee {
@@ -35,15 +35,6 @@
   }
 }
 
-.custom-scrollbar::-webkit-scrollbar {
-  height: 4px;
-}
-.custom-scrollbar::-webkit-scrollbar-track {
-  @apply bg-transparent;
-}
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  @apply bg-brand-gold/30 rounded-full;
-}
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
