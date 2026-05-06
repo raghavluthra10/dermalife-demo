@@ -44,8 +44,6 @@ const Navbar = () => {
     { name: 'Treatments', href: '#' },
     { name: 'Concerns', href: '#' },
     { name: 'Offers', href: '#' },
-    { name: 'Blogs', href: '#' },
-    { name: 'Find a Clinic', href: '#' },
     { name: 'Know your Skin', href: '#' },
   ];
 
@@ -153,15 +151,14 @@ const Hero = () => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Placeholder Image Overlay */}
+      {/* Hero Image & Overlays */}
       <div className="absolute inset-0 z-0">
-        <div className="w-full h-full bg-gradient-to-r from-brand-cream via-brand-cream/80 to-transparent absolute z-10" />
+        <div className="w-full h-full bg-gradient-to-r from-brand-cream/70 via-brand-cream/40 to-transparent absolute z-10" />
         <div 
           className="w-full h-full bg-cover bg-center" 
           style={{ backgroundImage: `url(${heroImage})` }}
         />
-        {/* If image doesn't load or as per user request for placeholder blocks: */}
-        <div className="w-full h-full bg-brand-muted/30 absolute inset-0 mix-blend-overlay" />
+        <div className="w-full h-full bg-black/5 absolute inset-0 z-[5]" />
       </div>
 
       <div className="relative z-20 max-w-7xl mx-auto px-6 w-full pt-32 pb-24">
@@ -171,7 +168,7 @@ const Hero = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h1 className="text-6xl md:text-8xl font-primary font-extrabold text-brand-green leading-[1.1] mb-6 uppercase tracking-tighter">
+            <h1 className="text-5xl md:text-7xl font-primary font-extrabold text-brand-green leading-[1.1] mb-6 uppercase tracking-tighter">
               Transformative <br />
               <span className="text-brand-gold">skin care,</span> <br />
               designed for you.
@@ -235,60 +232,40 @@ const Hero = () => {
   );
 };
 
-const OffersBanner = () => {
-  return (
-    <section className="py-spacing-section px-6 bg-white">
-      <motion.div 
-        whileHover={{ scale: 1.01 }}
-        className="max-w-7xl mx-auto rounded-[2rem] overflow-hidden relative group cursor-pointer"
-      >
-        <div className="absolute inset-0 bg-brand-dark/60 z-10 transition-opacity group-hover:opacity-40" />
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" />
-        <div className="relative z-20 py-24 px-12 md:px-24 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
-          <div className="max-w-2xl">
-            <h2 className="text-4xl md:text-5xl text-white mb-4 leading-tight font-primary">
-              The Best of Aesthetics, <br />
-              at <span className="text-brand-gold">Irresistible Prices</span>
-            </h2>
-            <p className="text-white/80 text-xl font-sans">
-              Expert-led care. Real results. Limited time opportunities.
-            </p>
-          </div>
-          <button className="px-10 py-5 bg-brand-gold text-white font-bold rounded-full hover:bg-brand-gold/90 transition-all shadow-xl group/btn uppercase tracking-widest text-sm font-primary">
-            <span className="flex items-center gap-2">
-              View Clinic Offers
-              <ChevronRight size={20} className="group-hover/btn:translate-x-1 transition-transform" />
-            </span>
-          </button>
-        </div>
-      </motion.div>
-    </section>
-  );
-};
 
 const TopTreatments = () => {
   const [activeTab, setActiveTab] = useState<'treatments' | 'concerns'>('treatments');
 
-  const treatments = [
-    "01. HydraFacial",
-    "02. Laser Hair Reduction",
-    "03. IV Wellness Drips",
-    "04. CoolSculpting",
-    "05. Skin Boosters",
-    "06. PRP Hair Treatment"
-  ];
+  const content = {
+    treatments: [
+      "01. HydraFacial",
+      "02. Laser Hair Reduction",
+      "03. IV Wellness Drips",
+      "04. CoolSculpting",
+      "05. Skin Boosters",
+      "06. PRP Hair Treatment"
+    ],
+    concerns: [
+      "01. Wrinkles & Fine Lines",
+      "02. Dull & Uneven Skin",
+      "03. Acne & Scarring",
+      "04. Pigmentation",
+      "05. Hair Thinning",
+      "06. Stubborn Fat"
+    ]
+  };
 
   return (
-    <section className="py-spacing-section px-6 bg-brand-cream">
+    <section className="py-spacing-section px-6 bg-brand-cream relative">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-5xl text-brand-green mb-12 font-primary">Top treatments for every concern</h2>
+        <h2 className="text-4xl md:text-5xl text-brand-green mb-12 font-primary font-bold">Top treatments for every concern</h2>
         
-        <div className="flex gap-8 border-b border-brand-muted mb-12">
+        <div className="flex gap-8 border-b border-brand-muted mb-16">
           {['Treatments', 'Concerns'].map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab.toLowerCase() as any)}
-              className={`pb-4 text-xl font-primary relative transition-all ${
+              className={`pb-4 text-xl font-primary font-bold relative transition-all ${
                 activeTab === tab.toLowerCase() ? 'text-brand-green' : 'text-brand-dark/40'
               }`}
             >
@@ -300,25 +277,32 @@ const TopTreatments = () => {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-16">
-          {treatments.map((item, i) => (
-            <motion.div 
-              key={item}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="group cursor-pointer"
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-16">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeTab}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.3 }}
+              className="contents"
             >
-              <div className="flex items-center justify-between border-b border-brand-muted pb-4 group-hover:border-brand-gold transition-colors">
-                <span className="text-2xl font-primary text-brand-green/60 group-hover:text-brand-gold transition-colors font-bold">{item.split('.')[0]}.</span>
-                <span className="text-2xl font-primary text-brand-dark flex-1 px-4">{item.split('.')[1]}</span>
-                <div className="w-10 h-10 rounded-full border border-brand-muted flex items-center justify-center group-hover:bg-brand-gold group-hover:text-white group-hover:border-brand-gold transition-all">
-                  <ArrowRight size={20} />
+              {content[activeTab].map((item, i) => (
+                <div 
+                  key={item}
+                  className="group cursor-pointer"
+                >
+                  <div className="flex items-center justify-between border-b border-brand-muted pb-6 group-hover:border-brand-gold transition-colors">
+                    <span className="text-2xl font-primary text-brand-green/60 group-hover:text-brand-gold transition-colors font-bold">{item.split('.')[0]}.</span>
+                    <span className="text-2xl font-primary text-brand-dark flex-1 px-4 font-bold">{item.split('.')[1]}</span>
+                    <div className="w-12 h-12 rounded-full border border-brand-muted flex items-center justify-center group-hover:bg-brand-gold group-hover:text-white group-hover:border-brand-gold transition-all shadow-sm">
+                      <ArrowRight size={20} />
+                    </div>
+                  </div>
                 </div>
-              </div>
+              ))}
             </motion.div>
-          ))}
+          </AnimatePresence>
         </div>
       </div>
     </section>
@@ -920,7 +904,6 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
-        <OffersBanner />
         <TopTreatments />
         <StatsSection />
         <BrandPillars />
