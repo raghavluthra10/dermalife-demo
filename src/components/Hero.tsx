@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { Search, Star } from 'lucide-react';
-import heroImage from '../hero-treatment.png';
+import heroVideo from '../hero-video.mp4';
 
 const Hero = () => {
   const stats = [
@@ -15,15 +15,20 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Hero Image & Overlays */}
+    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden bg-brand-cream">
+      {/* Hero Video & Overlays */}
       <div className="absolute inset-0 z-0">
-        <div className="w-full h-full bg-gradient-to-r from-brand-cream/70 via-brand-cream/40 to-transparent absolute z-10" />
-        <div 
-          className="w-full h-full bg-cover bg-center" 
-          style={{ backgroundImage: `url(${heroImage})` }}
-        />
-        <div className="w-full h-full bg-black/5 absolute inset-0 z-[5]" />
+        <div className="w-full h-full bg-gradient-to-r from-brand-cream/80 via-brand-cream/50 to-transparent absolute z-10" />
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover opacity-95"
+        >
+          <source src={heroVideo} type="video/mp4" />
+        </video>
+        <div className="w-full h-full bg-black/10 absolute inset-0 z-[5]" />
       </div>
 
       <div className="relative z-20 max-w-7xl mx-auto px-6 w-full pt-32 pb-24">
@@ -33,53 +38,35 @@ const Hero = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h1 className="text-5xl md:text-7xl font-primary font-extrabold text-brand-green leading-[1.1] mb-6 uppercase tracking-tighter">
+            <h1 className="text-3xl md:text-7xl font-primary font-extrabold text-brand-green leading-[1.1] mb-6 uppercase tracking-tighter">
               Transformative <br />
               <span className="text-brand-gold">skin care,</span> <br />
               designed for you.
             </h1>
-            <p className="text-xl md:text-2xl text-brand-dark/70 mb-10 max-w-md font-sans">
+            <p className="text-base md:text-2xl text-brand-dark/70 mb-10 max-w-md font-sans leading-relaxed">
               Expert dermatology. Real results. Tailored to your unique aesthetic goals.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center gap-4 mb-12">
-              <button 
+            <div className="hidden sm:block mt-12">
+              <button
                 onClick={scrollToBooking}
-                className="w-full sm:w-auto px-10 py-5 bg-brand-green text-white font-bold rounded-full hover:bg-brand-green/90 transition-all shadow-2xl font-primary uppercase tracking-widest text-sm"
+                className="px-10 py-5 bg-brand-green text-white font-bold rounded-full hover:bg-brand-green/90 transition-all shadow-2xl font-primary uppercase tracking-widest text-sm"
               >
                 Book Free Consultation
               </button>
-              
-              <div className="relative w-full sm:w-80 group">
-                <div className="absolute inset-y-0 left-4 flex items-center pointer-events-none text-brand-green/50 group-focus-within:text-brand-green">
-                  <Search size={20} />
-                </div>
-                <input 
-                  type="text" 
-                  placeholder="What can we treat?" 
-                  className="w-full bg-white border border-brand-muted py-4 pl-12 pr-6 rounded-full focus:outline-none focus:ring-2 focus:ring-brand-green/20 focus:border-brand-green transition-all shadow-md font-bold uppercase tracking-widest text-xs"
-                />
-              </div>
             </div>
           </motion.div>
         </div>
       </div>
 
-      {/* Floating Badge */}
-      <div className="absolute bottom-24 right-6 md:right-12 z-30 max-w-[240px]">
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.5, duration: 0.5 }}
-          className="bg-brand-green p-6 rounded-2xl text-white shadow-2xl relative"
+      {/* Mobile-Only Bottom CTA */}
+      <div className="sm:hidden absolute bottom-24 left-6 right-6 z-30">
+        <button
+          onClick={scrollToBooking}
+          className="w-full px-10 py-5 bg-brand-green text-white font-bold rounded-full hover:bg-brand-green/90 transition-all shadow-2xl font-primary uppercase tracking-widest text-sm"
         >
-          <div className="absolute -top-3 -right-3 w-8 h-8 bg-brand-gold rounded-full flex items-center justify-center">
-            <Star size={16} className="fill-brand-gold text-white" />
-          </div>
-          <p className="text-sm font-medium leading-relaxed font-bold uppercase tracking-tight">
-            <span className="text-brand-gold">#1 Specialist</span> in skin & aesthetic treatments across India
-          </p>
-        </motion.div>
+          Book Free Consultation
+        </button>
       </div>
 
       {/* Testimonial Ticker */}

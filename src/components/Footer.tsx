@@ -3,22 +3,22 @@ import { Instagram, Youtube, Star, Phone, Mail, MapPin } from 'lucide-react';
 const Footer = () => {
   const columns = [
     { title: "Company", links: ["About Us", "Our Doctors", "Careers", "Sustainability", "Media"] },
-    { title: "Salon", links: ["Hair Styling", "Nail Boutique", "Makeup", "Bridal", "Wellness"] },
     { title: "Clinic", links: ["Skin Treatments", "Anti-Ageing", "Laser Hair Reduction", "Body Sculpting", "IV Drips"] },
     { title: "Resource", links: ["Blogs", "FAQs", "Treatments Guide", "Know Your Skin", "Terms & Conditions"] }
   ];
 
   return (
-    <footer className="bg-white border-t border-brand-muted pt-32 pb-16 px-6">
+    <footer className="bg-white border-t border-brand-muted pt-24 pb-16 px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-16 mb-24">
-          <div className="lg:col-span-1">
+        <div className="flex flex-col lg:flex-row gap-16 mb-24">
+          {/* Brand Column */}
+          <div className="lg:w-1/4">
              <div className="flex items-center gap-3 mb-8">
               <div className="w-10 h-10 bg-brand-green rounded-full flex items-center justify-center text-white font-primary font-bold text-xl shadow-md">D</div>
               <span className="text-3xl font-primary font-bold tracking-tighter text-brand-green uppercase">DermaLife</span>
             </div>
-            <p className="text-brand-dark/50 text-sm mb-10 leading-relaxed font-sans font-medium uppercase tracking-tight">
-              India's first hybrid clinic-salon. Redefining medical aesthetics with a touch of luxury.
+            <p className="text-brand-dark/50 text-sm mb-10 leading-relaxed font-sans font-medium uppercase tracking-tight max-w-sm">
+              India's leading aesthetic clinic. Redefining medical excellence with a touch of luxury.
             </p>
             <div className="flex items-center gap-5">
               <a href="#" className="p-3.5 bg-brand-green/5 rounded-2xl text-brand-green hover:bg-brand-gold hover:text-white transition-all shadow-sm"><Instagram size={20} /></a>
@@ -27,16 +27,19 @@ const Footer = () => {
             </div>
           </div>
 
-          {columns.map((col) => (
-             <div key={col.title}>
-               <h4 className="text-xs font-extrabold uppercase tracking-[0.3em] text-brand-dark mb-10">{col.title}</h4>
-               <ul className="space-y-5">
-                  {col.links.map((link) => (
-                    <li key={link}><a href="#" className="text-brand-dark/60 hover:text-brand-gold text-sm font-bold transition-colors uppercase tracking-widest text-[11px]">{link}</a></li>
-                  ))}
-               </ul>
-             </div>
-          ))}
+          {/* Links Columns */}
+          <div className="flex-1 grid grid-cols-2 sm:grid-cols-3 gap-x-8 gap-y-12 lg:gap-16">
+            {columns.map((col) => (
+               <div key={col.title}>
+                 <h4 className="text-[10px] md:text-xs font-extrabold uppercase tracking-[0.3em] text-brand-dark mb-8 md:mb-10">{col.title}</h4>
+                 <ul className="space-y-4 md:space-y-5">
+                    {col.links.map((link) => (
+                      <li key={link}><a href="#" className="text-brand-dark/60 hover:text-brand-gold text-sm font-bold transition-colors uppercase tracking-widest text-[10px] md:text-[11px]">{link}</a></li>
+                    ))}
+                 </ul>
+               </div>
+            ))}
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 py-16 border-y border-brand-muted mb-16">

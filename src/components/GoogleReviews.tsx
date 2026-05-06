@@ -10,7 +10,7 @@ const GoogleReviews = () => {
   ]);
 
   return (
-    <section className="bg-brand-cream py-spacing-section px-6 py-20 border-y border-brand-muted">
+    <section className="bg-brand-cream py-spacing-section px-6 py-20 border-y border-brand-muted overflow-x-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between mb-12 gap-4">
           <div>
@@ -57,6 +57,22 @@ const GoogleReviews = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* CTA Block */}
+        <div className="mt-12 md:mt-16 text-center border-t border-brand-muted/30 pt-12 md:pt-16">
+          <h3 className="text-2xl md:text-4xl font-primary font-bold text-brand-green mb-8 uppercase tracking-tighter max-w-2xl mx-auto leading-tight">
+            Join 50,000+ clients who <span className="text-brand-gold italic font-normal">trust us</span> with their skin
+          </h3>
+          <button
+            onClick={() => document.getElementById('booking-section')?.scrollIntoView({ behavior: 'smooth' })}
+            className="w-full md:w-auto px-12 py-5 bg-brand-green text-white font-bold rounded-full hover:bg-brand-gold transition-all shadow-2xl uppercase tracking-widest text-sm font-primary"
+          >
+            Book Free Consultation
+          </button>
+          <p className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-brand-dark/30 font-bold mt-6">
+            Takes 2 minutes • No commitment
+          </p>
         </div>
       </div>
     </section>
