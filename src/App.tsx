@@ -29,7 +29,7 @@ export default function App() {
         <BrandPillars />
         {/* <CategoryExplorer /> */}
         <GoogleReviews />
-        <BlogSection />
+        {/* <BlogSection /> */}
         <FounderSection />
         <PressSection />
         <StoreHighlight />
@@ -40,3 +40,4 @@ export default function App() {
     </div>
   );
 }
+// 

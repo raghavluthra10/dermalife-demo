@@ -10,7 +10,7 @@ const GoogleReviews = () => {
   ]);
 
   return (
-    <section className="bg-brand-cream py-spacing-section px-6 border-y border-brand-muted">
+    <section className="bg-brand-cream py-spacing-section px-6 py-20 border-y border-brand-muted">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between mb-12 gap-4">
           <div>
@@ -34,27 +34,27 @@ const GoogleReviews = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {reviews.map((rev, i) => (
             <div key={i} className="bg-white p-8 rounded-3xl border border-brand-muted/50 flex flex-col justify-between h-full shadow-sm">
-               <div>
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 bg-brand-green/20 rounded-full flex items-center justify-center font-bold text-brand-green uppercase">
-                      {rev.author_name.charAt(0)}
-                    </div>
-                    <div>
-                      <p className="font-bold text-sm text-brand-dark">{rev.author_name}</p>
-                      <p className="text-[10px] text-brand-dark/40 uppercase font-bold tracking-widest">{rev.relative_time_description}</p>
-                    </div>
+              <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-brand-green/20 rounded-full flex items-center justify-center font-bold text-brand-green uppercase">
+                    {rev.author_name.charAt(0)}
                   </div>
-                  <div className="flex mb-4">
-                     {[...Array(rev.rating)].map((_, i) => <Star key={i} size={14} className="fill-[#FBBC05] text-[#FBBC05]" />)}
+                  <div>
+                    <p className="font-bold text-sm text-brand-dark">{rev.author_name}</p>
+                    <p className="text-[10px] text-brand-dark/40 uppercase font-bold tracking-widest">{rev.relative_time_description}</p>
                   </div>
-                  <p className="text-sm font-sans leading-relaxed text-brand-dark/70 line-clamp-4 italic font-medium">"{rev.text}"</p>
-               </div>
-               <div className="mt-6 pt-4 border-t border-brand-muted/50">
-                  <div className="flex items-center gap-2 text-[10px] font-bold text-brand-green uppercase tracking-tighter">
-                     <div className="w-4 h-4 bg-brand-green rounded-full flex items-center justify-center text-[8px] text-white">✓</div>
-                     Verified Customer
-                  </div>
-               </div>
+                </div>
+                <div className="flex mb-4">
+                  {[...Array(rev.rating)].map((_, i) => <Star key={i} size={14} className="fill-[#FBBC05] text-[#FBBC05]" />)}
+                </div>
+                <p className="text-sm font-sans leading-relaxed text-brand-dark/70 line-clamp-4 italic font-medium">"{rev.text}"</p>
+              </div>
+              <div className="mt-6 pt-4 border-t border-brand-muted/50">
+                <div className="flex items-center gap-2 text-[10px] font-bold text-brand-green uppercase tracking-tighter">
+                  <div className="w-4 h-4 bg-brand-green rounded-full flex items-center justify-center text-[8px] text-white">✓</div>
+                  Verified Customer
+                </div>
+              </div>
             </div>
           ))}
         </div>
