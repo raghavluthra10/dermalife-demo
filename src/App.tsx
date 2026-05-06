@@ -256,7 +256,7 @@ const TopTreatments = () => {
   };
 
   return (
-    <section className="py-spacing-section px-6 bg-brand-cream relative">
+    <section className="py-16 md:py-24 px-6 bg-brand-cream relative">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl md:text-5xl text-brand-green mb-12 font-primary font-bold">Top treatments for every concern</h2>
         
@@ -290,7 +290,7 @@ const TopTreatments = () => {
               {content[activeTab].map((item, i) => (
                 <div 
                   key={item}
-                  className="group cursor-pointer"
+                  className="group cursor-pointer transition-transform duration-300 hover:scale-[1.02]"
                 >
                   <div className="flex items-center justify-between border-b border-brand-muted pb-6 group-hover:border-brand-gold transition-colors">
                     <span className="text-2xl font-primary text-brand-green/60 group-hover:text-brand-gold transition-colors font-bold">{item.split('.')[0]}.</span>
