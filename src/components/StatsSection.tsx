@@ -13,7 +13,7 @@ const StatsSection = () => {
   };
 
   return (
-    <section className="bg-white border-y border-brand-muted overflow-hidden py-spacing-section">
+    <section className="bg-white border-y border-brand-muted overflow-hidden py-32 md:py-48">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center">
         <div className="flex-1 px-6">
           <h2 className="text-5xl text-brand-green mb-6 leading-tight font-primary font-bold uppercase tracking-tighter">Real experts, <br /><span className="italic font-normal">Real results.</span></h2>
