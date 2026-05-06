@@ -215,7 +215,7 @@ const TopTreatments = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                className="grid grid-cols-1 md:grid-cols-2 gap-4"
+                className="grid grid-cols-1 gap-3 w-full"
               >
                 {concernsData.map((concern) => (
                   <div
@@ -224,26 +224,26 @@ const TopTreatments = () => {
                   >
                     <button
                       onClick={() => setSelectedConcern(selectedConcern === concern.id ? null : concern.id)}
-                      className={`w-full flex items-center justify-between p-5 rounded-2xl transition-all border ${selectedConcern === concern.id
+                      className={`w-full flex items-center justify-between p-3 md:p-4 rounded-xl md:rounded-2xl transition-all border ${selectedConcern === concern.id
                         ? 'bg-brand-green border-brand-green text-white shadow-lg'
                         : 'bg-white border-brand-muted hover:border-brand-gold text-brand-dark'
                         }`}
                     >
-                      <div className="flex items-center gap-4">
-                        <div className={`w-12 h-12 rounded-xl flex items-center justify-center transition-colors flex-shrink-0 ${selectedConcern === concern.id ? 'bg-white/10' : 'bg-brand-cream'
+                      <div className="flex items-center gap-3 md:gap-4">
+                        <div className={`w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl flex items-center justify-center transition-colors flex-shrink-0 ${selectedConcern === concern.id ? 'bg-white/10' : 'bg-brand-cream'
                           }`}>
                           {concern.icon}
                         </div>
                         <div className="text-left">
-                          <h3 className="text-lg md:text-xl font-primary font-bold uppercase tracking-tight leading-tight">{concern.title}</h3>
-                          <p className={`text-[10px] md:text-xs font-sans font-bold uppercase tracking-widest mt-0.5 ${selectedConcern === concern.id ? 'text-white/60' : 'text-brand-gold'
+                          <h3 className="text-sm md:text-lg font-primary font-bold uppercase tracking-tight leading-tight">{concern.title}</h3>
+                          <p className={`text-[8px] md:text-[10px] font-sans font-bold uppercase tracking-widest mt-0.5 ${selectedConcern === concern.id ? 'text-white/60' : 'text-brand-gold'
                             }`}>
                             {concern.proof}
                           </p>
                         </div>
                       </div>
                       <ChevronDown
-                        size={20}
+                        size={16}
                         className={`transition-transform duration-500 flex-shrink-0 ${selectedConcern === concern.id ? 'rotate-180' : ''}`}
                       />
                     </button>
@@ -258,37 +258,35 @@ const TopTreatments = () => {
                           transition={{ duration: 0.5, ease: "circOut" }}
                           className="overflow-hidden"
                         >
-                          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8 bg-brand-green/5 rounded-b-[2rem] border-x border-b border-brand-green/10">
+                          <div className="flex overflow-x-auto pb-6 md:pb-0 gap-4 md:gap-8 p-4 md:p-8 bg-brand-green/5 rounded-b-[2rem] border-x border-b border-brand-green/10 no-scrollbar snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-3">
                             {concern.treatments.map((t, i) => (
                               <motion.div
                                 key={i}
                                 initial={{ opacity: 0, scale: 0.95 }}
                                 animate={{ opacity: 1, scale: 1 }}
                                 transition={{ delay: i * 0.1 }}
-                                className="bg-white p-6 rounded-[2rem] shadow-lg flex flex-col sm:flex-row gap-6 border border-brand-muted hover:border-brand-gold transition-colors"
+                                className="bg-white p-6 rounded-[2rem] shadow-lg flex flex-col gap-6 border border-brand-muted hover:border-brand-gold transition-colors min-w-[85%] sm:min-w-[320px] md:min-w-0 snap-center"
                               >
-                                <div className="w-full sm:w-32 h-32 rounded-2xl overflow-hidden flex-shrink-0 shadow-inner">
+                                <div className="w-full h-40 md:h-48 rounded-2xl overflow-hidden flex-shrink-0 shadow-inner">
                                   <img src={t.img} alt={t.name} className="w-full h-full object-cover" />
                                 </div>
-                                <div className="flex flex-col justify-between flex-1">
-                                  <div>
-                                    <div className="flex flex-wrap gap-2 mb-3">
-                                      {t.tags?.map(tag => (
-                                        <span key={tag} className="bg-brand-gold text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter">
-                                          {tag}
-                                        </span>
-                                      ))}
-                                    </div>
-                                    <h4 className="text-lg font-primary font-bold text-brand-green uppercase leading-tight">
-                                      {t.name} <span className="text-brand-dark/40 font-normal italic lowercase">({t.clinical})</span>
-                                    </h4>
-                                    <p className="text-sm text-brand-dark/60 mt-2 font-medium leading-relaxed">
-                                      {t.benefit}
-                                    </p>
+                                <div className="flex flex-col">
+                                  <div className="flex flex-wrap gap-2 mb-3">
+                                    {t.tags?.map(tag => (
+                                      <span key={tag} className="bg-brand-gold text-white text-[9px] md:text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter">
+                                        {tag}
+                                      </span>
+                                    ))}
                                   </div>
+                                  <h4 className="text-base md:text-lg font-primary font-bold text-brand-green uppercase leading-tight">
+                                    {t.name} <span className="text-brand-dark/40 font-normal italic lowercase">({t.clinical})</span>
+                                  </h4>
+                                  <p className="text-xs md:text-sm text-brand-dark/60 mt-2 font-medium leading-relaxed">
+                                    {t.benefit}
+                                  </p>
                                   <button
                                     onClick={scrollToBooking}
-                                    className="mt-4 flex items-center gap-2 text-brand-gold font-bold text-xs uppercase tracking-widest hover:text-brand-green transition-colors group/btn"
+                                    className="mt-6 flex items-center gap-2 text-brand-gold font-bold text-[10px] md:text-xs uppercase tracking-widest hover:text-brand-green transition-colors group/btn"
                                   >
                                     Book Free Consultation
                                     <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
@@ -309,12 +307,12 @@ const TopTreatments = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                className="flex overflow-x-auto pb-8 md:pb-0 gap-6 md:gap-8 no-scrollbar snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-3"
               >
                 {treatmentsData.map((t, i) => (
                   <div
                     key={i}
-                    className="group bg-white p-8 rounded-[2.5rem] border border-brand-muted hover:border-brand-gold hover:shadow-2xl transition-all duration-500 cursor-pointer"
+                    className="group bg-white p-8 rounded-[2.5rem] border border-brand-muted hover:border-brand-gold hover:shadow-2xl transition-all duration-500 cursor-pointer min-w-[85%] sm:min-w-[320px] md:min-w-0 snap-center"
                   >
                     <div className="flex gap-2 mb-6">
                       {t.badges.map(badge => (
@@ -342,16 +340,16 @@ const TopTreatments = () => {
         </div>
 
         {/* Bottom CTA Section */}
-        <div className="mt-6 pt-6 border-t border-brand-muted text-center">
+        <div className="mt-0 md:mt-20 pt-6 md:pt-20 border-t border-brand-muted text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-xl md:text-4xl font-primary font-bold text-brand-green uppercase tracking-tighter mb-6">
+            <h2 className="text-xl md:text-4xl font-primary font-bold text-brand-green uppercase tracking-tighter mb-2">
               Not sure which treatment <br className="hidden md:block" /> is right for you?
             </h2>
-            <p className="text-l text-brand-dark/50 font-sans font-medium mb-12">
+            <p className="text-l text-brand-dark/50 font-sans font-medium mb-6">
               Get a personalized skin plan from our board-certified experts.
             </p>
             <button
