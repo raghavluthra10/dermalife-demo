@@ -340,7 +340,7 @@ const TopTreatments = () => {
         </div>
 
         {/* Bottom CTA Section */}
-        <div className="mt-0 md:mt-20 pt-6 md:pt-20 border-t border-brand-muted text-center">
+        <div className="mt-0 md:mt-5 pt-6 md:pt-20 border-t border-brand-muted text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
