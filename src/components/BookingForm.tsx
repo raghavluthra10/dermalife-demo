@@ -13,11 +13,11 @@ const BookingForm = () => {
   };
 
   return (
-    <section id="booking-section" className="bg-brand-green py-12 md:py-24 px-4 md:px-6 relative overflow-hidden">
+    <section id="booking-section" className="bg-brand-green py-12 md:py-24 px-4 md:px-20 lg:px-32 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-gold/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-[100px]" />
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2 blur-[80px]" />
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-6xl mx-auto relative z-10">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-center">
           <div className="flex-1 text-white">
             <div className="inline-flex items-center gap-3 px-6 py-2 bg-white/10 rounded-full text-brand-gold text-[10px] md:text-xs font-extrabold uppercase tracking-[0.3em] mb-6 md:mb-10">
