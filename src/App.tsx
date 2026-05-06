@@ -27,7 +27,7 @@ export default function App() {
         <TopTreatments />
         <StatsSection />
         <BrandPillars />
-        <CategoryExplorer />
+        {/* <CategoryExplorer /> */}
         <GoogleReviews />
         <BlogSection />
         <FounderSection />

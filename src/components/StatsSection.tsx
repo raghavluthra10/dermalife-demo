@@ -13,7 +13,7 @@ const StatsSection = () => {
   };
 
   return (
-    <section className="bg-white border-y border-brand-muted overflow-hidden py-32 md:py-48">
+    <section className="bg-white border-y border-brand-muted overflow-hidden py-16 md:py-24">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center">
         <div className="flex-1 px-6">
           <h2 className="text-5xl text-brand-green mb-6 leading-tight font-primary font-bold uppercase tracking-tighter">Real experts, <br /><span className="italic font-normal">Real results.</span></h2>
@@ -29,7 +29,7 @@ const StatsSection = () => {
             ))}
           </div>
 
-          <button 
+          <button
             onClick={scrollToBooking}
             className="px-10 py-5 bg-brand-green text-white font-bold rounded-full hover:bg-brand-gold transition-all shadow-xl uppercase tracking-widest text-sm font-primary"
           >
@@ -40,7 +40,7 @@ const StatsSection = () => {
         <div className="flex-1 w-full h-[500px] lg:h-auto lg:self-stretch relative overflow-hidden mt-16 lg:mt-0">
           <div className="grid grid-cols-2 h-full gap-2 p-2">
             <div className="bg-brand-muted rounded-2xl relative overflow-hidden min-h-[300px]">
-               <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1512290923902-8a9f81dc206e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')] bg-cover bg-center" />
+              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1512290923902-8a9f81dc206e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')] bg-cover bg-center" />
             </div>
             <div className="grid gap-2">
               <div className="bg-brand-muted rounded-2xl relative overflow-hidden">

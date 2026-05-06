@@ -20,27 +20,26 @@ const CategoryExplorer = () => {
   ];
 
   return (
-    <section className="py-spacing-section px-6 bg-white">
+    <section className="py-spacing-section px-6 py-16 bg-white">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl md:text-5xl text-brand-green mb-12 font-primary font-bold uppercase tracking-tighter">Explore treatments for your specific needs</h2>
-        
+
         <div className="flex gap-4 mb-12 overflow-x-auto pb-4 no-scrollbar scroll-smooth">
           {categories.map((cat) => (
-             <button
+            <button
               key={cat}
               onClick={() => setActiveCat(cat)}
-              className={`whitespace-nowrap px-8 py-3 rounded-full text-sm font-bold transition-all uppercase tracking-widest ${
-                activeCat === cat ? 'bg-brand-green text-white shadow-lg' : 'bg-white border border-brand-muted text-brand-dark/60 hover:border-brand-green/30'
-              }`}
-             >
+              className={`whitespace-nowrap px-8 py-3 rounded-full text-sm font-bold transition-all uppercase tracking-widest ${activeCat === cat ? 'bg-brand-green text-white shadow-lg' : 'bg-white border border-brand-muted text-brand-dark/60 hover:border-brand-green/30'
+                }`}
+            >
               {cat}
-             </button>
+            </button>
           ))}
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {cards.map((card, i) => (
-            <motion.div 
+            <motion.div
               key={i}
               whileHover={{ y: -10 }}
               className="group cursor-pointer"
