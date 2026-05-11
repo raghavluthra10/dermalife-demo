@@ -69,13 +69,13 @@ const Hero = () => {
         </button>
       </div>
 
-      {/* Testimonial Ticker */}
+      {/* Marquee Ticker */}
       <div className="absolute bottom-0 left-0 w-full bg-brand-green/5 backdrop-blur-md py-4 overflow-hidden border-t border-brand-green/10">
         <div className="flex gap-12 whitespace-nowrap animate-marquee">
-          {[...stats, ...stats].map((stat, i) => (
+          {[1, 2, 3, 4].map((_, i) => (
             <span key={i} className="text-brand-green text-sm font-bold tracking-wide flex items-center gap-3 uppercase">
               <span className="w-1.5 h-1.5 rounded-full bg-brand-gold" />
-              {stat.text}
+              Dermalife Skin & Hair Clinic — Sector 56 Gurugram — Expert Dermatologists — ISO Certified — 1000+ Happy Patients
             </span>
           ))}
         </div>

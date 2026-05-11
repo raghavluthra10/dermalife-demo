@@ -58,7 +58,7 @@ const StatsSection = () => {
   ];
 
   return (
-    <section className="bg-white py-12 md:py-20 px-4 md:px-8 overflow-hidden">
+    <section id="results" className="bg-white py-12 md:py-20 px-4 md:px-8 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* 1. TOP SECTION */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-12 mb-10 md:mb-16">

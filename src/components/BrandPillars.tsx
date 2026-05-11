@@ -1,9 +1,9 @@
 const BrandPillars = () => {
   const pillars = [
-    { title: "Skilled and trusted expertise", desc: "Our team consists of board-certified dermatologists." },
-    { title: "Custom consultation plans", desc: "No two skin types are the same. Neither are our plans." },
-    { title: "Modern and premium facilities", desc: "Step into an oasis of luxury and clinical precision." },
-    { title: "Highest quality care", desc: "We use only FDA approved equipment and high-grade materials." },
+    { title: "Certified Dermatologists", desc: "Our team consists of board-certified dermatologists from top medical institutes." },
+    { title: "Personalised Treatment Plans", desc: "No two skin types are the same. We design plans tailored to your unique goals." },
+    { title: "Advanced Equipment", desc: "We use FDA-approved technology and state-of-the-art clinical facilities." },
+    { title: "Premium Quality Care", desc: "Experience luxury skincare with an uncompromising focus on safety and results." },
   ];
 
   return (

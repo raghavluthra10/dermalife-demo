@@ -28,17 +28,17 @@ const BookingForm = () => {
               Ready to meet <br />your <span className="text-brand-gold font-normal italic lowercase">best self?</span>
             </h2>
             <p className="text-base md:text-xl text-white/70 mb-10 md:mb-14 max-w-md font-sans leading-relaxed font-medium">
-              Book your free consultation today and get a personalized skin analysis from our board-certified experts.
+              Book your free consultation today and get a personalised skin analysis from our board-certified experts.
             </p>
 
             <div className="grid grid-cols-2 gap-4 md:gap-10">
               <div className="flex flex-col items-center p-6 md:p-8 bg-white/5 rounded-[2rem] md:rounded-[3rem] border border-white/10 shadow-sm backdrop-blur-sm">
-                <div className="text-2xl md:text-4xl font-extrabold font-primary text-brand-gold mb-1 md:mb-2 uppercase tracking-tighter">0%</div>
-                <div className="text-[8px] md:text-[10px] uppercase tracking-[0.3em] text-white/50 text-center font-bold">Consultation Fee</div>
+                <div className="text-2xl md:text-4xl font-extrabold font-primary text-brand-gold mb-1 md:mb-2 uppercase tracking-tighter">9%</div>
+                <div className="text-[8px] md:text-[10px] uppercase tracking-[0.3em] text-white/50 text-center font-bold">Avg. Downtime</div>
               </div>
               <div className="flex flex-col items-center p-6 md:p-8 bg-white/5 rounded-[2rem] md:rounded-[3rem] border border-white/10 shadow-sm backdrop-blur-sm">
-                <div className="text-2xl md:text-4xl font-extrabold font-primary text-brand-gold mb-1 md:mb-2 uppercase tracking-tighter">15m</div>
-                <div className="text-[8px] md:text-[10px] uppercase tracking-[0.3em] text-white/50 text-center font-bold">Expert Analysis</div>
+                <div className="text-2xl md:text-4xl font-extrabold font-primary text-brand-gold mb-1 md:mb-2 uppercase tracking-tighter">15M</div>
+                <div className="text-[8px] md:text-[10px] uppercase tracking-[0.3em] text-white/50 text-center font-bold">Treatments Done</div>
               </div>
             </div>
           </div>

@@ -19,10 +19,12 @@ const Navbar = () => {
   };
 
   const navLinks = [
-    { name: 'Treatments', href: '#' },
-    { name: 'Concerns', href: '#' },
-    { name: 'Offers', href: '#' },
-    { name: 'Know your Skin', href: '#' },
+    { name: 'Home', href: '#hero' },
+    { name: 'Services', href: '#concerns' },
+    { name: 'About', href: '#meet-the-doctor' },
+    { name: 'Results', href: '#results' },
+    { name: 'Reviews', href: '#reviews' },
+    { name: 'Contact', href: '#booking-section' },
   ];
 
   return (

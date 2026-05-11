@@ -181,7 +181,7 @@ const TopTreatments = () => {
   };
 
   return (
-    <section className="py-16 md:py-24 px-6 bg-brand-cream relative">
+    <section id="concerns" className="py-16 md:py-24 px-6 bg-brand-cream relative">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl md:text-5xl text-brand-green mb-4 font-primary font-bold uppercase tracking-tighter">Choose your skin goal</h2>
         <p className="text-brand-dark/60 mb-12 font-sans font-medium uppercase tracking-widest text-sm">Targeted results for a more confident you</p>

@@ -48,6 +48,13 @@
   h6 {
     @apply font-primary font-bold;
   }
+
+  button, 
+  a, 
+  input[type="button"], 
+  input[type="submit"] {
+    cursor: pointer;
+  }
 }
 
 .no-scrollbar::-webkit-scrollbar {

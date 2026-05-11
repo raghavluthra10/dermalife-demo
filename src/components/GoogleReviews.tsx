@@ -3,14 +3,14 @@ import { Star } from 'lucide-react';
 
 const GoogleReviews = () => {
   const [reviews] = useState([
-    { author_name: "Rahul Khanna", text: "Best clinic in South Delhi! The HydraFacial is worth every penny. Professional staff and luxury environment.", rating: 5, relative_time_description: "2 days ago" },
-    { author_name: "Meera Singh", text: "Saw visible results in just 2 sessions of Laser Hair Reduction. Highly recommend Dr. Rekha for personalized advice.", rating: 5, relative_time_description: "1 week ago" },
+    { author_name: "Rahul Khanna", text: "Best clinic in Sector 56! The HydraFacial is worth every penny. Professional staff and luxury environment.", rating: 5, relative_time_description: "2 days ago" },
+    { author_name: "Meera Singh", text: "Saw visible results in just 2 sessions of Laser Hair Reduction. Highly recommend Dr. Priya for personalised advice.", rating: 5, relative_time_description: "1 week ago" },
     { author_name: "Vikram Batra", text: "The weight management program is scientifically backed and really works. Clean and hygienic clinics.", rating: 5, relative_time_description: "3 weeks ago" },
     { author_name: "Deepika P.", text: "Absolutely loved the ambiance and the service. The skin boosters made my face look so fresh and youthful.", rating: 5, relative_time_description: "1 month ago" },
   ]);
 
   return (
-    <section className="bg-brand-cream py-spacing-section px-6 py-20 border-y border-brand-muted overflow-x-hidden">
+    <section id="reviews" className="bg-brand-cream py-spacing-section px-6 py-20 border-y border-brand-muted overflow-x-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between mb-12 gap-4">
           <div>
