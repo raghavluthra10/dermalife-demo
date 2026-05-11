@@ -1,10 +1,34 @@
 import { Instagram, Youtube, Star, Phone, Mail, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const columns = [
-    { title: "Company", links: ["About Us", "Our Doctors", "Careers", "Sustainability", "Media"] },
-    { title: "Clinic", links: ["Skin Treatments", "Anti-Ageing", "Laser Hair Reduction", "Body Sculpting", "IV Drips"] },
-    { title: "Resource", links: ["Blogs", "FAQs", "Treatments Guide", "Know Your Skin", "Terms & Conditions"] }
+    { 
+      title: "Company", 
+      links: [
+        { name: "About Us", href: "/about" },
+        { name: "Our Doctors", href: "/about" },
+        { name: "Contact Us", href: "/contact" },
+        { name: "Media", href: "#" },
+      ] 
+    },
+    { 
+      title: "Clinic", 
+      links: [
+        { name: "Skin Treatments", href: "/services" },
+        { name: "Results", href: "/results" },
+        { name: "Anti-Ageing", href: "/services" },
+        { name: "Body Sculpting", href: "/services" },
+      ] 
+    },
+    { 
+      title: "Resource", 
+      links: [
+        { name: "Blogs", href: "#" },
+        { name: "FAQs", href: "#" },
+        { name: "Terms", href: "#" },
+      ] 
+    }
   ];
 
   return (
@@ -32,11 +56,18 @@ const Footer = () => {
             {columns.map((col) => (
                <div key={col.title}>
                  <h4 className="text-[10px] md:text-xs font-extrabold uppercase tracking-[0.3em] text-brand-dark mb-8 md:mb-10">{col.title}</h4>
-                 <ul className="space-y-4 md:space-y-5">
+                  <ul className="space-y-4 md:space-y-5">
                     {col.links.map((link) => (
-                      <li key={link}><a href="#" className="text-brand-dark/60 hover:text-brand-gold text-sm font-bold transition-colors uppercase tracking-widest text-[10px] md:text-[11px]">{link}</a></li>
+                      <li key={link.name}>
+                        <Link 
+                          to={link.href} 
+                          className="text-brand-dark/60 hover:text-brand-gold text-sm font-bold transition-colors uppercase tracking-widest text-[10px] md:text-[11px]"
+                        >
+                          {link.name}
+                        </Link>
+                      </li>
                     ))}
-                 </ul>
+                  </ul>
                </div>
             ))}
           </div>

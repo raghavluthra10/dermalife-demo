@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X } from 'lucide-react';
 
@@ -19,12 +20,11 @@ const Navbar = () => {
   };
 
   const navLinks = [
-    { name: 'Home', href: '#hero' },
-    { name: 'Services', href: '#concerns' },
-    { name: 'About', href: '#meet-the-doctor' },
-    { name: 'Results', href: '#results' },
-    { name: 'Reviews', href: '#reviews' },
-    { name: 'Contact', href: '#booking-section' },
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/services' },
+    { name: 'Results', href: '/results' },
+    { name: 'About Us', href: '/about' },
+    { name: 'Contact Us', href: '/contact' },
   ];
 
   return (
@@ -44,14 +44,14 @@ const Navbar = () => {
         {/* Desktop Links */}
         <div className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a 
+            <Link 
               key={link.name} 
-              href={link.href}
+              to={link.href}
               className="text-sm font-semibold text-brand-dark/80 hover:text-brand-green transition-colors relative group font-primary uppercase tracking-wider"
             >
               {link.name}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-gold transition-all duration-300 group-hover:w-full" />
-            </a>
+            </Link>
           ))}
         </div>
 
@@ -91,9 +91,14 @@ const Navbar = () => {
           >
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
-                <a key={link.name} href={link.href} className="text-lg font-primary font-bold text-brand-dark py-2 border-b border-brand-muted uppercase tracking-wider">
+                <Link 
+                  key={link.name} 
+                  to={link.href} 
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="text-lg font-primary font-bold text-brand-dark py-2 border-b border-brand-muted uppercase tracking-wider"
+                >
                   {link.name}
-                </a>
+                </Link>
               ))}
               <div className="flex flex-col gap-3 mt-4">
                 <button 
