@@ -98,19 +98,19 @@ const StatsSection = () => {
             {cards.map((card, i) => (
               <div
                 key={i}
-                className="min-w-[85vw] md:min-w-0 snap-center bg-white rounded-[2rem] p-4 shadow-lg border border-brand-muted/30 group"
+                className="min-w-[85vw] md:min-w-0 snap-center group transition-all duration-500 hover:-translate-y-2"
               >
-                <div className="aspect-[4/5] rounded-[1.5rem] overflow-hidden mb-6 relative">
-                  <img src={card.img} alt={card.result} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                  <div className="absolute top-4 left-4">
-                    <span className="bg-brand-gold text-white text-[8px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full shadow-lg">Verified Result</span>
+                <div className="aspect-[4/5] rounded-[2.5rem] overflow-hidden mb-8 relative shadow-[0_20px_50px_-20px_rgba(0,0,0,0.15)] group-hover:shadow-[0_40px_80px_-30px_rgba(0,0,0,0.2)] transition-all duration-500">
+                  <img src={card.img} alt={card.result} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+                  <div className="absolute top-6 left-6">
+                    <span className="bg-brand-gold/90 backdrop-blur-md text-white text-[9px] font-bold uppercase tracking-[0.2em] px-5 py-2.5 rounded-full shadow-lg">Verified Result</span>
                   </div>
                 </div>
-                <div className="px-2">
-                  <h4 className="text-lg md:text-xl font-primary font-bold text-brand-green mb-1 uppercase tracking-tight">
+                <div className="px-4 text-center">
+                  <h4 className="text-xl md:text-2xl font-primary font-bold text-brand-green mb-2 uppercase tracking-tight group-hover:text-brand-gold transition-colors duration-300">
                     "{card.result}"
                   </h4>
-                  <p className="text-[10px] md:text-xs font-bold text-brand-dark/40 uppercase tracking-widest">
+                  <p className="text-[11px] md:text-xs font-bold text-brand-dark/40 uppercase tracking-[0.3em]">
                     {card.name} — {card.concern}
                   </p>
                 </div>
