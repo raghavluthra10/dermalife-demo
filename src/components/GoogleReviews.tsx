@@ -60,7 +60,7 @@ const GoogleReviews = () => {
         </div>
 
         {/* CTA Block */}
-        <div className="mt-12 md:mt-16 text-center border-t border-brand-muted/30 pt-12 md:pt-16">
+        {/* <div className="mt-12 md:mt-16 text-center border-t border-brand-muted/30 pt-12 md:pt-16">
           <h3 className="text-2xl md:text-4xl font-primary font-bold text-brand-green mb-8 uppercase tracking-tighter max-w-2xl mx-auto leading-tight">
             Join 50,000+ clients who <span className="text-brand-gold italic font-normal">trust us</span> with their skin
           </h3>
@@ -73,7 +73,7 @@ const GoogleReviews = () => {
           <p className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-brand-dark/30 font-bold mt-6">
             Takes 2 minutes • No commitment
           </p>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -18,6 +18,53 @@ interface Concern {
   treatments: RecommendedTreatment[];
 }
 
+interface TreatmentCardProps {
+  img: string;
+  name: string;
+  clinical: string;
+  tags?: string[];
+  benefit: string;
+  index: number;
+  onBook: () => void;
+}
+
+const TreatmentCard = ({ img, name, clinical, tags, benefit, index, onBook }: TreatmentCardProps) => (
+  <motion.div
+    initial={{ opacity: 0, scale: 0.95 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ delay: index * 0.1 }}
+    className="bg-white p-8 rounded-[2.5rem] shadow-lg flex flex-col gap-6 border border-brand-muted hover:border-brand-gold transition-colors min-w-[85%] sm:min-w-[320px] md:min-w-0 snap-center"
+  >
+    <div className="w-full h-40 md:h-48 rounded-2xl overflow-hidden flex-shrink-0 shadow-inner">
+      <img src={img} alt={name} className="w-full h-full object-cover" />
+    </div>
+    <div className="flex flex-col gap-4">
+      <div>
+        <div className="flex flex-wrap gap-2 mb-3">
+          {tags?.map(tag => (
+            <span key={tag} className="bg-brand-gold text-white text-[9px] md:text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter">
+              {tag}
+            </span>
+          ))}
+        </div>
+        <h4 className="text-base md:text-lg font-primary font-bold text-brand-green uppercase leading-tight">
+          {name} <span className="text-brand-dark/40 font-normal italic lowercase">({clinical})</span>
+        </h4>
+        <p className="text-xs md:text-sm text-brand-dark/60 mt-2 font-medium leading-relaxed">
+          {benefit}
+        </p>
+      </div>
+      <button
+        onClick={onBook}
+        className="flex items-center gap-2 text-brand-gold font-bold text-[10px] md:text-xs uppercase tracking-widest hover:text-brand-green transition-colors group/btn"
+      >
+        Book Free Consultation
+        <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
+      </button>
+    </div>
+  </motion.div>
+);
+
 const TopTreatments = () => {
   const [activeTab, setActiveTab] = useState<'concerns' | 'treatments'>('concerns');
   const [selectedConcern, setSelectedConcern] = useState<string | null>(null);
@@ -35,6 +82,13 @@ const TopTreatments = () => {
           benefit: "Softens expression lines for a natural, refreshed look.",
           tags: ["Most Popular"],
           img: "https://images.unsplash.com/photo-1512290923902-8a9f81dc206e?auto=format&fit=crop&w=400"
+        },
+        {
+          name: "Collagen Booster",
+          clinical: "HIFU Lifting",
+          benefit: "Tightens skin and defines jawline without surgery.",
+          tags: ["No Downtime"],
+          img: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=400"
         },
         {
           name: "Collagen Booster",
@@ -258,41 +312,14 @@ const TopTreatments = () => {
                           transition={{ duration: 0.5, ease: "circOut" }}
                           className="overflow-hidden"
                         >
-                          <div className="flex overflow-x-auto pb-6 md:pb-0 gap-4 md:gap-8 p-4 md:p-8 bg-brand-green/5 rounded-b-[2rem] border-x border-b border-brand-green/10 no-scrollbar snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-3">
+                          <div className="flex overflow-x-auto gap-4 md:gap-8 p-4 md:p-8 bg-brand-green/5 rounded-b-[2rem] border-x border-b border-brand-green/10 no-scrollbar snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-3">
                             {concern.treatments.map((t, i) => (
-                              <motion.div
+                              <TreatmentCard
                                 key={i}
-                                initial={{ opacity: 0, scale: 0.95 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                transition={{ delay: i * 0.1 }}
-                                className="bg-white p-6 rounded-[2rem] shadow-lg flex flex-col gap-6 border border-brand-muted hover:border-brand-gold transition-colors min-w-[85%] sm:min-w-[320px] md:min-w-0 snap-center"
-                              >
-                                <div className="w-full h-40 md:h-48 rounded-2xl overflow-hidden flex-shrink-0 shadow-inner">
-                                  <img src={t.img} alt={t.name} className="w-full h-full object-cover" />
-                                </div>
-                                <div className="flex flex-col">
-                                  <div className="flex flex-wrap gap-2 mb-3">
-                                    {t.tags?.map(tag => (
-                                      <span key={tag} className="bg-brand-gold text-white text-[9px] md:text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter">
-                                        {tag}
-                                      </span>
-                                    ))}
-                                  </div>
-                                  <h4 className="text-base md:text-lg font-primary font-bold text-brand-green uppercase leading-tight">
-                                    {t.name} <span className="text-brand-dark/40 font-normal italic lowercase">({t.clinical})</span>
-                                  </h4>
-                                  <p className="text-xs md:text-sm text-brand-dark/60 mt-2 font-medium leading-relaxed">
-                                    {t.benefit}
-                                  </p>
-                                  <button
-                                    onClick={scrollToBooking}
-                                    className="mt-6 flex items-center gap-2 text-brand-gold font-bold text-[10px] md:text-xs uppercase tracking-widest hover:text-brand-green transition-colors group/btn"
-                                  >
-                                    Book Free Consultation
-                                    <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
-                                  </button>
-                                </div>
-                              </motion.div>
+                                {...t}
+                                index={i}
+                                onBook={scrollToBooking}
+                              />
                             ))}
                           </div>
                         </motion.div>
