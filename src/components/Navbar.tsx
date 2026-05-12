@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X } from 'lucide-react';
+import logo from '../assets/dermalife_logo_new.png';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -36,10 +37,9 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-brand-green rounded-full flex items-center justify-center text-white font-primary font-bold text-xl">D</div>
-          <span className="text-2xl font-primary font-bold tracking-tight text-brand-green uppercase">DermaLife</span>
-        </div>
+        <Link to="/" className="flex items-center">
+          <img src={logo} alt="DermaLife Wellness Clinic" className="h-10 md:h-14 w-auto object-contain" />
+        </Link>
 
         {/* Desktop Links */}
         <div className="hidden lg:flex items-center gap-8">

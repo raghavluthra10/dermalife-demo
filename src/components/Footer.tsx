@@ -1,5 +1,6 @@
 import { Instagram, Youtube, Star, Phone, Mail, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import logo from '../assets/dermalife_logo_new.png';
 
 const Footer = () => {
   const columns = [
@@ -37,9 +38,8 @@ const Footer = () => {
         <div className="flex flex-col lg:flex-row gap-16 mb-24">
           {/* Brand Column */}
           <div className="lg:w-1/4">
-             <div className="flex items-center gap-3 mb-8">
-              <div className="w-10 h-10 bg-brand-green rounded-full flex items-center justify-center text-white font-primary font-bold text-xl shadow-md">D</div>
-              <span className="text-3xl font-primary font-bold tracking-tighter text-brand-green uppercase">DermaLife</span>
+             <div className="flex items-center mb-8">
+              <img src={logo} alt="DermaLife Wellness Clinic" className="h-12 w-auto object-contain" />
             </div>
             <p className="text-brand-dark/50 text-sm mb-10 leading-relaxed font-sans font-medium uppercase tracking-tight max-w-sm">
               India's leading aesthetic clinic. Redefining medical excellence with a touch of luxury.
