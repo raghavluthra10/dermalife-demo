@@ -38,7 +38,7 @@ const TreatmentCard = ({ img, name, clinical, tags, benefit, index, onBook }: Tr
     <div className="w-full h-40 md:h-48 rounded-2xl overflow-hidden flex-shrink-0 shadow-inner">
       <img src={img} alt={name} className="w-full h-full object-cover" />
     </div>
-    <div className="flex flex-col gap-4">
+    <div className="flex-1 flex flex-col justify-between">
       <div>
         <div className="flex flex-wrap gap-2 mb-3">
           {tags?.map(tag => (
@@ -56,9 +56,9 @@ const TreatmentCard = ({ img, name, clinical, tags, benefit, index, onBook }: Tr
       </div>
       <button
         onClick={onBook}
-        className="flex items-center gap-2 text-brand-gold font-bold text-[10px] md:text-xs uppercase tracking-widest hover:text-brand-green transition-colors group/btn"
+        className="mt-6 flex items-center gap-2 text-brand-gold font-bold text-[10px] md:text-xs uppercase tracking-widest hover:text-brand-green transition-colors group/btn"
       >
-        Book Free Consultation
+        View Details
         <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
       </button>
     </div>
