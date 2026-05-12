@@ -32,7 +32,7 @@ const servicesData = [
   {
     category: "Hair",
     services: [
-      { name: "Laser Hair Reduction", desc: "Permanent and painless hair removal" },
+      { name: "Laser Hair Reduction", desc: "Permanent and painless hair removal", href: "/services/laser-hair-reduction" },
       { name: "QR 678 neo", desc: "Hair regrowth and scalp revitalization" }
     ]
   }
@@ -143,7 +143,7 @@ const Navbar = () => {
                         {servicesData.find(c => c.category === activeCategory)?.services.map((service) => (
                           <Link
                             key={service.name}
-                            to="/services"
+                            to={service.href || "/services"}
                             className="group/item block"
                             onClick={() => setActiveMegaMenu(null)}
                           >
@@ -225,7 +225,7 @@ const Navbar = () => {
                                   {cat.services.map((s) => (
                                     <Link
                                       key={s.name}
-                                      to="/services"
+                                      to={s.href || "/services"}
                                       onClick={() => setIsMobileMenuOpen(false)}
                                       className="block"
                                     >

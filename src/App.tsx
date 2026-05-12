@@ -12,6 +12,7 @@ import Services from './pages/Services';
 import Results from './pages/Results';
 import AboutUs from './pages/AboutUs';
 import ContactUs from './pages/ContactUs';
+import LaserHairReduction from './pages/LaserHairReduction';
 
 import WhatsAppButton from './components/WhatsAppButton';
 
@@ -38,6 +39,7 @@ export default function App() {
             <Route path="/results" element={<Results />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/contact" element={<ContactUs />} />
+            <Route path="/services/laser-hair-reduction" element={<LaserHairReduction />} />
           </Routes>
         </main>
         <Footer />
