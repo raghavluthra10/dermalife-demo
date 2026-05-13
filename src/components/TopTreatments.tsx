@@ -190,44 +190,57 @@ const TopTreatments = () => {
     }
   ];
 
+  const categories = ['All', 'Skin', 'Hair', 'Body & Slimming'];
+  const [selectedCategory, setSelectedCategory] = useState('All');
+
   const treatmentsData = [
     {
       name: "Instant Glow Facial",
       clinical: "Hydrafacial Luxe",
       benefit: "Deep cleanses and hydrates for an immediate red-carpet glow.",
-      badges: ["Most Popular", "No Downtime"]
+      badges: ["Most Popular", "No Downtime"],
+      category: "Skin"
     },
     {
       name: "Fat Reduction Without Surgery",
       clinical: "CoolSculpting Elite",
       benefit: "Non-invasive fat cell reduction with permanent results.",
-      badges: ["FDA-approved"]
+      badges: ["FDA-approved"],
+      category: "Body & Slimming"
     },
     {
       name: "Hair Regrowth Treatment",
       clinical: "PRP Therapy",
       benefit: "Stimulates natural hair growth using plasma rich therapy.",
-      badges: ["Safe & Natural"]
+      badges: ["Safe & Natural"],
+      category: "Hair"
     },
     {
       name: "Laser Hair Removal for Smooth Skin",
       clinical: "Soprano Titanium",
       benefit: "Painless laser technology for long-lasting hair-free skin.",
-      badges: ["Most Popular", "Painless"]
+      badges: ["Most Popular", "Painless"],
+      category: "Skin"
     },
     {
       name: "Face Sculpt & Lift",
       clinical: "HIFU",
       benefit: "Non-surgical face lift for tighter and more defined skin.",
-      badges: ["No Downtime"]
+      badges: ["No Downtime"],
+      category: "Skin"
     },
     {
       name: "Skin Polish & Brighten",
       clinical: "Carbon Peel",
       benefit: "Removes impurities and brightens dull skin instantly.",
-      badges: ["Instant Results"]
+      badges: ["Instant Results"],
+      category: "Skin"
     }
   ];
+
+  const filteredTreatments = selectedCategory === 'All' 
+    ? treatmentsData 
+    : treatmentsData.filter(t => t.category === selectedCategory);
 
   const scrollToBooking = () => {
     const el = document.getElementById('booking-section');
@@ -248,6 +261,7 @@ const TopTreatments = () => {
               onClick={() => {
                 setActiveTab(tab.toLowerCase() as any);
                 setSelectedConcern(null);
+                setSelectedCategory('All');
               }}
               className={`pb-4 text-xl font-primary font-bold relative transition-all uppercase tracking-widest ${activeTab === tab.toLowerCase() ? 'text-brand-accent' : 'text-brand-dark/40'
                 }`}
@@ -334,33 +348,56 @@ const TopTreatments = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                className="flex overflow-x-auto pb-8 md:pb-0 gap-6 md:gap-8 no-scrollbar snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-3"
               >
-                {treatmentsData.map((t, i) => (
-                  <div
-                    key={i}
-                    className="group bg-white p-8 rounded-[2.5rem] border border-brand-muted hover:border-brand-gold hover:shadow-2xl transition-all duration-500 cursor-pointer min-w-[85%] sm:min-w-[320px] md:min-w-0 snap-center"
-                  >
-                    <div className="flex gap-2 mb-6">
-                      {t.badges.map(badge => (
-                        <span key={badge} className="bg-brand-gold/10 text-brand-gold text-[9px] font-bold px-3 py-1 rounded-full uppercase tracking-widest border border-brand-gold/20">
-                          {badge}
-                        </span>
-                      ))}
-                    </div>
-                    <h3 className="text-xl font-primary font-bold text-brand-accent uppercase tracking-tight leading-tight group-hover:text-brand-gold transition-colors">
-                      {t.name} <br />
-                      <span className="text-brand-dark/30 font-normal italic lowercase">({t.clinical})</span>
-                    </h3>
-                    <p className="text-sm text-brand-dark/50 mt-4 font-sans font-medium leading-relaxed">
-                      {t.benefit}
-                    </p>
-                    <div className="mt-8 pt-6 border-t border-brand-muted flex items-center justify-between opacity-40 group-hover:opacity-100 transition-opacity">
-                      <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-accent">Advanced Care</span>
-                      <ArrowRight size={20} className="text-brand-gold" />
-                    </div>
-                  </div>
-                ))}
+                {/* Category Pills */}
+                <div className="flex flex-wrap gap-3 mb-10">
+                  {categories.map((cat) => (
+                    <button
+                      key={cat}
+                      onClick={() => setSelectedCategory(cat)}
+                      className={`px-6 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest border transition-all duration-300 ${selectedCategory === cat 
+                        ? 'bg-brand-accent border-brand-accent text-white shadow-lg scale-105' 
+                        : 'bg-white border-brand-muted text-brand-dark/40 hover:border-brand-gold hover:text-brand-accent'}`}
+                    >
+                      {cat}
+                    </button>
+                  ))}
+                </div>
+
+                <div className="flex overflow-x-auto pb-8 md:pb-0 gap-6 md:gap-8 no-scrollbar snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-3">
+                  <AnimatePresence mode="popLayout">
+                    {filteredTreatments.map((t, i) => (
+                      <motion.div
+                        key={t.name}
+                        layout
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.9 }}
+                        transition={{ duration: 0.3 }}
+                        className="group bg-white p-8 rounded-[2.5rem] border border-brand-muted hover:border-brand-gold hover:shadow-2xl transition-all duration-500 cursor-pointer min-w-[85%] sm:min-w-[320px] md:min-w-0 snap-center"
+                      >
+                        <div className="flex gap-2 mb-6">
+                          {t.badges.map(badge => (
+                            <span key={badge} className="bg-brand-gold/10 text-brand-gold text-[9px] font-bold px-3 py-1 rounded-full uppercase tracking-widest border border-brand-gold/20">
+                              {badge}
+                            </span>
+                          ))}
+                        </div>
+                        <h3 className="text-xl font-primary font-bold text-brand-accent uppercase tracking-tight leading-tight group-hover:text-brand-gold transition-colors">
+                          {t.name} <br />
+                          <span className="text-brand-dark/30 font-normal italic lowercase">({t.clinical})</span>
+                        </h3>
+                        <p className="text-sm text-brand-dark/50 mt-4 font-sans font-medium leading-relaxed">
+                          {t.benefit}
+                        </p>
+                        <div className="mt-8 pt-6 border-t border-brand-muted flex items-center justify-between opacity-40 group-hover:opacity-100 transition-opacity">
+                          <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-accent">Advanced Care</span>
+                          <ArrowRight size={20} className="text-brand-gold" />
+                        </div>
+                      </motion.div>
+                    ))}
+                  </AnimatePresence>
+                </div>
               </motion.div>
             )}
           </AnimatePresence>

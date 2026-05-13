@@ -16,7 +16,7 @@ const Home = () => {
       <StatsSection />
       <BrandPillars />
       <GoogleReviews />
-      {/* <FounderSection /> */}
+      {/* Add galery */}
       <PressSection />
       <BookingForm />
       <MapSection />
