@@ -22,14 +22,14 @@ const CategoryExplorer = () => {
   return (
     <section className="py-spacing-section px-6 py-16 bg-white">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-5xl text-brand-green mb-12 font-primary font-bold uppercase tracking-tighter">Explore treatments for your specific needs</h2>
+        <h2 className="text-4xl md:text-5xl text-brand-accent mb-12 font-primary font-bold uppercase tracking-tighter">Explore treatments for your specific needs</h2>
 
         <div className="flex gap-4 mb-12 overflow-x-auto pb-4 no-scrollbar scroll-smooth">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCat(cat)}
-              className={`whitespace-nowrap px-8 py-3 rounded-full text-sm font-bold transition-all uppercase tracking-widest ${activeCat === cat ? 'bg-brand-green text-white shadow-lg' : 'bg-white border border-brand-muted text-brand-dark/60 hover:border-brand-green/30'
+              className={`whitespace-nowrap px-8 py-3 rounded-full text-sm font-bold transition-all uppercase tracking-widest ${activeCat === cat ? 'bg-brand-accent text-white shadow-lg' : 'bg-white border border-brand-muted text-brand-dark/60 hover:border-brand-accent/30'
                 }`}
             >
               {cat}
@@ -54,7 +54,7 @@ const CategoryExplorer = () => {
                 )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
-              <h3 className="text-2xl font-primary text-brand-dark group-hover:text-brand-green transition-colors font-bold uppercase tracking-tight">{card.title}</h3>
+              <h3 className="text-2xl font-primary text-brand-dark group-hover:text-brand-accent transition-colors font-bold uppercase tracking-tight">{card.title}</h3>
               <p className="text-brand-dark/50 text-sm mt-1 uppercase tracking-widest font-bold">Treatment & Procedures</p>
             </motion.div>
           ))}

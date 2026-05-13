@@ -13,20 +13,20 @@ const LaserHairReduction = () => {
             animate={{ opacity: 1, y: 0 }}
             className="max-w-3xl"
           >
-            <span className="inline-block px-4 py-1.5 bg-brand-green/10 text-brand-green rounded-full text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
+            <span className="inline-block px-4 py-1.5 bg-brand-accent/10 text-brand-accent rounded-full text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
               Premium Hair Care
             </span>
-            <h1 className="text-5xl md:text-7xl font-primary font-bold text-brand-green leading-[0.9] mb-8 uppercase tracking-tighter">
+            <h1 className="text-5xl md:text-7xl font-primary font-bold text-brand-accent leading-[0.9] mb-8 uppercase tracking-tighter">
               Laser Hair <br /> Reduction
             </h1>
             <p className="text-lg md:text-xl text-brand-dark/60 font-sans font-medium max-w-xl leading-relaxed mb-10">
               Experience the ultimate freedom from unwanted hair with our state-of-the-art laser technology. Painless, permanent, and perfectly safe for all skin types.
             </p>
             <div className="flex flex-wrap gap-4">
-              <button className="px-8 py-4 bg-brand-green text-white rounded-full font-primary font-bold uppercase tracking-widest text-xs hover:bg-brand-gold transition-all shadow-xl">
+              <button className="px-8 py-4 bg-brand-accent text-white rounded-full font-primary font-bold uppercase tracking-widest text-xs hover:bg-brand-gold transition-all shadow-xl">
                 Book Free Consultation
               </button>
-              <button className="px-8 py-4 border border-brand-green text-brand-green rounded-full font-primary font-bold uppercase tracking-widest text-xs hover:bg-brand-green hover:text-white transition-all">
+              <button className="px-8 py-4 border border-brand-accent text-brand-accent rounded-full font-primary font-bold uppercase tracking-widest text-xs hover:bg-brand-accent hover:text-white transition-all">
                 View Pricing
               </button>
             </div>
@@ -34,7 +34,7 @@ const LaserHairReduction = () => {
         </div>
         
         {/* Decorative Element */}
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-green/5 -skew-x-12 translate-x-1/4 z-0" />
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-accent/5 -skew-x-12 translate-x-1/4 z-0" />
       </section>
 
       {/* Benefits Grid */}
@@ -57,7 +57,7 @@ const LaserHairReduction = () => {
                 <div className="w-12 h-12 rounded-2xl bg-brand-cream flex items-center justify-center">
                   {benefit.icon}
                 </div>
-                <h3 className="text-xl font-primary font-bold text-brand-green uppercase tracking-tight">{benefit.title}</h3>
+                <h3 className="text-xl font-primary font-bold text-brand-accent uppercase tracking-tight">{benefit.title}</h3>
                 <p className="text-brand-dark/50 leading-relaxed text-sm uppercase tracking-tight font-medium">{benefit.desc}</p>
               </motion.div>
             ))}
@@ -69,7 +69,7 @@ const LaserHairReduction = () => {
       <section className="py-24 bg-brand-cream px-6">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
           <div className="lg:w-1/2">
-            <h2 className="text-4xl md:text-5xl font-primary font-bold text-brand-green mb-8 uppercase tracking-tighter">The Procedure</h2>
+            <h2 className="text-4xl md:text-5xl font-primary font-bold text-brand-accent mb-8 uppercase tracking-tighter">The Procedure</h2>
             <div className="space-y-8">
               {[
                 { step: "01", title: "Skin Assessment", desc: "Our experts analyze your skin type and hair growth patterns." },
@@ -80,7 +80,7 @@ const LaserHairReduction = () => {
                 <div key={i} className="flex gap-6 group">
                   <span className="text-2xl font-primary font-bold text-brand-gold/30 group-hover:text-brand-gold transition-colors">{item.step}</span>
                   <div>
-                    <h4 className="text-lg font-primary font-bold text-brand-green uppercase tracking-tight mb-2">{item.title}</h4>
+                    <h4 className="text-lg font-primary font-bold text-brand-accent uppercase tracking-tight mb-2">{item.title}</h4>
                     <p className="text-brand-dark/40 text-sm uppercase tracking-tight font-medium leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
@@ -88,10 +88,10 @@ const LaserHairReduction = () => {
             </div>
           </div>
           <div className="lg:w-1/2 w-full aspect-square bg-white rounded-[3rem] shadow-2xl flex items-center justify-center p-12 overflow-hidden relative">
-            <div className="absolute inset-0 bg-brand-green/5" />
+            <div className="absolute inset-0 bg-brand-accent/5" />
             <div className="relative z-10 text-center">
                 <Star className="w-16 h-16 text-brand-gold mx-auto mb-6 animate-pulse" />
-                <h3 className="text-3xl font-primary font-bold text-brand-green uppercase tracking-tighter mb-4">99% Satisfaction</h3>
+                <h3 className="text-3xl font-primary font-bold text-brand-accent uppercase tracking-tighter mb-4">99% Satisfaction</h3>
                 <p className="text-brand-dark/50 text-sm uppercase font-bold tracking-widest">Across 10,000+ sessions</p>
             </div>
           </div>

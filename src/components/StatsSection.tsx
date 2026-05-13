@@ -63,7 +63,7 @@ const StatsSection = () => {
         {/* 1. TOP SECTION */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-12 mb-10 md:mb-16">
           <div className="max-w-2xl">
-            <h2 className="text-4xl md:text-6xl text-brand-green mb-8 leading-[1.1] font-primary font-bold uppercase tracking-tighter">
+            <h2 className="text-4xl md:text-6xl text-brand-accent mb-8 leading-[1.1] font-primary font-bold uppercase tracking-tighter">
               Real experts, <br />
               <span className="italic font-normal">Real results.</span>
             </h2>
@@ -107,7 +107,7 @@ const StatsSection = () => {
                   </div>
                 </div>
                 <div className="px-4 text-center">
-                  <h4 className="text-xl md:text-2xl font-primary font-bold text-brand-green mb-2 uppercase tracking-tight group-hover:text-brand-gold transition-colors duration-300">
+                  <h4 className="text-xl md:text-2xl font-primary font-bold text-brand-accent mb-2 uppercase tracking-tight group-hover:text-brand-gold transition-colors duration-300">
                     "{card.result}"
                   </h4>
                   <p className="text-[11px] md:text-xs font-bold text-brand-dark/40 uppercase tracking-[0.3em]">
@@ -121,12 +121,12 @@ const StatsSection = () => {
 
         {/* 4. CTA SECTION */}
         <div className="text-center py-12 md:py-16 bg-brand-cream rounded-[3rem] md:rounded-[5rem] border border-brand-muted/50 px-6">
-          <h2 className="text-3xl md:text-5xl font-primary font-bold text-brand-green mb-8 uppercase tracking-tighter leading-tight">
+          <h2 className="text-3xl md:text-5xl font-primary font-bold text-brand-accent mb-8 uppercase tracking-tighter leading-tight">
             See what we can <br className="md:hidden" /> do for your skin
           </h2>
           <button
             onClick={scrollToBooking}
-            className="group relative inline-flex items-center justify-center px-12 py-6 bg-brand-green text-white font-bold rounded-full overflow-hidden transition-all duration-500 hover:scale-105 active:scale-95 shadow-[0_20px_50px_rgba(26,74,58,0.3)] hover:shadow-[0_25px_60px_rgba(26,74,58,0.4)]"
+            className="group relative inline-flex items-center justify-center px-12 py-6 bg-brand-accent text-white font-bold rounded-full overflow-hidden transition-all duration-500 hover:scale-105 active:scale-95 shadow-[0_20px_50px_rgba(26,74,58,0.3)] hover:shadow-[0_25px_60px_rgba(26,74,58,0.4)]"
           >
             <span className="relative z-10 font-primary uppercase tracking-[0.2em] text-sm">
               Book Free Consultation

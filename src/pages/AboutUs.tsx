@@ -12,10 +12,10 @@ const AboutUs = () => {
             animate={{ opacity: 1, y: 0 }}
             className="max-w-4xl mx-auto"
           >
-            <span className="inline-block px-4 py-1.5 bg-brand-green/10 text-brand-green rounded-full text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
+            <span className="inline-block px-4 py-1.5 bg-brand-accent/10 text-brand-accent rounded-full text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
               Our Story
             </span>
-            <h1 className="text-5xl md:text-8xl font-primary font-bold text-brand-green leading-[0.85] mb-10 uppercase tracking-tighter">
+            <h1 className="text-5xl md:text-8xl font-primary font-bold text-brand-accent leading-[0.85] mb-10 uppercase tracking-tighter">
               Beauty is more than <br /> <span className="text-brand-gold italic">skin deep</span>
             </h1>
             <p className="text-xl md:text-2xl text-brand-dark/70 font-sans font-medium leading-relaxed mb-12">
@@ -26,7 +26,7 @@ const AboutUs = () => {
         
         {/* Abstract Background Element */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-5 pointer-events-none">
-            <Leaf size={600} className="text-brand-green absolute -top-20 -left-20 rotate-45" />
+            <Leaf size={600} className="text-brand-accent absolute -top-20 -left-20 rotate-45" />
         </div>
       </section>
 
@@ -40,7 +40,7 @@ const AboutUs = () => {
               viewport={{ once: true }}
               className="space-y-8"
             >
-              <h2 className="text-4xl md:text-5xl font-primary font-bold text-brand-green uppercase tracking-tighter leading-tight">
+              <h2 className="text-4xl md:text-5xl font-primary font-bold text-brand-accent uppercase tracking-tighter leading-tight">
                 A Nurturing Environment <br /> for Transformation
               </h2>
               <div className="prose prose-lg text-brand-dark/60 font-sans font-medium uppercase tracking-tight leading-relaxed">
@@ -56,7 +56,7 @@ const AboutUs = () => {
             <div className="grid grid-cols-2 gap-4">
                <div className="space-y-4">
                   <div className="aspect-[4/5] bg-brand-cream rounded-3xl overflow-hidden shadow-2xl relative group">
-                    <div className="absolute inset-0 bg-brand-green/20 group-hover:bg-brand-green/0 transition-all duration-700" />
+                    <div className="absolute inset-0 bg-brand-accent/20 group-hover:bg-brand-accent/0 transition-all duration-700" />
                     <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80" alt="Clinic Ambience" className="w-full h-full object-cover" />
                   </div>
                   <div className="aspect-square bg-brand-gold rounded-3xl flex items-center justify-center p-8 text-white">
@@ -67,14 +67,14 @@ const AboutUs = () => {
                   </div>
                </div>
                <div className="space-y-4 pt-12">
-                  <div className="aspect-square bg-brand-green rounded-3xl flex items-center justify-center p-8 text-white">
+                  <div className="aspect-square bg-brand-accent rounded-3xl flex items-center justify-center p-8 text-white">
                       <div className="text-center">
                           <h4 className="text-4xl font-primary font-bold">15+</h4>
                           <p className="text-[10px] font-bold uppercase tracking-widest mt-2">Years of Excellence</p>
                       </div>
                   </div>
                   <div className="aspect-[4/5] bg-brand-cream rounded-3xl overflow-hidden shadow-2xl relative group">
-                    <div className="absolute inset-0 bg-brand-green/20 group-hover:bg-brand-green/0 transition-all duration-700" />
+                    <div className="absolute inset-0 bg-brand-accent/20 group-hover:bg-brand-accent/0 transition-all duration-700" />
                     <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc2069?auto=format&fit=crop&q=80" alt="Treatment Room" className="w-full h-full object-cover" />
                   </div>
                </div>
@@ -87,7 +87,7 @@ const AboutUs = () => {
       <section className="py-32 bg-brand-cream px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-6xl font-primary font-bold text-brand-green uppercase tracking-tighter mb-6">Our Three Pillars</h2>
+            <h2 className="text-4xl md:text-6xl font-primary font-bold text-brand-accent uppercase tracking-tighter mb-6">Our Three Pillars</h2>
             <p className="text-brand-dark/50 font-bold uppercase tracking-[0.3em] text-xs">A Trusted Destination in Delhi NCR</p>
           </div>
 
@@ -97,10 +97,10 @@ const AboutUs = () => {
               whileHover={{ y: -10 }}
               className="bg-white p-12 rounded-[3rem] shadow-xl border border-brand-muted relative group overflow-hidden"
             >
-              <div className="absolute top-0 right-0 p-8 text-brand-green/10 group-hover:text-brand-gold/20 transition-colors">
+              <div className="absolute top-0 right-0 p-8 text-brand-accent/10 group-hover:text-brand-gold/20 transition-colors">
                   <Sparkles size={120} />
               </div>
-              <h3 className="text-3xl font-primary font-bold text-brand-green uppercase tracking-tight mb-8">🌿 Skin Care</h3>
+              <h3 className="text-3xl font-primary font-bold text-brand-accent uppercase tracking-tight mb-8">🌿 Skin Care</h3>
               <ul className="space-y-6">
                 {[
                   { title: "Acne & Scar Treatments", desc: "Advanced therapies to restore clear, healthy skin." },
@@ -108,7 +108,7 @@ const AboutUs = () => {
                   { title: "Pigmentation & Glow", desc: "Customized regimens for even-toned, luminous skin." }
                 ].map((item, i) => (
                   <li key={i} className="group/item">
-                    <h5 className="font-primary font-bold text-brand-green uppercase tracking-tight text-sm group-hover/item:text-brand-gold transition-colors">{item.title}</h5>
+                    <h5 className="font-primary font-bold text-brand-accent uppercase tracking-tight text-sm group-hover/item:text-brand-gold transition-colors">{item.title}</h5>
                     <p className="text-brand-dark/40 text-[10px] uppercase font-bold tracking-tight mt-1">{item.desc}</p>
                   </li>
                 ))}
@@ -118,7 +118,7 @@ const AboutUs = () => {
             {/* Wellness */}
             <motion.div 
               whileHover={{ y: -10 }}
-              className="bg-brand-green p-12 rounded-[3rem] shadow-xl relative group overflow-hidden"
+              className="bg-brand-accent p-12 rounded-[3rem] shadow-xl relative group overflow-hidden"
             >
               <div className="absolute top-0 right-0 p-8 text-white/5 group-hover:text-brand-gold/10 transition-colors">
                   <Heart size={120} />
@@ -143,10 +143,10 @@ const AboutUs = () => {
               whileHover={{ y: -10 }}
               className="bg-white p-12 rounded-[3rem] shadow-xl border border-brand-muted relative group overflow-hidden"
             >
-              <div className="absolute top-0 right-0 p-8 text-brand-green/10 group-hover:text-brand-gold/20 transition-colors">
+              <div className="absolute top-0 right-0 p-8 text-brand-accent/10 group-hover:text-brand-gold/20 transition-colors">
                   <ShieldCheck size={120} />
               </div>
-              <h3 className="text-3xl font-primary font-bold text-brand-green uppercase tracking-tight mb-8">💄 Beauty</h3>
+              <h3 className="text-3xl font-primary font-bold text-brand-accent uppercase tracking-tight mb-8">💄 Beauty</h3>
               <ul className="space-y-6">
                 {[
                   { title: "Cosmetic Enhancements", desc: "Safe procedures for facial contouring and glow." },
@@ -154,7 +154,7 @@ const AboutUs = () => {
                   { title: "Hair Restoration", desc: "Natural-looking transplants and scalp therapies." }
                 ].map((item, i) => (
                   <li key={i} className="group/item">
-                    <h5 className="font-primary font-bold text-brand-green uppercase tracking-tight text-sm group-hover/item:text-brand-gold transition-colors">{item.title}</h5>
+                    <h5 className="font-primary font-bold text-brand-accent uppercase tracking-tight text-sm group-hover/item:text-brand-gold transition-colors">{item.title}</h5>
                     <p className="text-brand-dark/40 text-[10px] uppercase font-bold tracking-tight mt-1">{item.desc}</p>
                   </li>
                 ))}

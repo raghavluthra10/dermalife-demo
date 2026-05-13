@@ -47,7 +47,7 @@ const TreatmentCard = ({ img, name, clinical, tags, benefit, index, onBook }: Tr
             </span>
           ))}
         </div>
-        <h4 className="text-base md:text-lg font-primary font-bold text-brand-green uppercase leading-tight">
+        <h4 className="text-base md:text-lg font-primary font-bold text-brand-accent uppercase leading-tight">
           {name} <span className="text-brand-dark/40 font-normal italic lowercase">({clinical})</span>
         </h4>
         <p className="text-xs md:text-sm text-brand-dark/60 mt-2 font-medium leading-relaxed">
@@ -56,7 +56,7 @@ const TreatmentCard = ({ img, name, clinical, tags, benefit, index, onBook }: Tr
       </div>
       <button
         onClick={onBook}
-        className="mt-6 flex items-center gap-2 text-brand-gold font-bold text-[10px] md:text-xs uppercase tracking-widest hover:text-brand-green transition-colors group/btn"
+        className="mt-6 flex items-center gap-2 text-brand-gold font-bold text-[10px] md:text-xs uppercase tracking-widest hover:text-brand-accent transition-colors group/btn"
       >
         View Details
         <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
@@ -237,7 +237,7 @@ const TopTreatments = () => {
   return (
     <section id="concerns" className="py-16 md:py-24 px-6 bg-brand-cream relative">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-5xl text-brand-green mb-4 font-primary font-bold uppercase tracking-tighter">Choose your skin goal</h2>
+        <h2 className="text-4xl md:text-5xl text-brand-accent mb-4 font-primary font-bold uppercase tracking-tighter">Choose your skin goal</h2>
         <p className="text-brand-dark/60 mb-12 font-sans font-medium uppercase tracking-widest text-sm">Targeted results for a more confident you</p>
 
         {/* Tabs */}
@@ -249,7 +249,7 @@ const TopTreatments = () => {
                 setActiveTab(tab.toLowerCase() as any);
                 setSelectedConcern(null);
               }}
-              className={`pb-4 text-xl font-primary font-bold relative transition-all uppercase tracking-widest ${activeTab === tab.toLowerCase() ? 'text-brand-green' : 'text-brand-dark/40'
+              className={`pb-4 text-xl font-primary font-bold relative transition-all uppercase tracking-widest ${activeTab === tab.toLowerCase() ? 'text-brand-accent' : 'text-brand-dark/40'
                 }`}
             >
               {tab}
@@ -279,7 +279,7 @@ const TopTreatments = () => {
                     <button
                       onClick={() => setSelectedConcern(selectedConcern === concern.id ? null : concern.id)}
                       className={`w-full flex items-center justify-between p-3 md:p-4 rounded-xl md:rounded-2xl transition-all border ${selectedConcern === concern.id
-                        ? 'bg-brand-green border-brand-green text-white shadow-lg'
+                        ? 'bg-brand-accent border-brand-accent text-white shadow-lg'
                         : 'bg-white border-brand-muted hover:border-brand-gold text-brand-dark'
                         }`}
                     >
@@ -312,7 +312,7 @@ const TopTreatments = () => {
                           transition={{ duration: 0.5, ease: "circOut" }}
                           className="overflow-hidden"
                         >
-                          <div className="flex overflow-x-auto gap-4 md:gap-8 p-4 md:p-8 bg-brand-green/5 rounded-b-[2rem] border-x border-b border-brand-green/10 no-scrollbar snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-3">
+                          <div className="flex overflow-x-auto gap-4 md:gap-8 p-4 md:p-8 bg-brand-accent/5 rounded-b-[2rem] border-x border-b border-brand-accent/10 no-scrollbar snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-3">
                             {concern.treatments.map((t, i) => (
                               <TreatmentCard
                                 key={i}
@@ -348,7 +348,7 @@ const TopTreatments = () => {
                         </span>
                       ))}
                     </div>
-                    <h3 className="text-xl font-primary font-bold text-brand-green uppercase tracking-tight leading-tight group-hover:text-brand-gold transition-colors">
+                    <h3 className="text-xl font-primary font-bold text-brand-accent uppercase tracking-tight leading-tight group-hover:text-brand-gold transition-colors">
                       {t.name} <br />
                       <span className="text-brand-dark/30 font-normal italic lowercase">({t.clinical})</span>
                     </h3>
@@ -356,7 +356,7 @@ const TopTreatments = () => {
                       {t.benefit}
                     </p>
                     <div className="mt-8 pt-6 border-t border-brand-muted flex items-center justify-between opacity-40 group-hover:opacity-100 transition-opacity">
-                      <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-green">Advanced Care</span>
+                      <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-accent">Advanced Care</span>
                       <ArrowRight size={20} className="text-brand-gold" />
                     </div>
                   </div>
@@ -373,7 +373,7 @@ const TopTreatments = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-xl md:text-4xl font-primary font-bold text-brand-green uppercase tracking-tighter mb-2">
+            <h2 className="text-xl md:text-4xl font-primary font-bold text-brand-accent uppercase tracking-tighter mb-2">
               Not sure which treatment <br className="hidden md:block" /> is right for you?
             </h2>
             <p className="text-l text-brand-dark/50 font-sans font-medium mb-6">
@@ -381,7 +381,7 @@ const TopTreatments = () => {
             </p>
             <button
               onClick={scrollToBooking}
-              className="px-12 py-6 bg-brand-green text-white font-bold rounded-full hover:bg-brand-gold transition-all shadow-2xl uppercase tracking-widest text-sm font-primary"
+              className="px-12 py-6 bg-brand-accent text-white font-bold rounded-full hover:bg-brand-gold transition-all shadow-2xl uppercase tracking-widest text-sm font-primary"
             >
               Book Free Consultation
             </button>

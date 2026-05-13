@@ -24,7 +24,7 @@ const Hero = () => {
           loop
           muted
           playsInline
-          className="w-full h-full object-cover opacity-95"
+          className="w-full h-full object-cover"
         >
           <source src={heroVideo} type="video/mp4" />
         </video>
@@ -38,7 +38,7 @@ const Hero = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h1 className="text-3xl md:text-7xl font-primary font-extrabold text-brand-green leading-[1.1] mb-6 uppercase tracking-tighter">
+            <h1 className="text-3xl md:text-7xl font-primary font-extrabold text-brand-accent leading-[1.1] mb-6 uppercase tracking-tighter">
               Transformative <br />
               <span className="text-brand-gold">skin care,</span> <br />
               designed for you.
@@ -50,7 +50,7 @@ const Hero = () => {
             <div className="hidden sm:block mt-12">
               <button
                 onClick={scrollToBooking}
-                className="px-10 py-5 bg-brand-green text-white font-bold rounded-full hover:bg-brand-green/90 transition-all shadow-2xl font-primary uppercase tracking-widest text-sm"
+                className="px-10 py-5 bg-brand-accent text-white font-bold rounded-full hover:bg-brand-accent/90 transition-all shadow-2xl font-primary uppercase tracking-widest text-sm"
               >
                 Book Free Consultation
               </button>
@@ -63,17 +63,17 @@ const Hero = () => {
       <div className="sm:hidden absolute bottom-24 left-6 right-6 z-30">
         <button
           onClick={scrollToBooking}
-          className="w-full px-10 py-5 bg-brand-green text-white font-bold rounded-full hover:bg-brand-green/90 transition-all shadow-2xl font-primary uppercase tracking-widest text-sm"
+          className="w-full px-10 py-5 bg-brand-accent text-white font-bold rounded-full hover:bg-brand-accent/90 transition-all shadow-2xl font-primary uppercase tracking-widest text-sm"
         >
           Book Free Consultation
         </button>
       </div>
 
       {/* Marquee Ticker */}
-      <div className="absolute bottom-0 left-0 w-full bg-brand-green/5 backdrop-blur-md py-4 overflow-hidden border-t border-brand-green/10">
+      <div className="absolute bottom-0 left-0 w-full bg-brand-accent/5 backdrop-blur-md py-4 overflow-hidden border-t border-brand-accent/10">
         <div className="flex gap-12 whitespace-nowrap animate-marquee">
           {[1, 2, 3, 4].map((_, i) => (
-            <span key={i} className="text-brand-green text-sm font-bold tracking-wide flex items-center gap-3 uppercase">
+            <span key={i} className="text-brand-accent text-sm font-bold tracking-wide flex items-center gap-3 uppercase">
               <span className="w-1.5 h-1.5 rounded-full bg-brand-gold" />
               Dermalife Skin & Hair Clinic — Sector 56 Gurugram — Expert Dermatologists — ISO Certified — 1000+ Happy Patients
             </span>

@@ -36,7 +36,7 @@ const GoogleReviews = () => {
             <div key={i} className="bg-white p-8 rounded-3xl border border-brand-muted/50 flex flex-col justify-between h-full shadow-sm min-w-[85%] sm:min-w-[320px] md:min-w-0 snap-center">
               <div>
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-brand-green/20 rounded-full flex items-center justify-center font-bold text-brand-green uppercase">
+                  <div className="w-10 h-10 bg-brand-accent/20 rounded-full flex items-center justify-center font-bold text-brand-accent uppercase">
                     {rev.author_name.charAt(0)}
                   </div>
                   <div>
@@ -50,8 +50,8 @@ const GoogleReviews = () => {
                 <p className="text-sm font-sans leading-relaxed text-brand-dark/70 line-clamp-4 italic font-medium">"{rev.text}"</p>
               </div>
               <div className="mt-6 pt-4 border-t border-brand-muted/50">
-                <div className="flex items-center gap-2 text-[10px] font-bold text-brand-green uppercase tracking-tighter">
-                  <div className="w-4 h-4 bg-brand-green rounded-full flex items-center justify-center text-[8px] text-white">✓</div>
+                <div className="flex items-center gap-2 text-[10px] font-bold text-brand-accent uppercase tracking-tighter">
+                  <div className="w-4 h-4 bg-brand-accent rounded-full flex items-center justify-center text-[8px] text-white">✓</div>
                   Verified Customer
                 </div>
               </div>
@@ -61,12 +61,12 @@ const GoogleReviews = () => {
 
         {/* CTA Block */}
         {/* <div className="mt-12 md:mt-16 text-center border-t border-brand-muted/30 pt-12 md:pt-16">
-          <h3 className="text-2xl md:text-4xl font-primary font-bold text-brand-green mb-8 uppercase tracking-tighter max-w-2xl mx-auto leading-tight">
+          <h3 className="text-2xl md:text-4xl font-primary font-bold text-brand-accent mb-8 uppercase tracking-tighter max-w-2xl mx-auto leading-tight">
             Join 50,000+ clients who <span className="text-brand-gold italic font-normal">trust us</span> with their skin
           </h3>
           <button
             onClick={() => document.getElementById('booking-section')?.scrollIntoView({ behavior: 'smooth' })}
-            className="w-full md:w-auto px-12 py-5 bg-brand-green text-white font-bold rounded-full hover:bg-brand-gold transition-all shadow-2xl uppercase tracking-widest text-sm font-primary"
+            className="w-full md:w-auto px-12 py-5 bg-brand-accent text-white font-bold rounded-full hover:bg-brand-gold transition-all shadow-2xl uppercase tracking-widest text-sm font-primary"
           >
             Book Free Consultation
           </button>

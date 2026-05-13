@@ -15,7 +15,7 @@ const SalonBanner = () => {
              <h2 className="text-4xl md:text-6xl text-white mb-10 font-primary font-extrabold uppercase tracking-tighter">Step up your beauty game <br />with our salon.</h2>
              <button 
                 onClick={scrollToBooking}
-                className="inline-flex items-center gap-4 px-12 py-6 bg-white text-brand-green font-extrabold rounded-full hover:bg-brand-gold hover:text-white transition-all shadow-xl group/link uppercase tracking-[0.2em] text-xs font-primary"
+                className="inline-flex items-center gap-4 px-12 py-6 bg-white text-brand-accent font-extrabold rounded-full hover:bg-brand-gold hover:text-white transition-all shadow-xl group/link uppercase tracking-[0.2em] text-xs font-primary"
              >
                 Explore Services <ChevronRight size={20} className="group-hover/link:translate-x-2 transition-transform" />
              </button>

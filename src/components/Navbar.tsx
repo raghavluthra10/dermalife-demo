@@ -127,7 +127,7 @@ const Navbar = () => {
                           <button
                             key={cat.category}
                             onMouseEnter={() => setActiveCategory(cat.category)}
-                            className={`text-left px-5 py-3.5 rounded-xl font-primary font-bold uppercase tracking-widest text-[10px] transition-all flex items-center justify-between group ${activeCategory === cat.category ? 'bg-brand-green text-white shadow-md' : 'text-brand-dark/40 hover:text-brand-green hover:bg-brand-green/5'
+                            className={`text-left px-5 py-3.5 rounded-xl font-primary font-bold uppercase tracking-widest text-[10px] transition-all flex items-center justify-between group ${activeCategory === cat.category ? 'bg-brand-accent text-white shadow-md' : 'text-brand-dark/40 hover:text-brand-accent hover:bg-brand-accent/5'
                               }`}
                           >
                             {cat.category}
@@ -147,7 +147,7 @@ const Navbar = () => {
                             className="group/item block"
                             onClick={() => setActiveMegaMenu(null)}
                           >
-                            <h4 className="font-primary font-bold text-brand-green uppercase tracking-tight text-[13px] group-hover/item:text-brand-gold transition-colors leading-tight">
+                            <h4 className="font-primary font-bold text-brand-accent uppercase tracking-tight text-[13px] group-hover/item:text-brand-gold transition-colors leading-tight">
                               {service.name}
                             </h4>
                             <p className="text-[10px] text-brand-dark/40 font-medium mt-1.5 leading-relaxed uppercase tracking-tighter max-w-[200px]">
@@ -168,13 +168,13 @@ const Navbar = () => {
         <div className="hidden lg:flex items-center gap-4">
           <button 
             onClick={scrollToBooking}
-            className="px-5 py-2.5 border border-brand-green text-brand-green text-sm font-bold rounded-full hover:bg-brand-green hover:text-white transition-all font-primary uppercase tracking-wider"
+            className="px-5 py-2.5 border border-brand-accent text-brand-accent text-sm font-bold rounded-full hover:bg-brand-accent hover:text-white transition-all font-primary uppercase tracking-wider"
           >
             Book Consultation
           </button>
           <button 
             onClick={scrollToBooking}
-            className="px-5 py-2.5 bg-brand-green text-white text-sm font-bold rounded-full hover:bg-brand-green/90 transition-all shadow-md active:scale-95 font-primary uppercase tracking-wider"
+            className="px-5 py-2.5 bg-brand-accent text-white text-sm font-bold rounded-full hover:bg-brand-accent/90 transition-all shadow-md active:scale-95 font-primary uppercase tracking-wider"
           >
             Request a Call
           </button>
@@ -182,7 +182,7 @@ const Navbar = () => {
 
         {/* Mobile Toggle */}
         <button 
-          className="lg:hidden p-2 text-brand-green"
+          className="lg:hidden p-2 text-brand-accent"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -216,10 +216,10 @@ const Navbar = () => {
                             initial={{ height: 0, opacity: 0 }}
                             animate={{ height: 'auto', opacity: 1 }}
                             exit={{ height: 0, opacity: 0 }}
-                            className="overflow-hidden bg-brand-green/5 rounded-xl mt-2 px-4"
+                            className="overflow-hidden bg-brand-accent/5 rounded-xl mt-2 px-4"
                           >
                             {servicesData.map((cat) => (
-                              <div key={cat.category} className="py-4 border-b border-brand-green/10 last:border-0">
+                              <div key={cat.category} className="py-4 border-b border-brand-accent/10 last:border-0">
                                 <h5 className="text-xs font-bold text-brand-gold uppercase tracking-widest mb-3">{cat.category}</h5>
                                 <div className="grid grid-cols-1 gap-4">
                                   {cat.services.map((s) => (
@@ -229,7 +229,7 @@ const Navbar = () => {
                                       onClick={() => setIsMobileMenuOpen(false)}
                                       className="block"
                                     >
-                                      <p className="text-sm font-bold text-brand-green uppercase tracking-tight">{s.name}</p>
+                                      <p className="text-sm font-bold text-brand-accent uppercase tracking-tight">{s.name}</p>
                                       <p className="text-[9px] text-brand-dark/40 uppercase tracking-tighter mt-0.5">{s.desc}</p>
                                     </Link>
                                   ))}
@@ -254,13 +254,13 @@ const Navbar = () => {
               <div className="flex flex-col gap-3 mt-4">
                 <button 
                   onClick={scrollToBooking}
-                  className="w-full py-3 border border-brand-green text-brand-green font-bold rounded-full uppercase tracking-wider font-primary"
+                  className="w-full py-3 border border-brand-accent text-brand-accent font-bold rounded-full uppercase tracking-wider font-primary"
                 >
                   Book Consultation
                 </button>
                 <button 
                   onClick={scrollToBooking}
-                  className="w-full py-3 bg-brand-green text-white font-bold rounded-full uppercase tracking-wider font-primary"
+                  className="w-full py-3 bg-brand-accent text-white font-bold rounded-full uppercase tracking-wider font-primary"
                 >
                   Request a Call
                 </button>

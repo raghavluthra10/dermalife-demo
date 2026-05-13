@@ -45,9 +45,9 @@ const Footer = () => {
               India's leading aesthetic clinic. Redefining medical excellence with a touch of luxury.
             </p>
             <div className="flex items-center gap-5">
-              <a href="#" className="p-3.5 bg-brand-green/5 rounded-2xl text-brand-green hover:bg-brand-gold hover:text-white transition-all shadow-sm"><Instagram size={20} /></a>
-              <a href="#" className="p-3.5 bg-brand-green/5 rounded-2xl text-brand-green hover:bg-brand-gold hover:text-white transition-all shadow-sm"><Youtube size={20} /></a>
-              <a href="#" className="p-3.5 bg-brand-green/5 rounded-2xl text-brand-green hover:bg-brand-gold hover:text-white transition-all shadow-sm"><Star size={20} /></a>
+              <a href="#" className="p-3.5 bg-brand-accent/5 rounded-2xl text-brand-accent hover:bg-brand-gold hover:text-white transition-all shadow-sm"><Instagram size={20} /></a>
+              <a href="#" className="p-3.5 bg-brand-accent/5 rounded-2xl text-brand-accent hover:bg-brand-gold hover:text-white transition-all shadow-sm"><Youtube size={20} /></a>
+              <a href="#" className="p-3.5 bg-brand-accent/5 rounded-2xl text-brand-accent hover:bg-brand-gold hover:text-white transition-all shadow-sm"><Star size={20} /></a>
             </div>
           </div>
 
@@ -75,21 +75,21 @@ const Footer = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 py-16 border-y border-brand-muted mb-16">
            <div className="flex items-center gap-6">
-              <div className="w-14 h-14 bg-brand-green/10 rounded-[1.5rem] flex items-center justify-center text-brand-green shadow-sm"><Phone size={24} /></div>
+              <div className="w-14 h-14 bg-brand-accent/10 rounded-[1.5rem] flex items-center justify-center text-brand-accent shadow-sm"><Phone size={24} /></div>
               <div>
                 <p className="text-[10px] text-brand-dark/40 uppercase font-extrabold tracking-[0.3em] mb-1">Call Us</p>
                 <p className="font-primary font-bold text-lg text-brand-dark tracking-tight">+91 91234 56789</p>
               </div>
            </div>
            <div className="flex items-center gap-6">
-              <div className="w-14 h-14 bg-brand-green/10 rounded-[1.5rem] flex items-center justify-center text-brand-green shadow-sm"><Mail size={24} /></div>
+              <div className="w-14 h-14 bg-brand-accent/10 rounded-[1.5rem] flex items-center justify-center text-brand-accent shadow-sm"><Mail size={24} /></div>
               <div>
                 <p className="text-[10px] text-brand-dark/40 uppercase font-extrabold tracking-[0.3em] mb-1">Email Us</p>
                 <p className="font-primary font-bold text-lg text-brand-dark tracking-tight">hello@dermalife.in</p>
               </div>
            </div>
            <div className="flex items-center gap-6">
-              <div className="w-14 h-14 bg-brand-green/10 rounded-[1.5rem] flex items-center justify-center text-brand-green shadow-sm"><MapPin size={24} /></div>
+              <div className="w-14 h-14 bg-brand-accent/10 rounded-[1.5rem] flex items-center justify-center text-brand-accent shadow-sm"><MapPin size={24} /></div>
               <div>
                 <p className="text-[10px] text-brand-dark/40 uppercase font-extrabold tracking-[0.3em] mb-1">Find Us</p>
                 <p className="font-primary font-bold text-sm text-brand-dark tracking-tight uppercase leading-tight">Sector 56, Gurugram, Haryana <br/> Mon–Sat 10am–7pm</p>

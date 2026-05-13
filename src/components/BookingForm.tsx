@@ -13,7 +13,7 @@ const BookingForm = () => {
   };
 
   return (
-    <section id="booking-section" className="bg-brand-green py-12 md:py-24 px-4 md:px-20 lg:px-32 relative overflow-hidden">
+    <section id="booking-section" className="bg-brand-accent py-12 md:py-24 px-4 md:px-20 lg:px-32 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-gold/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-[100px]" />
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2 blur-[80px]" />
 
@@ -55,10 +55,10 @@ const BookingForm = () => {
                   animate={{ opacity: 1 }}
                   className="flex flex-col items-center text-center py-12 md:py-16"
                 >
-                  <div className="w-16 h-16 md:w-24 md:h-24 bg-brand-green rounded-full flex items-center justify-center text-white mb-6 md:mb-8 shadow-xl">
+                  <div className="w-16 h-16 md:w-24 md:h-24 bg-brand-accent rounded-full flex items-center justify-center text-white mb-6 md:mb-8 shadow-xl">
                     <Star size={32} className="md:size-[48px] fill-current" />
                   </div>
-                  <h3 className="text-2xl md:text-4xl font-primary font-bold mb-4 md:mb-6 text-brand-green uppercase tracking-tighter">Request Received!</h3>
+                  <h3 className="text-2xl md:text-4xl font-primary font-bold mb-4 md:mb-6 text-brand-accent uppercase tracking-tighter">Request Received!</h3>
                   <p className="text-brand-dark/60 font-sans text-sm md:text-lg font-medium leading-relaxed">Our skin specialist will call you shortly to confirm your slot.</p>
                 </motion.div>
               ) : (

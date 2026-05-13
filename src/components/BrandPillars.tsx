@@ -7,7 +7,7 @@ const BrandPillars = () => {
   ];
 
   return (
-    <section className="bg-brand-green py-12 md:py-20 px-6 text-white text-center">
+    <section className="bg-brand-accent py-12 md:py-20 px-6 text-white text-center">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-3xl md:text-5xl lg:text-6xl mb-10 md:mb-16 leading-tight font-primary font-bold uppercase tracking-tighter">Led by certified specialists. <br />Driven by <span className="text-brand-gold italic font-normal">lasting results.</span></h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
@@ -31,7 +31,7 @@ const BrandPillars = () => {
           </p>
           <button
             onClick={() => document.getElementById('booking-section')?.scrollIntoView({ behavior: 'smooth' })}
-            className="w-full md:w-auto px-12 py-4 md:py-5 bg-brand-gold text-white font-bold rounded-full hover:bg-white hover:text-brand-green transition-all shadow-2xl uppercase tracking-widest text-xs md:text-sm font-primary"
+            className="w-full md:w-auto px-12 py-4 md:py-5 bg-brand-gold text-white font-bold rounded-full hover:bg-white hover:text-brand-accent transition-all shadow-2xl uppercase tracking-widest text-xs md:text-sm font-primary"
           >
             Book Free Consultation
           </button>

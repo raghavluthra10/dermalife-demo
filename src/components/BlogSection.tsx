@@ -10,8 +10,8 @@ const BlogSection = () => {
     <section className="py-spacing-section px-6 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-end justify-between mb-12">
-          <h2 className="text-4xl md:text-5xl text-brand-green font-primary font-bold uppercase tracking-tighter">The DermaLife Buzz</h2>
-          <a href="#" className="text-brand-gold font-bold uppercase tracking-widest text-sm border-b-2 border-brand-gold pb-1 hover:text-brand-green transition-colors font-primary">
+          <h2 className="text-4xl md:text-5xl text-brand-accent font-primary font-bold uppercase tracking-tighter">The DermaLife Buzz</h2>
+          <a href="#" className="text-brand-gold font-bold uppercase tracking-widest text-sm border-b-2 border-brand-gold pb-1 hover:text-brand-accent transition-colors font-primary">
             View All
           </a>
         </div>
@@ -27,7 +27,7 @@ const BlogSection = () => {
                   <span className="text-[10px] uppercase font-bold tracking-widest text-brand-gold bg-brand-gold/10 px-3 py-1 rounded-full">{blog.cat}</span>
                   <span className="text-xs text-brand-dark/40 font-bold uppercase">April 2026</span>
                 </div>
-                <h3 className="text-xl font-primary text-brand-dark group-hover:text-brand-green transition-colors line-clamp-2 font-bold leading-snug uppercase tracking-tight">
+                <h3 className="text-xl font-primary text-brand-dark group-hover:text-brand-accent transition-colors line-clamp-2 font-bold leading-snug uppercase tracking-tight">
                   {blog.title}
                 </h3>
              </div>
