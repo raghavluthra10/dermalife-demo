@@ -13,6 +13,11 @@ import Results from './pages/Results';
 import AboutUs from './pages/AboutUs';
 import ContactUs from './pages/ContactUs';
 import LaserHairReduction from './pages/LaserHairReduction';
+import Skin from './pages/Skin';
+import Hair from './pages/Hair';
+import Slimming from './pages/Slimming';
+import Aesthetics from './pages/Aesthetics';
+import Facials from './pages/Facials';
 import NotFound from './pages/NotFound';
 
 import WhatsAppButton from './components/WhatsAppButton';
@@ -42,6 +47,11 @@ export default function App() {
             <Route path="/about" element={<AboutUs />} />
             <Route path="/contact" element={<ContactUs />} />
             <Route path="/services/laser-hair-reduction" element={<LaserHairReduction />} />
+            <Route path="/skin" element={<Skin />} />
+            <Route path="/hair" element={<Hair />} />
+            <Route path="/slimming" element={<Slimming />} />
+            <Route path="/aesthetics" element={<Aesthetics />} />
+            <Route path="/facials" element={<Facials />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
