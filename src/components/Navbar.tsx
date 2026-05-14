@@ -65,9 +65,7 @@ const Navbar = () => {
   };
 
   const navLinks = [
-    { name: 'Home', href: '/' },
     { name: 'Services', href: '#', isDropdown: true },
-    { name: 'Results', href: '/results' },
     { name: 'About Us', href: '/about' },
     { name: 'Contact Us', href: '/contact' },
   ];
