@@ -1,39 +1,11 @@
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { ArrowUpRight, Check, Phone, Target, Activity, ShieldCheck, Zap } from 'lucide-react';
+import { motion } from 'motion/react';
+import { ArrowUpRight, Check, Phone, Target, Activity, Zap, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const PicoLaser = () => {
-  const [activeTab, setActiveTab] = useState<'Toning' | 'Brightening'>('Toning');
-
+const MesoBotox = () => {
   const scrollToBooking = () => {
     const el = document.getElementById('booking-section');
     if (el) el.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const tabContent = {
-    Toning: {
-      heading: "Pico Toning",
-      paragraph: "A low-fluence, high-frequency Pico laser protocol that targets uneven skin tone, melasma, and diffuse pigmentation across the face. Gentle enough for regular sessions, effective enough to deliver visible, lasting improvement in overall skin tone and clarity.",
-      treats: [
-        "Melasma and hormonal pigmentation",
-        "Uneven and patchy skin tone",
-        "Diffuse pigmentation and sun damage",
-        "Dull and lacklustre complexion",
-        "Suitable for all Indian skin tones"
-      ]
-    },
-    Brightening: {
-      heading: "Pico Brightening",
-      paragraph: "A targeted Pico laser protocol that focuses on specific dark spots, post-acne marks, and concentrated areas of pigmentation — shattering pigment precisely and stimulating collagen for a brighter, more even, glass-skin result.",
-      treats: [
-        "Specific dark spots and sunspots",
-        "Post-acne marks and blemishes",
-        "Age spots and liver spots",
-        "Concentrated areas of hyperpigmentation",
-        "Overall skin brightening and glow"
-      ]
-    }
   };
 
   return (
@@ -43,9 +15,9 @@ const PicoLaser = () => {
         <nav className="text-[10px] md:text-xs uppercase tracking-[0.2em] font-bold text-brand-dark/40">
           <Link to="/" className="hover:text-brand-gold transition-colors">Home</Link>
           <span className="mx-2 text-brand-gold">›</span>
-          <Link to="/skin" className="hover:text-brand-gold transition-colors">Skin</Link>
+          <Link to="/aesthetics" className="hover:text-brand-gold transition-colors">Aesthetics</Link>
           <span className="mx-2 text-brand-gold">›</span>
-          <span className="text-brand-dark uppercase tracking-widest">Pico Laser</span>
+          <span className="text-brand-dark uppercase tracking-widest">Meso Botox</span>
         </nav>
       </div>
 
@@ -58,7 +30,7 @@ const PicoLaser = () => {
               animate={{ opacity: 1, y: 0 }}
               className="text-[10px] md:text-[12px] font-primary font-bold uppercase tracking-[0.4em] text-brand-gold mb-6 block"
             >
-              BRIGHTEN . TONE . CORRECT
+              REFINE . SMOOTH . PERFECT
             </motion.span>
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -66,7 +38,7 @@ const PicoLaser = () => {
               transition={{ delay: 0.1, duration: 0.8 }}
               className="text-4xl md:text-6xl lg:text-[64px] font-primary font-normal text-brand-dark leading-[1.1] mb-8 uppercase tracking-tighter"
             >
-              Pico laser — advanced <br /> <span className="text-brand-gold italic font-normal text-5xl md:text-[56px]">toning and brightening</span>
+              Meso Botox — <br /> <span className="text-brand-gold italic font-normal text-5xl md:text-[56px]">glass skin without filters</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -74,7 +46,7 @@ const PicoLaser = () => {
               transition={{ delay: 0.2, duration: 0.8 }}
               className="font-sans text-[16px] md:text-[18px] text-brand-dark/70 leading-[1.7] mb-10 max-w-xl"
             >
-              One of the most advanced laser technologies available for skin brightening and toning. Pico laser delivers ultra-short bursts of energy in picoseconds — shattering pigment particles and stimulating collagen without damaging surrounding skin. Available in two focused protocols: toning and brightening.
+              Meso Botox uses micro-injections of highly diluted Botox placed just beneath the surface of the skin — not into the muscles. This refines pores, controls excess oil production, smooths fine surface lines, and gives the skin a poreless, glassy finish that looks like a filter in real life.
             </motion.p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button onClick={scrollToBooking} className="btn-primary">Book free consultation</button>
@@ -86,71 +58,8 @@ const PicoLaser = () => {
           <div className="w-full lg:w-1/2">
             <div className="aspect-[4/5] bg-[#E5E1DA] rounded-[24px] overflow-hidden relative border border-brand-muted/30 group">
               <div className="absolute inset-0 bg-gradient-to-br from-brand-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-              <div className="absolute inset-0 flex items-center justify-center text-brand-dark/10 uppercase tracking-widest text-[10px] font-bold">Pico Laser Image Placeholder</div>
+              <div className="absolute inset-0 flex items-center justify-center text-brand-dark/10 uppercase tracking-widest text-[10px] font-bold">Meso Botox Image Placeholder</div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* TWO TREATMENT TABS SECTION */}
-      <section className="bg-white border-y border-brand-muted/20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex justify-center border-b border-brand-muted/10">
-            {(['Toning', 'Brightening'] as const).map((tab) => (
-              <button
-                key={tab}
-                onClick={() => setActiveTab(tab)}
-                className={`px-12 py-8 text-[10px] font-bold uppercase tracking-[0.3em] transition-all relative ${
-                  activeTab === tab ? 'text-brand-gold' : 'text-brand-dark/40 hover:text-brand-dark'
-                }`}
-              >
-                {tab}
-                {activeTab === tab && (
-                  <motion.div
-                    layoutId="activeTabPico"
-                    className="absolute bottom-0 left-0 right-0 h-[2px] bg-brand-gold"
-                  />
-                )}
-              </button>
-            ))}
-          </div>
-
-          <div className="py-24 max-w-5xl mx-auto">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeTab}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5 }}
-                className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start"
-              >
-                <div>
-                  <h3 className="text-4xl font-primary font-bold text-brand-dark uppercase tracking-tight mb-8">
-                    {tabContent[activeTab].heading}
-                  </h3>
-                  <p className="font-sans text-brand-dark/70 text-lg leading-relaxed mb-10">
-                    {tabContent[activeTab].paragraph}
-                  </p>
-                  <button onClick={scrollToBooking} className="btn-primary">
-                    Book {activeTab} Consultation
-                  </button>
-                </div>
-                <div>
-                  <span className="text-brand-gold text-[10px] font-bold uppercase tracking-widest mb-8 block">WHAT IT TREATS</span>
-                  <div className="space-y-4">
-                    {tabContent[activeTab].treats.map((item, i) => (
-                      <div key={i} className="flex items-center gap-4 group">
-                        <div className="w-6 h-6 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold shrink-0 group-hover:bg-brand-gold group-hover:text-white transition-all">
-                          <Check size={12} />
-                        </div>
-                        <span className="font-sans text-brand-dark/80 font-bold text-sm tracking-tight">{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </motion.div>
-            </AnimatePresence>
           </div>
         </div>
       </section>
@@ -162,10 +71,10 @@ const PicoLaser = () => {
             <div className="w-full lg:w-1/2 text-white">
               <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.4em] mb-6 block">WHY DERMALIFE</span>
               <h2 className="text-3xl md:text-5xl font-primary font-bold uppercase tracking-tighter leading-tight mb-8 text-white">
-                Clearer, more even skin. <br /> Faster than you think.
+                The glass skin treatment <br /> that actually works.
               </h2>
               <p className="font-sans text-[16px] md:text-[18px] text-white/60 leading-[1.7] mb-8">
-                Pico laser on Indian skin requires precise calibration to avoid triggering post-inflammatory hyperpigmentation. Our dermatologists customise every session — wavelength, energy, and pulse duration — based on your specific skin tone, concern, and whether you need toning or brightening protocol.
+                Meso Botox requires precise micro-injection technique at the correct intradermal depth — too deep and it affects the muscles producing an unnatural result, too shallow and it has no effect. At Dermalife, every Meso Botox treatment is administered by our certified dermatologists who are trained in advanced micro-injection technique for a perfect, natural finish.
               </p>
               <div className="flex flex-col sm:flex-row items-center gap-6">
                 <button onClick={scrollToBooking} className="px-12 py-5 bg-brand-gold text-brand-dark font-bold rounded-full hover:bg-white transition-all uppercase tracking-widest text-sm shadow-xl w-full sm:w-auto text-center border-none">
@@ -180,10 +89,10 @@ const PicoLaser = () => {
             <div className="w-full lg:w-1/2 flex items-center">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 w-full">
                 {[
-                  { text: "Pigmentation and melasma corrected", icon: <Target className="text-brand-gold" size={20} /> },
-                  { text: "Acne marks and dark spots faded", icon: <Activity className="text-brand-gold" size={20} /> },
-                  { text: "Skin tone evened and brightened", icon: <ShieldCheck className="text-brand-gold" size={20} /> },
-                  { text: "Safe for all Indian skin tones", icon: <Zap className="text-brand-gold" size={20} /> }
+                  { text: "Pores visibly refined and minimised", icon: <Target className="text-brand-gold" size={20} /> },
+                  { text: "Excess oil production controlled", icon: <Zap className="text-brand-gold" size={20} /> },
+                  { text: "Fine surface lines smoothed", icon: <Activity className="text-brand-gold" size={20} /> },
+                  { text: "Glassy, poreless skin finish achieved", icon: <ShieldCheck className="text-brand-gold" size={20} /> }
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-4 p-5 rounded-xl bg-white/5 border border-white/10 hover:border-brand-gold/30 transition-all group">
                     <div className="mt-1 group-hover:scale-110 transition-transform duration-300">{item.icon}</div>
@@ -204,10 +113,10 @@ const PicoLaser = () => {
 
         <div className="max-w-4xl mx-auto px-6 relative z-10">
           <h2 className="text-3xl md:text-[56px] font-primary font-bold text-brand-dark leading-[1.1] mb-6 uppercase tracking-tighter text-black">
-            Ready for clearer, <br /> <span className="text-brand-gold italic font-normal text-4xl md:text-5xl lg:text-[52px]">more even skin?</span>
+            Want poreless, glassy skin <br /> <span className="text-brand-gold italic font-normal text-4xl md:text-5xl lg:text-[52px]">in real life?</span>
           </h2>
           <p className="font-sans text-base md:text-lg text-brand-dark/60 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Book a free consultation — our dermatologist will assess your skin tone and recommend whether toning or brightening protocol is right for you.
+            Book a free consultation — our dermatologist will assess your skin and tell you if Meso Botox is the right treatment for your skin goals.
           </p>
           <button onClick={scrollToBooking} className="btn-primary min-w-[300px]">
             Book free consultation
@@ -232,4 +141,4 @@ const PicoLaser = () => {
   );
 };
 
-export default PicoLaser;
+export default MesoBotox;

@@ -33,9 +33,11 @@ const servicesData: Record<string, { name: string; href: string }[]> = {
     { name: "Weight Loss Program", href: "/slimming/weight-loss-program" }
   ],
   Aesthetics: [
-    { name: "Botox & Fillers", href: "/aesthetics" },
-    { name: "Thread Lift", href: "/aesthetics" },
-    { name: "Skin Boosters", href: "/aesthetics" }
+    { name: "Dermal Fillers", href: "/aesthetics/dermal-fillers" },
+    { name: "Botox", href: "/aesthetics/botox" },
+    { name: "Collagen Threads", href: "/aesthetics/collagen-threads" },
+    { name: "Skin Booster", href: "/aesthetics/skin-booster" },
+    { name: "Meso Botox", href: "/aesthetics/meso-botox" }
   ],
   Facials: [
     { name: "Hydrafacial", href: "/facials" },

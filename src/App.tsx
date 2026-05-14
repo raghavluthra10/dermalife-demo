@@ -39,6 +39,11 @@ import BodyTrim from './pages/BodyTrim';
 import MSculpt from './pages/MSculpt';
 import Metaslim from './pages/Metaslim';
 import WeightLoss from './pages/WeightLoss';
+import DermalFillers from './pages/DermalFillers';
+import Botox from './pages/Botox';
+import CollagenThreads from './pages/CollagenThreads';
+import SkinBooster from './pages/SkinBooster';
+import MesoBotox from './pages/MesoBotox';
 import NotFound from './pages/NotFound';
 
 import WhatsAppButton from './components/WhatsAppButton';
@@ -91,6 +96,11 @@ export default function App() {
             <Route path="/hair/gfc-treatment" element={<GfcHair />} />
             <Route path="/hair/qr678-treatment" element={<Qr678Hair />} />
             <Route path="/hair/exosome-treatment" element={<ExosomeHair />} />
+            <Route path="/aesthetics/dermal-fillers" element={<DermalFillers />} />
+            <Route path="/aesthetics/botox" element={<Botox />} />
+            <Route path="/aesthetics/collagen-threads" element={<CollagenThreads />} />
+            <Route path="/aesthetics/skin-booster" element={<SkinBooster />} />
+            <Route path="/aesthetics/meso-botox" element={<MesoBotox />} />
             <Route path="/slimming" element={<Slimming />} />
             <Route path="/aesthetics" element={<Aesthetics />} />
             <Route path="/facials" element={<Facials />} />
