@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { Search, Star } from 'lucide-react';
-import heroVideo from '../assets/hero_video.mp4';
+import newHero from '../assets/new_hero_1.png';
 
 const Hero = () => {
   const stats = [
@@ -17,26 +17,22 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-[75vh] md:h-screen md:min-h-screen flex flex-col md:flex-row md:items-center overflow-hidden bg-[#DDD6CB] md:bg-brand-cream pt-[72px] md:pt-0"
+      className="relative min-h-[75vh] md:h-[calc(100vh-104px)] flex flex-col md:flex-row md:items-center overflow-hidden bg-[#DDD6CB] md:bg-brand-cream pt-[72px] md:pt-0 md:mt-[104px]"
     >
-      {/* Hero Video Container */}
+      {/* Hero Image Container */}
       <div className="relative h-[45vh] md:absolute md:inset-0 md:h-full w-full z-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover max-[465px]:object-[80%_center] object-right md:object-center"
-        >
-          <source src={heroVideo} type="video/mp4" />
-        </video>
+        <img
+          src={newHero}
+          alt="Dermalife Aesthetic Care"
+          className="w-full h-full object-cover max-[465px]:object-[85%_center] object-right md:object-right"
+        />
 
         {/* Transition Gradient for Mobile - with 1px overlap to fix rendering glitch */}
         <div className="absolute bottom-[-1px] left-0 w-full h-24 bg-gradient-to-t from-[#DDD6CB] to-transparent z-10 md:hidden" />
       </div>
 
-      <div className="relative z-20 max-w-7xl mx-auto px-6 w-full pt-8 pb-4 md:pt-32 md:pb-24">
-        <div className="max-w-3xl text-left">
+      <div className="relative z-20 max-w-7xl mx-auto px-6 md:px-12 w-full pt-8 pb-4 md:pt-32 md:pb-24">
+        <div className="max-w-[75%] md:max-w-3xl text-left">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -46,13 +42,60 @@ const Hero = () => {
               Skin that tells <br />
               <span className="text-brand-gold">your best story.</span> <br />
             </h3>
-            <p className="text-base md:text-xl text-brand-dark/70 mb-10 max-w-md font-sans leading-relaxed">
+            <p className="text-base md:text-xl text-brand-dark/70 mb-8 max-w-md font-sans leading-relaxed">
               Expert dermatology and aesthetics for every
-              <br />
               skin type, tone, and concern. Real results,
-              <br />
-              - right here in Gurugram.
+              right here in Gurugram.
             </p>
+
+            {/* Fancy Trust Statements - Reorganized into Rows */}
+            <div className="flex flex-col gap-3 mb-12">
+              <div className="flex flex-wrap gap-3 md:gap-4">
+                <motion.div 
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.5, duration: 0.8 }}
+                  className="inline-flex items-center gap-3 py-2.5 px-4 bg-white/40 backdrop-blur-md border border-brand-gold/20 rounded-2xl shadow-sm hover:border-brand-gold/40 transition-all duration-500"
+                >
+                  <div className="w-6 h-6 rounded-full bg-brand-gold/10 flex items-center justify-center">
+                    <Star size={12} className="fill-brand-gold text-brand-gold" />
+                  </div>
+                  <span className="text-[9px] md:text-[10px] font-primary font-bold text-brand-dark/80 uppercase tracking-[0.15em]">
+                    Trusted by <span className="text-brand-gold">Dermatologists</span>
+                  </span>
+                </motion.div>
+
+                <motion.div 
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.6, duration: 0.8 }}
+                  className="inline-flex items-center gap-3 py-2.5 px-4 bg-white/40 backdrop-blur-md border border-brand-gold/20 rounded-2xl shadow-sm hover:border-brand-gold/40 transition-all duration-500"
+                >
+                  <div className="w-6 h-6 rounded-full bg-brand-gold/10 flex items-center justify-center">
+                    <div className="w-2.5 h-2.5 rounded-full bg-brand-gold animate-pulse" />
+                  </div>
+                  <span className="text-[9px] md:text-[10px] font-primary font-bold text-brand-dark/80 uppercase tracking-[0.15em]">
+                    <span className="text-brand-gold">1,000+</span> Happy Customers
+                  </span>
+                </motion.div>
+              </div>
+
+              <motion.div 
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.7, duration: 0.8 }}
+                className="inline-flex items-center gap-3 py-2.5 px-4 bg-white/40 backdrop-blur-md border border-brand-gold/20 rounded-2xl shadow-sm hover:border-brand-gold/40 transition-all duration-500 w-fit"
+              >
+                <div className="flex gap-1">
+                  {[1, 2, 3, 4, 5].map((s) => (
+                    <Star key={s} size={10} className="fill-brand-gold text-brand-gold" />
+                  ))}
+                </div>
+                <span className="text-[9px] md:text-[10px] font-primary font-bold text-brand-dark/80 uppercase tracking-[0.15em]">
+                  <span className="text-brand-gold">4.9/5</span> Verified Clinic Rating
+                </span>
+              </motion.div>
+            </div>
 
             {/* Unified Button: Full-width on mobile/tablet, inline on desktop */}
             <div className="mt-8 md:mt-12">

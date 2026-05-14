@@ -10,23 +10,19 @@ const Skin = () => {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-5xl md:text-7xl font-primary font-extrabold uppercase tracking-tighter mb-8">
-            Skin <br />
-            <span className="text-brand-gold">Solutions</span>
+            Skin treatments <br />
+            <span className="text-brand-gold italic font-normal">that actually work.</span>
           </h1>
-          <p className="text-xl text-brand-dark/70 max-w-2xl font-sans leading-relaxed mb-12">
-            Experience dermatologist-led skincare treatments tailored to your unique needs. 
-            From acne management to advanced anti-aging, we provide clinically proven results.
+          <p className="text-lg md:text-xl text-brand-dark/70 max-w-2xl font-sans leading-relaxed mb-12">
+            From acne and pigmentation to anti-ageing and skin texture — every treatment at Dermalife is diagnosed and supervised by a certified dermatologist. No guesswork. No generic protocols.
           </p>
         </motion.div>
 
-        {/* Placeholder for future content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-20">
-          <div className="aspect-[4/3] bg-brand-muted rounded-[2rem]" />
-          <div className="flex flex-col justify-center">
-            <h2 className="text-3xl font-primary mb-6">Expert Diagnostics</h2>
-            <p className="text-brand-dark/70 leading-relaxed mb-8">
-              Every skin journey at Dermalife begins with a comprehensive analysis by our 
-              senior dermatologists, ensuring the safest and most effective protocol for your skin type.
+        {/* Intro Para Section */}
+        <div className="mt-16 md:mt-24 border-t border-brand-muted pt-12">
+          <div className="max-w-4xl">
+            <p className="text-xl md:text-2xl font-primary text-brand-dark leading-relaxed">
+              Your skin is unique. That's why at Dermalife, we never recommend a treatment before understanding your skin profile. Every consultation begins with a detailed skin analysis by our dermatologist — who then builds a plan specific to your concerns, skin type, and goals. We use only FDA-approved technology, administered by trained specialists under medical supervision.
             </p>
           </div>
         </div>
