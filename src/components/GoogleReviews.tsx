@@ -26,7 +26,7 @@ const GoogleReviews = () => {
           <div>
             <div className="flex items-center gap-2 mb-2">
               <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_Logo.svg" alt="Google" className="h-6" />
-              <span className="text-xl font-bold font-primary uppercase tracking-widest ">Reviews</span>
+              <span className="text-xl font-bold font-primary uppercase tracking-widest text-black">Reviews</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="flex">

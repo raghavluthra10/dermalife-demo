@@ -40,7 +40,6 @@ const TrustedExpertise = () => {
               alt={label} 
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60" />
           </>
         ) : (
           <div className="absolute inset-0 w-full h-full" />
@@ -48,7 +47,7 @@ const TrustedExpertise = () => {
         
         {/* Label - Bottom Left */}
         <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 z-20">
-          <span className={`font-primary text-base md:text-[18px] font-normal ${image ? 'text-white' : 'text-brand-dark'}`}>
+          <span className="font-primary text-base md:text-[18px] font-bold text-black uppercase tracking-tight">
             {label}
           </span>
         </div>
@@ -69,7 +68,7 @@ const TrustedExpertise = () => {
         {/* Top Text Block */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 mb-16 items-start">
           <div className="max-w-md">
-            <h2 className="text-[36px] font-primary font-normal text-brand-dark leading-[1.2] normal-case tracking-tight">
+            <h2 className="text-[36px] font-primary font-bold text-black leading-[1.2] normal-case tracking-tight">
               India's most trusted name in dermatology.
             </h2>
           </div>
