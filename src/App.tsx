@@ -15,6 +15,7 @@ import ContactUs from './pages/ContactUs';
 import LaserHairReduction from './pages/LaserHairReduction';
 
 import WhatsAppButton from './components/WhatsAppButton';
+import PhoneButton from './components/PhoneButton';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -44,6 +45,7 @@ export default function App() {
         </main>
         <Footer />
         <WhatsAppButton />
+        <PhoneButton />
       </div>
     </Router>
   );

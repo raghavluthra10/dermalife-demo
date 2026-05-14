@@ -164,19 +164,12 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Desktop CTAs */}
         <div className="hidden lg:flex items-center gap-4">
           <button 
             onClick={scrollToBooking}
-            className="px-5 py-2.5 border border-brand-accent text-brand-accent text-sm font-bold rounded-full hover:bg-brand-accent hover:text-white transition-all font-primary uppercase tracking-wider"
+            className="px-6 py-2.5 bg-brand-accent text-white text-sm font-bold rounded-full hover:bg-brand-accent/90 transition-all shadow-md active:scale-95 font-primary uppercase tracking-wider"
           >
             Book Consultation
-          </button>
-          <button 
-            onClick={scrollToBooking}
-            className="px-5 py-2.5 bg-brand-accent text-white text-sm font-bold rounded-full hover:bg-brand-accent/90 transition-all shadow-md active:scale-95 font-primary uppercase tracking-wider"
-          >
-            Request a Call
           </button>
         </div>
 
@@ -251,18 +244,12 @@ const Navbar = () => {
                   )}
                 </div>
               ))}
-              <div className="flex flex-col gap-3 mt-4">
+              <div className="flex flex-col gap-3 mt-4 pb-12">
                 <button 
                   onClick={scrollToBooking}
-                  className="w-full py-3 border border-brand-accent text-brand-accent font-bold rounded-full uppercase tracking-wider font-primary"
+                  className="w-full py-4 bg-brand-accent text-white font-bold rounded-full uppercase tracking-wider font-primary shadow-lg"
                 >
                   Book Consultation
-                </button>
-                <button 
-                  onClick={scrollToBooking}
-                  className="w-full py-3 bg-brand-accent text-white font-bold rounded-full uppercase tracking-wider font-primary"
-                >
-                  Request a Call
                 </button>
               </div>
             </div>
