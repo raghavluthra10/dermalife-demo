@@ -1,17 +1,22 @@
 import { motion } from 'motion/react';
 import { ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import skinImg from '../assets/skin.png';
+import hairImg from '../assets/hair_home_page.png';
+import slimmingImg from '../assets/slimming_and_body_contouring.png';
+import aestheticsImg from '../assets/aesthetics_home.png';
+import facialsImg from '../assets/facial_home.png';
 
 const TrustedExpertise = () => {
   const row1Services = [
-    { label: 'Skin', path: '/skin' },
-    { label: 'Hair', path: '/hair' },
-    { label: 'Slimming', path: '/slimming' },
+    { label: 'Skin', path: '/skin', image: skinImg },
+    { label: 'Hair', path: '/hair', image: hairImg },
+    { label: 'Slimming and Body Contouring', path: '/slimming', image: slimmingImg },
   ];
 
   const row2Services = [
-    { label: 'Aesthetics', path: '/aesthetics' },
-    { label: 'Facials', path: '/facials' },
+    { label: 'Aesthetics', path: '/aesthetics', image: aestheticsImg },
+    { label: 'Facials', path: '/facials', image: facialsImg },
   ];
 
   const scrollToBooking = () => {
@@ -19,7 +24,7 @@ const TrustedExpertise = () => {
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const Card = ({ label, path, className = "" }: { label: string, path: string, className?: string }) => (
+  const Card = ({ label, path, image, className = "" }: { label: string, path: string, image?: string, className?: string }) => (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -27,12 +32,23 @@ const TrustedExpertise = () => {
       className={`group relative aspect-[3/4] bg-[#E8E4DE] rounded-[12px] overflow-hidden ${className}`}
     >
       <Link to={path} className="block w-full h-full">
-        {/* Placeholder for image */}
-        <div className="absolute inset-0 w-full h-full" />
+        {/* Image Rendering */}
+        {image ? (
+          <>
+            <img 
+              src={image} 
+              alt={label} 
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60" />
+          </>
+        ) : (
+          <div className="absolute inset-0 w-full h-full" />
+        )}
         
         {/* Label - Bottom Left */}
         <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 z-20">
-          <span className="font-primary text-base md:text-[18px] font-normal text-brand-dark">
+          <span className={`font-primary text-base md:text-[18px] font-normal ${image ? 'text-white' : 'text-brand-dark'}`}>
             {label}
           </span>
         </div>
@@ -70,7 +86,7 @@ const TrustedExpertise = () => {
           <div className="flex md:contents overflow-x-auto no-scrollbar snap-x snap-mandatory pb-4 md:pb-0 -mx-[60px] px-[60px] md:mx-0 md:px-0">
             {row1Services.map((service) => (
               <div key={service.label} className="min-w-[calc(50%-8px)] md:min-w-0 snap-center mr-4 md:mr-0">
-                <Card label={service.label} path={service.path} />
+                <Card label={service.label} path={service.path} image={service.image} />
               </div>
             ))}
           </div>
@@ -78,7 +94,7 @@ const TrustedExpertise = () => {
           {/* Row 2: 2 Cards side-by-side on mobile, part of 5-Grid on Desktop */}
           <div className="grid grid-cols-2 md:contents gap-4">
             {row2Services.map((service) => (
-              <Card key={service.label} label={service.label} path={service.path} />
+              <Card key={service.label} label={service.label} path={service.path} image={(service as any).image} />
             ))}
           </div>
         </div>
