@@ -18,16 +18,19 @@ const servicesData: Record<string, { name: string; href: string }[]> = {
     { name: "Chemical Peel", href: "/skin/face-brightening-acne-peel" }
   ],
   Hair: [
-    { name: "Laser Hair Reduction", href: "/hair" },
+    { name: "Laser Hair Reduction", href: "/services/laser-hair-reduction" },
+    { name: "PRP & GFC Therapy", href: "/hair" },
     { name: "QR 678 neo", href: "/hair" },
-    { name: "Hair Growth Therapy", href: "/hair" }
+    { name: "Exosome Therapy", href: "/hair" }
   ],
   Slimming: [
-    { name: "Ondacool", href: "/slimming" },
-    { name: "Lipolasere", href: "/slimming" },
-    { name: "M-sculpt", href: "/slimming" },
-    { name: "Body Trim", href: "/slimming" },
-    { name: "Weight Loss Program", href: "/slimming" }
+    { name: "Ondacool", href: "/slimming/ondacool" },
+    { name: "Lipolasere", href: "/slimming/lipolasere" },
+    { name: "Detox & Massage", href: "/slimming/detox-deep-tissue-massage" },
+    { name: "M-sculpt", href: "/slimming/m-sculpt" },
+    { name: "Body Trim", href: "/slimming/body-trim" },
+    { name: "Metaslim & Trimbit", href: "/slimming/metaslim-trimbit" },
+    { name: "Weight Loss Program", href: "/slimming/weight-loss-program" }
   ],
   Aesthetics: [
     { name: "Botox & Fillers", href: "/aesthetics" },

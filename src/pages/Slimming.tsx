@@ -24,13 +24,13 @@ const Slimming = () => {
   ];
 
   const treatments = [
-    { name: "Ondacool", desc: "Fat freezing and skin tightening for face and body using targeted cool energy.", href: "/slimming" },
-    { name: "Lipolasere", desc: "Laser-based fat reduction that melts stubborn fat and tightens skin simultaneously.", href: "/slimming" },
-    { name: "Detox & deep tissue massage", desc: "Therapeutic body massage that drains toxins, reduces water retention, and improves circulation.", href: "/slimming" },
-    { name: "Body trim", desc: "A targeted body contouring treatment to reduce localised fat and reshape problem areas.", href: "/slimming" },
-    { name: "M-sculpt", desc: "Electromagnetic muscle stimulation that builds muscle and burns fat at the same time.", href: "/slimming" },
-    { name: "Weight loss program", desc: "Medically supervised weight loss programs designed for 5kg, 7kg, and 10kg targets.", href: "/slimming" },
-    { name: "Metaslim & Trimbit", desc: "Advanced metabolic slimming treatments targeting deep fat layers for lasting inch loss.", href: "/slimming" },
+    { name: "Ondacool", desc: "Fat freezing and skin tightening for face and body using targeted cool energy.", href: "/slimming/ondacool" },
+    { name: "Lipolasere", desc: "Laser-based fat reduction that melts stubborn fat and tightens skin simultaneously.", href: "/slimming/lipolasere" },
+    { name: "Detox & deep tissue massage", desc: "Therapeutic body massage that drains toxins, reduces water retention, and improves circulation.", href: "/slimming/detox-deep-tissue-massage" },
+    { name: "Body trim", desc: "A targeted body contouring treatment to reduce localised fat and reshape problem areas.", href: "/slimming/body-trim" },
+    { name: "M-sculpt", desc: "Electromagnetic muscle stimulation that builds muscle and burns fat at the same time.", href: "/slimming/m-sculpt" },
+    { name: "Weight loss program", desc: "Medically supervised weight loss programs designed for 5kg, 7kg, and 10kg targets.", href: "/slimming/weight-loss-program" },
+    { name: "Metaslim & Trimbit", desc: "Advanced metabolic slimming treatments targeting deep fat layers for lasting inch loss.", href: "/slimming/metaslim-trimbit" },
   ];
 
   return (

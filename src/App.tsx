@@ -28,6 +28,13 @@ import GlutathioneIVMicroneedling from './pages/GlutathioneIVMicroneedling';
 import FacePrp from './pages/FacePrp';
 import Morpheus from './pages/Morpheus';
 import QSwitchLaser from './pages/QSwitchLaser';
+import Ondacool from './pages/Ondacool';
+import Lipolasere from './pages/Lipolasere';
+import DetoxMassage from './pages/DetoxMassage';
+import BodyTrim from './pages/BodyTrim';
+import MSculpt from './pages/MSculpt';
+import Metaslim from './pages/Metaslim';
+import WeightLoss from './pages/WeightLoss';
 import NotFound from './pages/NotFound';
 
 import WhatsAppButton from './components/WhatsAppButton';
@@ -68,6 +75,13 @@ export default function App() {
             <Route path="/skin/face-prp" element={<FacePrp />} />
             <Route path="/skin/morpheus" element={<Morpheus />} />
             <Route path="/skin/q-switch-laser" element={<QSwitchLaser />} />
+            <Route path="/slimming/ondacool" element={<Ondacool />} />
+            <Route path="/slimming/lipolasere" element={<Lipolasere />} />
+            <Route path="/slimming/detox-deep-tissue-massage" element={<DetoxMassage />} />
+            <Route path="/slimming/body-trim" element={<BodyTrim />} />
+            <Route path="/slimming/m-sculpt" element={<MSculpt />} />
+            <Route path="/slimming/metaslim-trimbit" element={<Metaslim />} />
+            <Route path="/slimming/weight-loss-program" element={<WeightLoss />} />
             <Route path="/hair" element={<Hair />} />
             <Route path="/slimming" element={<Slimming />} />
             <Route path="/aesthetics" element={<Aesthetics />} />
