@@ -162,7 +162,32 @@ const Skin = () => {
                 <p className="font-sans text-[15px] text-brand-dark/60 leading-relaxed mb-6">
                   {treatment.desc}
                 </p>
-                <Link to="/skin" className="inline-flex items-center gap-2 text-[10px] font-primary font-bold uppercase tracking-widest text-brand-gold group">
+                <Link 
+                  to={
+                    treatment.name === "Face brightening & acne peel" 
+                      ? "/skin/face-brightening-acne-peel" 
+                      : treatment.name === "HIFU" 
+                        ? "/skin/hifu" 
+                        : treatment.name === "Pico laser"
+                          ? "/skin/pico-laser"
+                          : treatment.name === "Fractional laser"
+                            ? "/skin/fractional-laser"
+                            : treatment.name === "Photofacial"
+                              ? "/skin/photofacial"
+                              : treatment.name === "Exosome therapy"
+                                ? "/skin/exosome-therapy"
+                                : treatment.name === "Glutathione IV & microneedling"
+                                  ? "/skin/glutathione-iv-microneedling"
+                                  : treatment.name === "Face PRP"
+                                    ? "/skin/face-prp"
+                                    : treatment.name === "Morpheus"
+                                      ? "/skin/morpheus"
+                                      : treatment.name === "Q-switch laser & carbon toning"
+                                        ? "/skin/q-switch-laser"
+                                        : "/skin"
+                  } 
+                  className="inline-flex items-center gap-2 text-[10px] font-primary font-bold uppercase tracking-widest text-brand-gold group"
+                >
                   Learn more
                   <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
                 </Link>

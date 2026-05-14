@@ -18,6 +18,16 @@ import Hair from './pages/Hair';
 import Slimming from './pages/Slimming';
 import Aesthetics from './pages/Aesthetics';
 import Facials from './pages/Facials';
+import FaceBrighteningAcnePeel from './pages/FaceBrighteningAcnePeel';
+import Hifu from './pages/Hifu';
+import PicoLaser from './pages/PicoLaser';
+import FractionalLaser from './pages/FractionalLaser';
+import Photofacial from './pages/Photofacial';
+import ExosomeTherapy from './pages/ExosomeTherapy';
+import GlutathioneIVMicroneedling from './pages/GlutathioneIVMicroneedling';
+import FacePrp from './pages/FacePrp';
+import Morpheus from './pages/Morpheus';
+import QSwitchLaser from './pages/QSwitchLaser';
 import NotFound from './pages/NotFound';
 
 import WhatsAppButton from './components/WhatsAppButton';
@@ -48,6 +58,16 @@ export default function App() {
             <Route path="/contact" element={<ContactUs />} />
             <Route path="/services/laser-hair-reduction" element={<LaserHairReduction />} />
             <Route path="/skin" element={<Skin />} />
+            <Route path="/skin/face-brightening-acne-peel" element={<FaceBrighteningAcnePeel />} />
+            <Route path="/skin/hifu" element={<Hifu />} />
+            <Route path="/skin/pico-laser" element={<PicoLaser />} />
+            <Route path="/skin/fractional-laser" element={<FractionalLaser />} />
+            <Route path="/skin/photofacial" element={<Photofacial />} />
+            <Route path="/skin/exosome-therapy" element={<ExosomeTherapy />} />
+            <Route path="/skin/glutathione-iv-microneedling" element={<GlutathioneIVMicroneedling />} />
+            <Route path="/skin/face-prp" element={<FacePrp />} />
+            <Route path="/skin/morpheus" element={<Morpheus />} />
+            <Route path="/skin/q-switch-laser" element={<QSwitchLaser />} />
             <Route path="/hair" element={<Hair />} />
             <Route path="/slimming" element={<Slimming />} />
             <Route path="/aesthetics" element={<Aesthetics />} />
