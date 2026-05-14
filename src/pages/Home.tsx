@@ -1,4 +1,5 @@
 import Hero from '../components/Hero';
+import ConsultationCTA from '../components/ConsultationCTA';
 import TopTreatments from '../components/TopTreatments';
 import StatsSection from '../components/StatsSection';
 import BrandPillars from '../components/BrandPillars';
@@ -12,6 +13,7 @@ const Home = () => {
   return (
     <>
       <Hero />
+      <ConsultationCTA />
       {/* <TopTreatments /> */}
       <StatsSection />
       <BrandPillars />
