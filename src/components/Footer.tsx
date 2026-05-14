@@ -41,13 +41,13 @@ const Footer = () => {
              <div className="flex items-center mb-8">
               <img src={logo} alt="DermaLife Wellness Clinic" className="h-12 w-auto object-contain" />
             </div>
-            <p className="text-brand-dark/50 text-sm mb-10 leading-relaxed font-sans font-medium uppercase tracking-tight max-w-sm">
+            <p className="/50 text-sm mb-10 leading-relaxed font-sans font-medium uppercase tracking-tight max-w-sm">
               India's leading aesthetic clinic. Redefining medical excellence with a touch of luxury.
             </p>
             <div className="flex items-center gap-5">
-              <a href="#" className="p-3.5 bg-brand-accent/5 rounded-2xl text-brand-accent hover:bg-brand-gold hover:text-white transition-all shadow-sm"><Instagram size={20} /></a>
-              <a href="#" className="p-3.5 bg-brand-accent/5 rounded-2xl text-brand-accent hover:bg-brand-gold hover:text-white transition-all shadow-sm"><Youtube size={20} /></a>
-              <a href="#" className="p-3.5 bg-brand-accent/5 rounded-2xl text-brand-accent hover:bg-brand-gold hover:text-white transition-all shadow-sm"><Star size={20} /></a>
+              <a href="#" className="p-3.5 bg-brand-accent/5 rounded-2xl  hover:bg-brand-gold hover:text-white transition-all shadow-sm"><Instagram size={20} /></a>
+              <a href="#" className="p-3.5 bg-brand-accent/5 rounded-2xl  hover:bg-brand-gold hover:text-white transition-all shadow-sm"><Youtube size={20} /></a>
+              <a href="#" className="p-3.5 bg-brand-accent/5 rounded-2xl  hover:bg-brand-gold hover:text-white transition-all shadow-sm"><Star size={20} /></a>
             </div>
           </div>
 
@@ -55,13 +55,13 @@ const Footer = () => {
           <div className="flex-1 grid grid-cols-2 sm:grid-cols-3 gap-x-8 gap-y-12 lg:gap-16">
             {columns.map((col) => (
                <div key={col.title}>
-                 <h4 className="text-[10px] md:text-xs font-extrabold uppercase tracking-[0.3em] text-brand-dark mb-8 md:mb-10">{col.title}</h4>
+                 <h4 className="text-[10px] md:text-xs font-extrabold uppercase tracking-[0.3em]  mb-8 md:mb-10">{col.title}</h4>
                   <ul className="space-y-4 md:space-y-5">
                     {col.links.map((link) => (
                       <li key={link.name}>
                         <Link 
                           to={link.href} 
-                          className="text-brand-dark/60 hover:text-brand-gold text-sm font-bold transition-colors uppercase tracking-widest text-[10px] md:text-[11px]"
+                          className="/60 hover:text-brand-gold text-sm font-bold transition-colors uppercase tracking-widest text-[10px] md:text-[11px]"
                         >
                           {link.name}
                         </Link>
@@ -75,24 +75,24 @@ const Footer = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 py-16 border-y border-brand-muted mb-16">
            <div className="flex items-center gap-6">
-              <div className="w-14 h-14 bg-brand-accent/10 rounded-[1.5rem] flex items-center justify-center text-brand-accent shadow-sm"><Phone size={24} /></div>
+              <div className="w-14 h-14 bg-brand-accent/10 rounded-[1.5rem] flex items-center justify-center  shadow-sm"><Phone size={24} /></div>
               <div>
                 <p className="text-[10px] text-brand-dark/40 uppercase font-extrabold tracking-[0.3em] mb-1">Call Us</p>
-                <p className="font-primary font-bold text-lg text-brand-dark tracking-tight">+91 91234 56789</p>
+                <p className="font-primary font-bold text-lg  tracking-tight">+91 91234 56789</p>
               </div>
            </div>
            <div className="flex items-center gap-6">
-              <div className="w-14 h-14 bg-brand-accent/10 rounded-[1.5rem] flex items-center justify-center text-brand-accent shadow-sm"><Mail size={24} /></div>
+              <div className="w-14 h-14 bg-brand-accent/10 rounded-[1.5rem] flex items-center justify-center  shadow-sm"><Mail size={24} /></div>
               <div>
                 <p className="text-[10px] text-brand-dark/40 uppercase font-extrabold tracking-[0.3em] mb-1">Email Us</p>
-                <p className="font-primary font-bold text-lg text-brand-dark tracking-tight">hello@dermalife.in</p>
+                <p className="font-primary font-bold text-lg  tracking-tight">hello@dermalife.in</p>
               </div>
            </div>
            <div className="flex items-center gap-6">
-              <div className="w-14 h-14 bg-brand-accent/10 rounded-[1.5rem] flex items-center justify-center text-brand-accent shadow-sm"><MapPin size={24} /></div>
+              <div className="w-14 h-14 bg-brand-accent/10 rounded-[1.5rem] flex items-center justify-center  shadow-sm"><MapPin size={24} /></div>
               <div>
                 <p className="text-[10px] text-brand-dark/40 uppercase font-extrabold tracking-[0.3em] mb-1">Find Us</p>
-                <p className="font-primary font-bold text-sm text-brand-dark tracking-tight uppercase leading-tight">Sector 56, Gurugram, Haryana <br/> Mon–Sat 10am–7pm</p>
+                <p className="font-primary font-bold text-sm  tracking-tight uppercase leading-tight">Sector 56, Gurugram, Haryana <br/> Mon–Sat 10am–7pm</p>
               </div>
            </div>
         </div>

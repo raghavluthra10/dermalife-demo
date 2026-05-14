@@ -46,7 +46,7 @@
   h4,
   h5,
   h6 {
-    @apply font-primary font-bold;
+    @apply font-primary font-bold text-brand-dark;
   }
 
   button, 
@@ -54,6 +54,32 @@
   input[type="button"], 
   input[type="submit"] {
     cursor: pointer;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-10 py-5 bg-brand-accent text-white font-bold rounded-full hover:bg-brand-accent/90 transition-all shadow-2xl font-primary uppercase tracking-widest text-sm inline-flex items-center justify-center;
+  }
+
+  .btn-outline {
+    @apply px-10 py-5 border border-brand-accent text-brand-dark font-bold rounded-full hover:bg-brand-accent hover:text-white transition-all font-primary uppercase tracking-widest text-sm inline-flex items-center justify-center;
+  }
+
+  .tag-gold {
+    @apply bg-brand-gold text-white text-[9px] md:text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter;
+  }
+
+  .tag-accent-light {
+    @apply bg-brand-accent/10 text-brand-dark text-[10px] font-bold px-4 py-1.5 rounded-full uppercase tracking-[0.2em];
+  }
+
+  .text-muted {
+    @apply text-brand-dark/60;
+  }
+
+  .text-secondary {
+    @apply text-brand-dark/40;
   }
 }
 

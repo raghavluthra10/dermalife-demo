@@ -63,7 +63,7 @@ const StatsSection = () => {
         {/* 1. TOP SECTION */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-12 mb-10 md:mb-16">
           <div className="max-w-2xl">
-            <h2 className="text-4xl md:text-6xl text-brand-accent mb-8 leading-[1.1] font-primary font-bold uppercase tracking-tighter">
+            <h2 className="text-4xl md:text-6xl  mb-8 leading-[1.1] font-primary font-bold uppercase tracking-tighter">
               Real experts, <br />
               <span className="italic font-normal">Real results.</span>
             </h2>
@@ -107,7 +107,7 @@ const StatsSection = () => {
                   </div>
                 </div>
                 <div className="px-2 text-center">
-                  <h4 className="text-lg md:text-xl font-primary font-bold text-brand-accent mb-1 uppercase tracking-tight group-hover:text-brand-gold transition-colors duration-300">
+                  <h4 className="text-lg md:text-xl font-primary font-bold  mb-1 uppercase tracking-tight group-hover:text-brand-gold transition-colors duration-300">
                     "{card.result}"
                   </h4>
                   <p className="text-[10px] md:text-[11px] font-bold text-brand-dark/40 uppercase tracking-[0.3em]">
@@ -121,7 +121,7 @@ const StatsSection = () => {
 
         {/* 4. CTA SECTION */}
         <div className="text-center py-10 md:py-12 bg-brand-cream rounded-[3rem] border border-brand-muted/30 px-6">
-          <h2 className="text-2xl md:text-4xl font-primary font-bold text-brand-accent mb-6 uppercase tracking-tighter leading-tight">
+          <h2 className="text-2xl md:text-4xl font-primary font-bold  mb-6 uppercase tracking-tighter leading-tight">
             See what we can <br className="md:hidden" /> do for your skin
           </h2>
           <button

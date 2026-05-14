@@ -127,7 +127,7 @@ const Navbar = () => {
                           <button
                             key={cat.category}
                             onMouseEnter={() => setActiveCategory(cat.category)}
-                            className={`text-left px-5 py-3.5 rounded-xl font-primary font-bold uppercase tracking-widest text-[10px] transition-all flex items-center justify-between group ${activeCategory === cat.category ? 'bg-brand-accent text-white shadow-md' : 'text-brand-dark/40 hover:text-brand-accent hover:bg-brand-accent/5'
+                            className={`text-left px-5 py-3.5 rounded-xl font-primary font-bold uppercase tracking-widest text-[10px] transition-all flex items-center justify-between group ${activeCategory === cat.category ? 'bg-brand-accent text-white shadow-md' : '/40 hover: hover:bg-brand-accent/5'
                               }`}
                           >
                             {cat.category}
@@ -147,7 +147,7 @@ const Navbar = () => {
                             className="group/item block"
                             onClick={() => setActiveMegaMenu(null)}
                           >
-                            <h4 className="font-primary font-bold text-brand-accent uppercase tracking-tight text-[13px] group-hover/item:text-brand-gold transition-colors leading-tight">
+                            <h4 className="font-primary font-bold  uppercase tracking-tight text-[13px] group-hover/item:text-brand-gold transition-colors leading-tight">
                               {service.name}
                             </h4>
                             <p className="text-[10px] text-brand-dark/40 font-medium mt-1.5 leading-relaxed uppercase tracking-tighter max-w-[200px]">
@@ -175,7 +175,7 @@ const Navbar = () => {
 
         {/* Mobile Toggle */}
         <button 
-          className="lg:hidden p-2 text-brand-accent"
+          className="lg:hidden p-2 "
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -198,7 +198,7 @@ const Navbar = () => {
                     <div className="flex flex-col">
                       <button
                         onClick={() => setActiveMegaMenu(activeMegaMenu === link.name ? null : link.name)}
-                        className="w-full text-left text-lg font-primary font-bold text-brand-dark py-4 border-b border-brand-muted uppercase tracking-wider flex items-center justify-between"
+                        className="w-full text-left text-lg font-primary font-bold  py-4 border-b border-brand-muted uppercase tracking-wider flex items-center justify-between"
                       >
                         {link.name}
                         <ChevronDown size={20} className={`transition-transform duration-300 ${activeMegaMenu === link.name ? 'rotate-180 text-brand-gold' : ''}`} />
@@ -222,7 +222,7 @@ const Navbar = () => {
                                       onClick={() => setIsMobileMenuOpen(false)}
                                       className="block"
                                     >
-                                      <p className="text-sm font-bold text-brand-accent uppercase tracking-tight">{s.name}</p>
+                                      <p className="text-sm font-bold  uppercase tracking-tight">{s.name}</p>
                                       <p className="text-[9px] text-brand-dark/40 uppercase tracking-tighter mt-0.5">{s.desc}</p>
                                     </Link>
                                   ))}
@@ -237,7 +237,7 @@ const Navbar = () => {
                     <Link
                       to={link.href}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="block text-lg font-primary font-bold text-brand-dark py-4 border-b border-brand-muted uppercase tracking-wider"
+                      className="block text-lg font-primary font-bold  py-4 border-b border-brand-muted uppercase tracking-wider"
                     >
                       {link.name}
                     </Link>

@@ -19,7 +19,7 @@ const PhoneButton = () => {
       <Phone className="w-6 h-6 text-white" />
       
       {/* Tooltip */}
-      <span className="absolute right-full mr-4 px-3 py-1 bg-white text-brand-accent text-[10px] font-bold uppercase tracking-widest rounded-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-xl pointer-events-none">
+      <span className="absolute right-full mr-4 px-3 py-1 bg-white  text-[10px] font-bold uppercase tracking-widest rounded-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-xl pointer-events-none">
         Call us
       </span>
     </motion.a>

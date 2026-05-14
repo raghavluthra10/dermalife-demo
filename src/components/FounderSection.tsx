@@ -6,7 +6,7 @@ const FounderSection = () => {
       <div className="mb-20">
         <div className="flex gap-12 whitespace-nowrap animate-marquee border-y border-brand-muted py-8">
           {[...Array(10)].map((_, i) => (
-            <span key={i} className="font-primary text-6xl text-brand-accent/20 uppercase tracking-tighter font-extrabold">
+            <span key={i} className="font-primary text-6xl text-brand-dark/20 uppercase tracking-tighter font-extrabold">
               — MEET THE VISIONARY — MEET THE VISIONARY
             </span>
           ))}
@@ -21,14 +21,14 @@ const FounderSection = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <p className="text-2xl md:text-3xl font-primary text-brand-accent leading-relaxed mb-8 italic font-bold uppercase tracking-tight">
+              <p className="text-2xl md:text-3xl font-primary  leading-relaxed mb-8 italic font-bold uppercase tracking-tight">
                 "Our philosophy is simple — combine world-class medical science with a premium aesthetic experience that transforms not just how you look, but how you feel."
               </p>
               <p className="text-lg text-brand-dark/70 mb-12 font-sans leading-relaxed font-medium">
                 Dr. Priya Sharma, MBBS, MD Dermatology — AIIMS Delhi, with 12 years of dedicated experience, leads a team of experts committed to clinical excellence. Her vision for Dermalife brings together medical precision and a premium aesthetic journey, ensuring results that are both transformative and natural.
               </p>
               <div>
-                <h4 className="text-3xl font-primary text-brand-accent font-bold uppercase tracking-tight">Dr. Priya Sharma</h4>
+                <h4 className="text-3xl font-primary  font-bold uppercase tracking-tight">Dr. Priya Sharma</h4>
                 <p className="text-brand-gold font-bold uppercase tracking-widest text-sm mt-1">Founder & Medical Director</p>
               </div>
             </motion.div>

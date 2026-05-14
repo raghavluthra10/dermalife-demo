@@ -58,8 +58,8 @@ const BookingForm = () => {
                   <div className="w-16 h-16 md:w-24 md:h-24 bg-brand-accent rounded-full flex items-center justify-center text-white mb-6 md:mb-8 shadow-xl">
                     <Star size={32} className="md:size-[48px] fill-current" />
                   </div>
-                  <h3 className="text-2xl md:text-4xl font-primary font-bold mb-4 md:mb-6 text-brand-accent uppercase tracking-tighter">Request Received!</h3>
-                  <p className="text-brand-dark/60 font-sans text-sm md:text-lg font-medium leading-relaxed">Our skin specialist will call you shortly to confirm your slot.</p>
+                  <h3 className="text-2xl md:text-4xl font-primary font-bold mb-4 md:mb-6  uppercase tracking-tighter">Request Received!</h3>
+                  <p className="/60 font-sans text-sm md:text-lg font-medium leading-relaxed">Our skin specialist will call you shortly to confirm your slot.</p>
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6 md:space-y-8">
@@ -71,7 +71,7 @@ const BookingForm = () => {
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         placeholder="Ex: Ananya Kapoor"
-                        className="w-full bg-brand-cream border-2 border-transparent p-4 md:p-5 rounded-xl md:rounded-2xl focus:border-brand-gold focus:outline-none transition-all placeholder:text-brand-dark/20 font-bold uppercase tracking-widest text-[10px] md:text-xs"
+                        className="w-full bg-brand-cream border-2 border-transparent p-4 md:p-5 rounded-xl md:rounded-2xl focus:border-brand-gold focus:outline-none transition-all placeholder:/20 font-bold uppercase tracking-widest text-[10px] md:text-xs"
                       />
                     </div>
                     <div className="col-span-2 sm:col-span-1">
@@ -82,7 +82,7 @@ const BookingForm = () => {
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         placeholder="+91 00000 00000"
-                        className="w-full bg-brand-cream border-2 border-transparent p-4 md:p-5 rounded-xl md:rounded-2xl focus:border-brand-gold focus:outline-none transition-all placeholder:text-brand-dark/20 font-bold uppercase tracking-widest text-[10px] md:text-xs"
+                        className="w-full bg-brand-cream border-2 border-transparent p-4 md:p-5 rounded-xl md:rounded-2xl focus:border-brand-gold focus:outline-none transition-all placeholder:/20 font-bold uppercase tracking-widest text-[10px] md:text-xs"
                       />
                     </div>
                     <div className="col-span-2 sm:col-span-1">
@@ -91,7 +91,7 @@ const BookingForm = () => {
                         required
                         value={formData.city}
                         onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                        className="w-full bg-brand-cream border-2 border-transparent p-4 md:p-5 rounded-xl md:rounded-2xl focus:border-brand-gold focus:outline-none transition-all appearance-none cursor-pointer font-bold uppercase tracking-widest text-[10px] md:text-xs text-brand-dark"
+                        className="w-full bg-brand-cream border-2 border-transparent p-4 md:p-5 rounded-xl md:rounded-2xl focus:border-brand-gold focus:outline-none transition-all appearance-none cursor-pointer font-bold uppercase tracking-widest text-[10px] md:text-xs "
                       >
                         <option value="">Select City</option>
                         <option>Delhi NCR</option>
@@ -106,7 +106,7 @@ const BookingForm = () => {
                         required
                         value={formData.service}
                         onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                        className="w-full bg-brand-cream border-2 border-transparent p-4 md:p-5 rounded-xl md:rounded-2xl focus:border-brand-gold focus:outline-none transition-all appearance-none cursor-pointer font-bold uppercase tracking-widest text-[10px] md:text-xs text-brand-dark"
+                        className="w-full bg-brand-cream border-2 border-transparent p-4 md:p-5 rounded-xl md:rounded-2xl focus:border-brand-gold focus:outline-none transition-all appearance-none cursor-pointer font-bold uppercase tracking-widest text-[10px] md:text-xs "
                       >
                         <option value="">Choose Treatment</option>
                         <option>HydraFacial</option>

@@ -16,14 +16,14 @@ const GoogleReviews = () => {
           <div>
             <div className="flex items-center gap-2 mb-2">
               <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_Logo.svg" alt="Google" className="h-6" />
-              <span className="text-xl font-bold font-primary uppercase tracking-widest text-brand-dark">Reviews</span>
+              <span className="text-xl font-bold font-primary uppercase tracking-widest ">Reviews</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="flex">
                 {[...Array(5)].map((_, i) => <Star key={i} size={18} className="fill-[#FBBC05] text-[#FBBC05]" />)}
               </div>
-              <span className="font-bold text-lg text-brand-dark">4.9 / 5.0</span>
-              <span className="text-brand-dark/40 text-sm">(2,450+ Verified Reviews)</span>
+              <span className="font-bold text-lg ">4.9 / 5.0</span>
+              <span className="/40 text-sm">(2,450+ Verified Reviews)</span>
             </div>
           </div>
           <a href="#" className="px-6 py-3 border-2 border-brand-dark rounded-full text-sm font-bold uppercase tracking-widest hover:bg-brand-dark hover:text-white transition-all font-primary">
@@ -36,11 +36,11 @@ const GoogleReviews = () => {
             <div key={i} className="bg-white p-8 rounded-3xl border border-brand-muted/50 flex flex-col justify-between h-full shadow-sm min-w-[85%] sm:min-w-[320px] md:min-w-0 snap-center">
               <div>
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-brand-accent/20 rounded-full flex items-center justify-center font-bold text-brand-accent uppercase">
+                  <div className="w-10 h-10 bg-brand-accent/20 rounded-full flex items-center justify-center font-bold  uppercase">
                     {rev.author_name.charAt(0)}
                   </div>
                   <div>
-                    <p className="font-bold text-sm text-brand-dark">{rev.author_name}</p>
+                    <p className="font-bold text-sm ">{rev.author_name}</p>
                     <p className="text-[10px] text-brand-dark/40 uppercase font-bold tracking-widest">{rev.relative_time_description}</p>
                   </div>
                 </div>
@@ -50,7 +50,7 @@ const GoogleReviews = () => {
                 <p className="text-sm font-sans leading-relaxed text-brand-dark/70 line-clamp-4 italic font-medium">"{rev.text}"</p>
               </div>
               <div className="mt-6 pt-4 border-t border-brand-muted/50">
-                <div className="flex items-center gap-2 text-[10px] font-bold text-brand-accent uppercase tracking-tighter">
+                <div className="flex items-center gap-2 text-[10px] font-bold  uppercase tracking-tighter">
                   <div className="w-4 h-4 bg-brand-accent rounded-full flex items-center justify-center text-[8px] text-white">✓</div>
                   Verified Customer
                 </div>
@@ -61,7 +61,7 @@ const GoogleReviews = () => {
 
         {/* CTA Block */}
         <div className="mt-6 md:mt-12 text-center border-t border-brand-muted/30 pt-12 md:pt-16">
-          <h3 className="text-2xl md:text-4xl font-primary font-bold text-brand-accent mb-8 uppercase tracking-tighter max-w-2xl mx-auto leading-tight">
+          <h3 className="text-2xl md:text-4xl font-primary font-bold  mb-8 uppercase tracking-tighter max-w-2xl mx-auto leading-tight">
             Join 50,000+ clients who <span className="text-brand-gold italic font-normal">trust us</span> with their skin
           </h3>
           <button

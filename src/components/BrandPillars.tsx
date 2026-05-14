@@ -31,7 +31,7 @@ const BrandPillars = () => {
           </p>
           <button
             onClick={() => document.getElementById('booking-section')?.scrollIntoView({ behavior: 'smooth' })}
-            className="w-full md:w-auto px-14 py-4 md:py-5 bg-brand-gold text-white font-bold rounded-full hover:bg-white hover:text-brand-accent transition-all shadow-2xl uppercase tracking-widest text-xs md:text-sm font-primary active:scale-95"
+            className="w-full md:w-auto px-14 py-4 md:py-5 bg-brand-gold text-white font-bold rounded-full hover:bg-white hover: transition-all shadow-2xl uppercase tracking-widest text-xs md:text-sm font-primary active:scale-95"
           >
             Book Free Consultation
           </button>

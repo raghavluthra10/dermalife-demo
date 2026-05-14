@@ -18,10 +18,10 @@ const ContactUs = () => {
             animate={{ opacity: 1, y: 0 }}
             className="max-w-3xl mx-auto"
           >
-            <span className="inline-block px-4 py-1.5 bg-brand-accent/10 text-brand-accent rounded-full text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
+            <span className="inline-block px-4 py-1.5 bg-brand-accent/10  rounded-full text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
               Get in Touch
             </span>
-            <h1 className="text-5xl md:text-7xl font-primary font-bold text-brand-accent leading-[0.9] mb-8 uppercase tracking-tighter">
+            <h1 className="text-5xl md:text-7xl font-primary font-bold  leading-[0.9] mb-8 uppercase tracking-tighter">
               Contact <br /> Dermalife
             </h1>
             <p className="text-lg text-brand-dark/50 font-sans font-medium uppercase tracking-tight max-w-xl mx-auto">
@@ -89,7 +89,7 @@ const ContactUs = () => {
                   </div>
                   <button 
                     type="submit"
-                    className="w-full bg-brand-gold text-white font-primary font-bold uppercase tracking-[0.2em] py-5 rounded-2xl hover:bg-white hover:text-brand-accent transition-all shadow-xl flex items-center justify-center gap-3 active:scale-[0.98]"
+                    className="w-full bg-brand-gold text-white font-primary font-bold uppercase tracking-[0.2em] py-5 rounded-2xl hover:bg-white hover: transition-all shadow-xl flex items-center justify-center gap-3 active:scale-[0.98]"
                   >
                     Send Message <Send size={18} />
                   </button>
@@ -99,18 +99,18 @@ const ContactUs = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 <div className="bg-white p-8 rounded-3xl shadow-sm border border-brand-muted hover:shadow-md transition-shadow">
                   <Phone className="text-brand-gold mb-4" size={24} />
-                  <h4 className="font-primary font-bold text-brand-accent uppercase tracking-tight mb-2">Phone</h4>
-                  <p className="text-brand-dark/60 text-sm font-medium">+91-8882047047</p>
+                  <h4 className="font-primary font-bold  uppercase tracking-tight mb-2">Phone</h4>
+                  <p className="/60 text-sm font-medium">+91-8882047047</p>
                 </div>
                 <div className="bg-white p-8 rounded-3xl shadow-sm border border-brand-muted hover:shadow-md transition-shadow">
                   <Mail className="text-brand-gold mb-4" size={24} />
-                  <h4 className="font-primary font-bold text-brand-accent uppercase tracking-tight mb-2">Email</h4>
-                  <p className="text-brand-dark/60 text-sm font-medium">info@dermalife.com</p>
+                  <h4 className="font-primary font-bold  uppercase tracking-tight mb-2">Email</h4>
+                  <p className="/60 text-sm font-medium">info@dermalife.com</p>
                 </div>
                 <div className="bg-white p-8 rounded-3xl shadow-sm border border-brand-muted hover:shadow-md transition-shadow sm:col-span-2">
                   <MapPin className="text-brand-gold mb-4" size={24} />
-                  <h4 className="font-primary font-bold text-brand-accent uppercase tracking-tight mb-2">Clinic Address</h4>
-                  <p className="text-brand-dark/60 text-sm font-medium leading-relaxed">
+                  <h4 className="font-primary font-bold  uppercase tracking-tight mb-2">Clinic Address</h4>
+                  <p className="/60 text-sm font-medium leading-relaxed">
                     C-15, Ground Floor, Side Portion, Green Park Extension, <br />
                     Green Park Market, New Delhi - 110016
                   </p>
@@ -125,7 +125,7 @@ const ContactUs = () => {
               className="h-full min-h-[600px] bg-white rounded-[3rem] shadow-xl border border-brand-muted overflow-hidden relative"
             >
               <div className="absolute top-8 left-8 z-10 bg-white/90 backdrop-blur-md p-6 rounded-2xl shadow-lg border border-brand-muted max-w-[240px]">
-                <h4 className="font-primary font-bold text-brand-accent uppercase tracking-tight mb-2">Visit Our Clinic</h4>
+                <h4 className="font-primary font-bold  uppercase tracking-tight mb-2">Visit Our Clinic</h4>
                 <div className="flex gap-2 items-start text-[10px] text-brand-dark/60 font-bold uppercase tracking-tight">
                     <Clock size={14} className="text-brand-gold shrink-0" />
                     <span>Mon - Sat: 10AM - 7PM <br /> Sunday: By Appointment</span>

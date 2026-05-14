@@ -17,7 +17,7 @@ const StoreHighlight = () => {
 
         <div className="flex-1 flex flex-col justify-center">
           <span className="text-brand-gold text-sm font-bold uppercase tracking-[0.3em] block mb-6">Our Clinic Experience</span>
-          <h2 className="text-5xl md:text-6xl text-brand-accent mb-10 leading-tight font-primary font-bold uppercase tracking-tighter">Ready to feel <br />fabulous?</h2>
+          <h2 className="text-5xl md:text-6xl  mb-10 leading-tight font-primary font-bold uppercase tracking-tighter">Ready to feel <br />fabulous?</h2>
           <ul className="space-y-8 mb-12">
             {[
               "Modern and spacious outlets",
@@ -35,7 +35,7 @@ const StoreHighlight = () => {
           </ul>
           
           <div className="relative group max-w-sm">
-            <select className="w-full bg-white border-2 border-brand-muted py-5 px-8 rounded-2xl focus:outline-none focus:border-brand-gold appearance-none shadow-xl cursor-pointer font-bold uppercase tracking-widest text-xs text-brand-dark">
+            <select className="w-full bg-white border-2 border-brand-muted py-5 px-8 rounded-2xl focus:outline-none focus:border-brand-gold appearance-none shadow-xl cursor-pointer font-bold uppercase tracking-widest text-xs ">
               <option>Select your city to find a clinic</option>
               <option>Delhi NCR</option>
               <option>Mumbai</option>

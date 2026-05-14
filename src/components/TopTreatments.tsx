@@ -47,8 +47,8 @@ const TreatmentCard = ({ img, name, clinical, tags, benefit, index, onBook }: Tr
             </span>
           ))}
         </div>
-        <h4 className="text-base md:text-lg font-primary font-bold text-brand-accent uppercase leading-tight">
-          {name} <span className="text-brand-dark/40 font-normal italic lowercase">({clinical})</span>
+        <h4 className="text-base md:text-lg font-primary font-bold  uppercase leading-tight">
+          {name} <span className="/40 font-normal italic lowercase">({clinical})</span>
         </h4>
         <p className="text-xs md:text-sm text-brand-dark/60 mt-2 font-medium leading-relaxed">
           {benefit}
@@ -56,7 +56,7 @@ const TreatmentCard = ({ img, name, clinical, tags, benefit, index, onBook }: Tr
       </div>
       <button
         onClick={onBook}
-        className="mt-6 flex items-center gap-2 text-brand-gold font-bold text-[10px] md:text-xs uppercase tracking-widest hover:text-brand-accent transition-colors group/btn"
+        className="mt-6 flex items-center gap-2 text-brand-gold font-bold text-[10px] md:text-xs uppercase tracking-widest hover: transition-colors group/btn"
       >
         View Details
         <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
@@ -250,8 +250,8 @@ const TopTreatments = () => {
   return (
     <section id="concerns" className="py-16 md:py-24 px-6 bg-brand-cream relative">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-5xl text-brand-accent mb-4 font-primary font-bold uppercase tracking-tighter">Choose your skin goal</h2>
-        <p className="text-brand-dark/60 mb-12 font-sans font-medium uppercase tracking-widest text-sm">Targeted results for a more confident you</p>
+        <h2 className="text-4xl md:text-5xl  mb-4 font-primary font-bold uppercase tracking-tighter">Choose your skin goal</h2>
+        <p className="/60 mb-12 font-sans font-medium uppercase tracking-widest text-sm">Targeted results for a more confident you</p>
 
         {/* Tabs */}
         <div className="flex gap-8 border-b border-brand-muted mb-12">
@@ -263,7 +263,7 @@ const TopTreatments = () => {
                 setSelectedConcern(null);
                 setSelectedCategory('All');
               }}
-              className={`pb-4 text-xl font-primary font-bold relative transition-all uppercase tracking-widest ${activeTab === tab.toLowerCase() ? 'text-brand-accent' : 'text-brand-dark/40'
+              className={`pb-4 text-xl font-primary font-bold relative transition-all uppercase tracking-widest ${activeTab === tab.toLowerCase() ? '' : '/40'
                 }`}
             >
               {tab}
@@ -294,7 +294,7 @@ const TopTreatments = () => {
                       onClick={() => setSelectedConcern(selectedConcern === concern.id ? null : concern.id)}
                       className={`w-full flex items-center justify-between p-3 md:p-4 rounded-xl md:rounded-2xl transition-all border ${selectedConcern === concern.id
                         ? 'bg-brand-accent border-brand-accent text-white shadow-lg'
-                        : 'bg-white border-brand-muted hover:border-brand-gold text-brand-dark'
+                        : 'bg-white border-brand-muted hover:border-brand-gold '
                         }`}
                     >
                       <div className="flex items-center gap-3 md:gap-4">
@@ -357,7 +357,7 @@ const TopTreatments = () => {
                       onClick={() => setSelectedCategory(cat)}
                       className={`px-6 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest border transition-all duration-300 ${selectedCategory === cat 
                         ? 'bg-brand-accent border-brand-accent text-white shadow-lg scale-105' 
-                        : 'bg-white border-brand-muted text-brand-dark/40 hover:border-brand-gold hover:text-brand-accent'}`}
+                        : 'bg-white border-brand-muted text-brand-dark/40 hover:border-brand-gold hover:'}`}
                     >
                       {cat}
                     </button>
@@ -383,15 +383,15 @@ const TopTreatments = () => {
                             </span>
                           ))}
                         </div>
-                        <h3 className="text-xl font-primary font-bold text-brand-accent uppercase tracking-tight leading-tight group-hover:text-brand-gold transition-colors">
+                        <h3 className="text-xl font-primary font-bold  uppercase tracking-tight leading-tight group-hover:text-brand-gold transition-colors">
                           {t.name} <br />
-                          <span className="text-brand-dark/30 font-normal italic lowercase">({t.clinical})</span>
+                          <span className="/30 font-normal italic lowercase">({t.clinical})</span>
                         </h3>
                         <p className="text-sm text-brand-dark/50 mt-4 font-sans font-medium leading-relaxed">
                           {t.benefit}
                         </p>
                         <div className="mt-8 pt-6 border-t border-brand-muted flex items-center justify-between opacity-40 group-hover:opacity-100 transition-opacity">
-                          <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-accent">Advanced Care</span>
+                          <span className="text-[10px] font-bold uppercase tracking-[0.2em] ">Advanced Care</span>
                           <ArrowRight size={20} className="text-brand-gold" />
                         </div>
                       </motion.div>
@@ -410,7 +410,7 @@ const TopTreatments = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-xl md:text-4xl font-primary font-bold text-brand-accent uppercase tracking-tighter mb-2">
+            <h2 className="text-xl md:text-4xl font-primary font-bold  uppercase tracking-tighter mb-2">
               Not sure which treatment <br className="hidden md:block" /> is right for you?
             </h2>
             <p className="text-l text-brand-dark/50 font-sans font-medium mb-6">
