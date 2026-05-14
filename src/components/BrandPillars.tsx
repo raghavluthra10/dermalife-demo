@@ -1,15 +1,29 @@
 const BrandPillars = () => {
   const pillars = [
-    { title: "Certified Dermatologists", desc: "Our team consists of board-certified dermatologists from top medical institutes." },
-    { title: "Personalised Treatment Plans", desc: "No two skin types are the same. We design plans tailored to your unique goals." },
-    { title: "Advanced Equipment", desc: "We use FDA-approved technology and state-of-the-art clinical facilities." },
-    { title: "Premium Quality Care", desc: "Experience luxury skincare with an uncompromising focus on safety and results." },
+    {
+      title: "Every treatment supervised by a doctor",
+      desc: "Not a therapist. Not a technician. A certified dermatologist diagnoses and oversees every single treatment at Dermalife."
+    },
+    {
+      title: "Plans built for your skin, not a template",
+      desc: "We analyse your skin profile before recommending anything. No upselling, no generic protocols."
+    },
+    {
+      title: "FDA-approved technology only",
+      desc: "Every device we use is clinically approved. No experimental treatments, no shortcuts."
+    },
+    {
+      title: "You see results or we fix it",
+      desc: "We stand behind our outcomes. If something isn't working, your dermatologist adjusts the plan at no extra cost."
+    },
   ];
 
   return (
-    <section className="bg-brand-accent py-10 md:py-12 px-6 text-white text-center">
+    <section className="bg-brand-accent py-6 md:py-8 px-6 text-white text-center">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-2xl md:text-4xl lg:text-5xl mb-8 md:mb-10 leading-tight font-primary font-bold uppercase tracking-tighter max-w-3xl mx-auto">Led by certified specialists. <br />Driven by <span className="text-brand-gold italic font-normal">lasting results.</span></h2>
+        <h2 className="text-2xl md:text-5xl lg:text-5xl mb-4 md:mb-6 leading-tight font-primary font-bold uppercase tracking-tighter max-w-3xl mx-auto">
+          Why patients choose Dermalife <br className="hidden md:block" /> over every other clinic.
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-x-10 md:gap-y-6">
           {pillars.map((p, i) => (
             <div key={i} className="flex flex-col items-center">
@@ -22,16 +36,16 @@ const BrandPillars = () => {
         </div>
 
         {/* CTA Block */}
-        <div className="mt-8 md:mt-10 pt-8 md:pt-10 border-t border-white/5">
+        <div className="mt-4 md:mt-6 pt-4 md:pt-6 border-t border-white/5">
           <h3 className="text-lg md:text-xl font-primary font-bold mb-1 uppercase tracking-tight">
-            Let our experts guide your skin journey
+            Ready to see what's actually possible for your skin?
           </h3>
-          <p className="text-white/60 mb-6 max-w-md mx-auto font-sans font-medium text-[11px] md:text-xs leading-relaxed">
+          <p className="text-white/60 mb-4 max-w-md mx-auto font-sans font-medium text-[11px] md:text-xs leading-relaxed">
             Get a personalized treatment plan based on your skin, goals, and concerns
           </p>
           <button
             onClick={() => document.getElementById('booking-section')?.scrollIntoView({ behavior: 'smooth' })}
-            className="w-full md:w-auto px-14 py-4 md:py-5 bg-brand-gold text-white font-bold rounded-full hover:bg-white hover: transition-all shadow-2xl uppercase tracking-widest text-xs md:text-sm font-primary active:scale-95"
+            className="w-full md:w-auto px-14 py-4 md:py-5 bg-brand-gold text-white font-bold rounded-full hover:bg-white hover:text-brand-accent transition-all shadow-2xl uppercase tracking-widest text-xs md:text-sm font-primary active:scale-95"
           >
             Book Free Consultation
           </button>

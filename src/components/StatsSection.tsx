@@ -58,16 +58,16 @@ const StatsSection = () => {
   ];
 
   return (
-    <section id="results" className="bg-white py-12 md:py-20 px-4 md:px-8 overflow-hidden">
+    <section id="results" className="bg-white py-6 md:py-10 px-4 md:px-48 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* 1. TOP SECTION */}
-        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-12 mb-10 md:mb-16">
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-12 mb-10 md:mb-12">
           <div className="max-w-2xl">
-            <h2 className="text-4xl md:text-6xl  mb-8 leading-[1.1] font-primary font-bold uppercase tracking-tighter">
+            <h2 className="text-3xl md:text-5xl  mb-6 leading-[1.1] font-primary font-bold uppercase tracking-tighter">
               Real experts, <br />
               <span className="italic font-normal">Real results.</span>
             </h2>
-            <p className="text-lg md:text-xl text-brand-dark/70 font-sans leading-relaxed">
+            <p className="text-base md:text-lg text-brand-dark/70 font-sans leading-relaxed">
               Our certified medical treatments are driven by clinical excellence and an uncompromising attention to detail.
             </p>
           </div>
@@ -88,8 +88,8 @@ const StatsSection = () => {
 
 
         {/* 3. MORE TRANSFORMATIONS */}
-        <div className="mb-16 md:mb-24">
-          <div className="text-center mb-10 md:mb-12">
+        <div className="mb-4 md:mb-6">
+          <div className="text-center mb-6">
             <div className="w-20 h-1 bg-brand-gold mx-auto rounded-full" />
           </div>
 
@@ -98,9 +98,9 @@ const StatsSection = () => {
             {cards.map((card, i) => (
               <div
                 key={i}
-                className="min-w-[80vw] md:min-w-0 snap-center group transition-all duration-500 hover:-translate-y-2"
+                className="min-w-[60vw] md:min-w-0 snap-center group transition-all duration-500 hover:-translate-y-2"
               >
-                <div className="aspect-[4/4.8] rounded-[2rem] overflow-hidden mb-4 relative shadow-[0_15px_35px_-15px_rgba(0,0,0,0.1)] group-hover:shadow-[0_30px_60px_-25px_rgba(0,0,0,0.15)] transition-all duration-500">
+                <div className="aspect-[4/4.8] rounded-[1.5rem] overflow-hidden mb-3 relative shadow-[0_15px_35px_-15px_rgba(0,0,0,0.1)] group-hover:shadow-[0_30px_60px_-25px_rgba(0,0,0,0.15)] transition-all duration-500">
                   <img src={card.img} alt={card.result} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
                   <div className="absolute top-4 left-4">
                     <span className="bg-brand-gold/90 backdrop-blur-md text-white text-[8px] font-bold uppercase tracking-[0.2em] px-4 py-2 rounded-full shadow-lg">Verified Result</span>
@@ -120,10 +120,7 @@ const StatsSection = () => {
         </div>
 
         {/* 4. CTA SECTION */}
-        <div className="text-center py-10 md:py-12 bg-brand-cream rounded-[3rem] border border-brand-muted/30 px-6">
-          <h2 className="text-2xl md:text-4xl font-primary font-bold  mb-6 uppercase tracking-tighter leading-tight">
-            See what we can <br className="md:hidden" /> do for your skin
-          </h2>
+        <div className="text-center py-4 md:py-6 px-6">
           <button
             onClick={scrollToBooking}
             className="group relative inline-flex items-center justify-center px-10 py-4.5 bg-brand-accent text-white font-bold rounded-full overflow-hidden transition-all duration-500 hover:scale-105 active:scale-95 shadow-[0_15px_35px_rgba(0,0,0,0.2)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.3)]"
