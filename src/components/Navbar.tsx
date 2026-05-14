@@ -23,9 +23,11 @@ const servicesData: Record<string, { name: string; href: string }[]> = {
     { name: "Hair Growth Therapy", href: "/hair" }
   ],
   Slimming: [
-    { name: "M-tone", href: "/slimming" },
-    { name: "Lipo Laser", href: "/slimming" },
-    { name: "Fat Freezing", href: "/slimming" }
+    { name: "Ondacool", href: "/slimming" },
+    { name: "Lipolasere", href: "/slimming" },
+    { name: "M-sculpt", href: "/slimming" },
+    { name: "Body Trim", href: "/slimming" },
+    { name: "Weight Loss Program", href: "/slimming" }
   ],
   Aesthetics: [
     { name: "Botox & Fillers", href: "/aesthetics" },
