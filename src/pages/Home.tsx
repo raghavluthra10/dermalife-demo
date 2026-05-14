@@ -1,5 +1,6 @@
 import Hero from '../components/Hero';
 import ConsultationCTA from '../components/ConsultationCTA';
+import TrustedExpertise from '../components/TrustedExpertise';
 import TopTreatments from '../components/TopTreatments';
 import StatsSection from '../components/StatsSection';
 import BrandPillars from '../components/BrandPillars';
@@ -14,12 +15,13 @@ const Home = () => {
     <>
       <Hero />
       <ConsultationCTA />
+      <TrustedExpertise />
       {/* <TopTreatments /> */}
       <StatsSection />
       <BrandPillars />
       <GoogleReviews />
       {/* Add galery */}
-      <PressSection />
+      {/* <PressSection /> */}
       <BookingForm />
       <MapSection />
     </>
