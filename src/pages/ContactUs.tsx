@@ -111,8 +111,8 @@ const ContactUs = () => {
                   <MapPin className="text-brand-gold mb-4" size={24} />
                   <h4 className="font-primary font-bold  uppercase tracking-tight mb-2">Clinic Address</h4>
                   <p className="/60 text-sm font-medium leading-relaxed">
-                    C-15, Ground Floor, Side Portion, Green Park Extension, <br />
-                    Green Park Market, New Delhi - 110016
+                    Ground Floor, DLF PHASE 1, <br />
+                    A-14/22, Gurugram, Haryana 122002
                   </p>
                 </div>
               </div>

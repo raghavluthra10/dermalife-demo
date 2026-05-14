@@ -126,7 +126,7 @@ const StatsSection = () => {
           </h2>
           <button
             onClick={scrollToBooking}
-            className="group relative inline-flex items-center justify-center px-10 py-4.5 bg-brand-accent text-white font-bold rounded-full overflow-hidden transition-all duration-500 hover:scale-105 active:scale-95 shadow-[0_15px_35px_rgba(192,54,90,0.25)] hover:shadow-[0_20px_45px_rgba(192,54,90,0.35)]"
+            className="group relative inline-flex items-center justify-center px-10 py-4.5 bg-brand-accent text-white font-bold rounded-full overflow-hidden transition-all duration-500 hover:scale-105 active:scale-95 shadow-[0_15px_35px_rgba(0,0,0,0.2)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.3)]"
           >
             <span className="relative z-10 font-primary uppercase tracking-[0.2em] text-xs">
               Book Free Consultation

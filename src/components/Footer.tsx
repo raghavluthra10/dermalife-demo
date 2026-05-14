@@ -92,7 +92,7 @@ const Footer = () => {
               <div className="w-14 h-14 bg-brand-accent/10 rounded-[1.5rem] flex items-center justify-center  shadow-sm"><MapPin size={24} /></div>
               <div>
                 <p className="text-[10px] text-brand-dark/40 uppercase font-extrabold tracking-[0.3em] mb-1">Find Us</p>
-                <p className="font-primary font-bold text-sm  tracking-tight uppercase leading-tight">Sector 56, Gurugram, Haryana <br/> Mon–Sat 10am–7pm</p>
+                <p className="font-primary font-bold text-sm  tracking-tight uppercase leading-tight">Ground Floor, DLF PHASE 1, <br/> A-14/22, Gurugram, Haryana 122002</p>
               </div>
            </div>
         </div>

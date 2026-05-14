@@ -8,9 +8,9 @@ const MapSection = () => {
           <div className="absolute top-8 left-8 z-10 bg-white/90 backdrop-blur-md p-6 rounded-2xl shadow-lg border border-brand-muted max-w-[240px]">
             <h4 className="font-primary font-bold  uppercase tracking-tight mb-2">Locate Us</h4>
             <p className="text-[10px] text-brand-dark/60 font-bold uppercase tracking-tight leading-relaxed">
-              C-15, Ground Floor, Side Portion, <br />
-              Green Park Extension, Green Park Market, <br />
-              New Delhi - 110016
+              Ground Floor, DLF PHASE 1, <br />
+              A-14/22, Gurugram, <br />
+              Haryana 122002
             </p>
           </div>
           <iframe 
