@@ -288,11 +288,11 @@ const Skin = () => {
             ].map((result, i) => (
               <motion.div 
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="flex flex-col bg-brand-cream/10 rounded-3xl overflow-hidden border border-brand-muted/30 shadow-sm hover:shadow-xl transition-all duration-500 min-w-[85%] lg:min-w-0 snap-center"
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ delay: i * 0.1, duration: 0.5 }}
+                className="flex flex-col bg-brand-cream/10 rounded-3xl overflow-hidden border border-brand-muted/30 shadow-sm hover:border-brand-gold/20 transition-all duration-300 min-w-[85%] lg:min-w-0 snap-center h-full"
               >
                 {/* Before/After Split Placeholder */}
                 <div className="flex aspect-video bg-[#E5E1DA]">
