@@ -15,6 +15,10 @@ import ContactUs from './pages/ContactUs';
 import LaserHairReduction from './pages/LaserHairReduction';
 import Skin from './pages/Skin';
 import Hair from './pages/Hair';
+import PrpHair from './pages/PrpHair';
+import GfcHair from './pages/GfcHair';
+import Qr678Hair from './pages/Qr678Hair';
+import ExosomeHair from './pages/ExosomeHair';
 import Slimming from './pages/Slimming';
 import Aesthetics from './pages/Aesthetics';
 import Facials from './pages/Facials';
@@ -83,6 +87,10 @@ export default function App() {
             <Route path="/slimming/metaslim-trimbit" element={<Metaslim />} />
             <Route path="/slimming/weight-loss-program" element={<WeightLoss />} />
             <Route path="/hair" element={<Hair />} />
+            <Route path="/hair/prp-treatment" element={<PrpHair />} />
+            <Route path="/hair/gfc-treatment" element={<GfcHair />} />
+            <Route path="/hair/qr678-treatment" element={<Qr678Hair />} />
+            <Route path="/hair/exosome-treatment" element={<ExosomeHair />} />
             <Route path="/slimming" element={<Slimming />} />
             <Route path="/aesthetics" element={<Aesthetics />} />
             <Route path="/facials" element={<Facials />} />

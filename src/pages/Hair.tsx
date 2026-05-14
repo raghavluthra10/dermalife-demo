@@ -27,22 +27,22 @@ const Hair = () => {
     { 
       name: "PRP hair treatment", 
       desc: "Platelet-rich plasma injected into the scalp to reactivate dormant hair follicles and stimulate growth.",
-      href: "/hair"
+      href: "/hair/prp-treatment"
     },
     { 
       name: "GFC hair treatment", 
       desc: "Growth Factor Concentrate — a more potent evolution of PRP for stronger, faster hair regrowth.",
-      href: "/hair"
+      href: "/hair/gfc-treatment"
     },
     { 
       name: "QR678 hair treatment", 
       desc: "A clinically proven proprietary formula injected into the scalp to reverse hair loss and restore density.",
-      href: "/hair"
+      href: "/hair/qr678-treatment"
     },
     { 
       name: "Exosome hair treatment", 
       desc: "Next-generation regenerative therapy using stem cell-derived exosomes to deeply restore hair follicle health.",
-      href: "/hair"
+      href: "/hair/exosome-treatment"
     }
   ];
 
