@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { ArrowRight, Check, Phone, Activity, Target, Layers, ShieldCheck, Sparkles, HeartPulse, Zap, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import BookingForm from '../components/BookingForm';
+import aestheticsHero from '../assets/aesthetics_home.png';
 
 const Aesthetics = () => {
   const scrollToBooking = () => {
@@ -75,8 +76,12 @@ const Aesthetics = () => {
             className="w-full min-[929px]:w-[40%] sticky top-[140px]"
           >
             <div className="aspect-[2/3] bg-[#E5E1DA] rounded-[12px] border border-brand-muted/30 flex items-center justify-center overflow-hidden relative group">
+              <img 
+                src={aestheticsHero} 
+                alt="Aesthetics Treatment" 
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+              />
               <div className="absolute inset-0 bg-gradient-to-br from-brand-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-              <p className="text-brand-dark/20 uppercase tracking-widest text-[10px] font-bold">Aesthetics Image Placeholder</p>
             </div>
           </motion.div>
 

@@ -313,3 +313,5 @@ const Skin = () => {
     </div>
   );
 };
+
+export default Skin;

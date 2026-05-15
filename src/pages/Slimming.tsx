@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { ArrowRight, Check, Phone, Activity, Target, Layers, ShieldCheck, Sparkles, Zap, TrendingUp, Heart, Droplets } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import BookingForm from '../components/BookingForm';
+import slimmingHero from '../assets/slimming_and_body_contouring.png';
 
 const Slimming = () => {
   const scrollToBooking = () => {
@@ -57,8 +58,12 @@ const Slimming = () => {
             className="w-full min-[929px]:w-[40%] sticky top-[140px]"
           >
             <div className="aspect-[2/3] bg-[#E5E1DA] rounded-[12px] border border-brand-muted/30 flex items-center justify-center overflow-hidden relative group">
+              <img 
+                src={slimmingHero} 
+                alt="Slimming & Body Contouring" 
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+              />
               <div className="absolute inset-0 bg-gradient-to-br from-brand-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-              <p className="text-brand-dark/20 uppercase tracking-widest text-[10px] font-bold">Image Placeholder</p>
             </div>
           </motion.div>
 

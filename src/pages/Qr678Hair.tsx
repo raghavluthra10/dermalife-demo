@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Check, Phone, Target, Activity, ShieldCheck, Zap } from 'lucide-react';
+import { Check, Phone, Target, Activity, ShieldCheck, Zap, HeartPulse } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import BookingForm from '../components/BookingForm';
 

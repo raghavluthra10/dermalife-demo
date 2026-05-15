@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Check, Phone, Target, Zap, Activity, ShieldCheck, HeartPulse, Sparkles } from 'lucide-react';
+import { Check, Phone, Target, Zap, Activity, ShieldCheck, HeartPulse, Sparkles, Layers } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import BookingForm from '../components/BookingForm';
 import skinHero from '../assets/skin_page_hero_image.png';
@@ -27,14 +27,14 @@ const FacePrp = () => {
       <section className="max-w-7xl mx-auto px-6 pb-24">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
           <div className="w-full lg:w-1/2">
-            <motion.span 
+            <motion.span
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               className="text-[10px] md:text-[12px] font-primary font-bold uppercase tracking-[0.4em] text-brand-gold mb-6 block"
             >
               REJUVENATE . RESTORE . RENEW
             </motion.span>
-            <motion.h1 
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.8 }}
@@ -42,7 +42,7 @@ const FacePrp = () => {
             >
               Face PRP — natural skin <br /> <span className="text-brand-gold italic font-normal text-5xl md:text-[56px]">rejuvenation</span>
             </motion.h1>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
@@ -59,10 +59,10 @@ const FacePrp = () => {
           </div>
           <div className="w-full lg:w-1/2">
             <div className="aspect-[4/5] bg-[#E5E1DA] rounded-[24px] overflow-hidden relative border border-brand-muted/30 group">
-              <img 
-                src={skinHero} 
-                alt="Face PRP Treatment" 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+              <img
+                src={skinHero}
+                alt="Face PRP Treatment"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-br from-brand-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
             </div>

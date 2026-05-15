@@ -1,100 +1,144 @@
 import { motion } from 'motion/react';
-import { ShieldCheck, Sparkles, Target, Star } from 'lucide-react';
+import { Check, Phone, Target, Activity, ShieldCheck, Zap, HeartPulse, Sparkles, Layers, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import BookingForm from '../components/BookingForm';
+import skinHero from '../assets/skin_page_hero_image.png';
 
 const LaserHairReduction = () => {
+  const scrollToBooking = () => {
+    const el = document.getElementById('booking-section');
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <div className="bg-brand-cream min-h-screen">
-      
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 px-6 overflow-hidden">
-        <div className="max-w-7xl mx-auto relative z-10">
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="max-w-3xl"
-          >
-            <span className="inline-block px-4 py-1.5 bg-brand-accent/10  rounded-full text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
-              Premium Hair Care
-            </span>
-            <h1 className="text-5xl md:text-7xl font-primary font-bold  leading-[0.9] mb-8 uppercase tracking-tighter">
-              Laser Hair <br /> Reduction
-            </h1>
-            <p className="text-lg md:text-xl text-brand-dark/60 font-sans font-medium max-w-xl leading-relaxed mb-10">
-              Experience the ultimate freedom from unwanted hair with our state-of-the-art laser technology. Painless, permanent, and perfectly safe for all skin types.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <button className="px-8 py-4 bg-brand-accent text-white rounded-full font-primary font-bold uppercase tracking-widest text-xs hover:bg-brand-gold transition-all shadow-xl">
-                Book Free Consultation
-              </button>
-              <button className="px-8 py-4 border border-brand-accent  rounded-full font-primary font-bold uppercase tracking-widest text-xs hover:bg-brand-accent hover:text-white transition-all">
-                View Pricing
-              </button>
-            </div>
-          </motion.div>
-        </div>
-        
-        {/* Decorative Element */}
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-accent/5 -skew-x-12 translate-x-1/4 z-0" />
-      </section>
+    <div className="bg-brand-cream min-h-screen pt-[104px]">
+      {/* Breadcrumb */}
+      <div className="max-w-7xl mx-auto px-6 py-8">
+        <nav className="text-[10px] md:text-xs uppercase tracking-[0.2em] font-bold text-brand-dark/40">
+          <Link to="/" className="hover:text-brand-gold transition-colors">Home</Link>
+          <span className="mx-2 text-brand-gold">›</span>
+          <Link to="/skin" className="hover:text-brand-gold transition-colors">Skin</Link>
+          <span className="mx-2 text-brand-gold">›</span>
+          <span className="text-brand-dark uppercase tracking-widest">Laser Hair Reduction</span>
+        </nav>
+      </div>
 
-      {/* Benefits Grid */}
-      <section className="py-20 bg-white px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {[
-              { icon: <ShieldCheck className="text-brand-gold" />, title: "FDA Approved", desc: "World-class safety standards with clinically proven results." },
-              { icon: <Sparkles className="text-brand-gold" />, title: "Virtually Painless", desc: "Advanced cooling technology ensures maximum comfort during treatment." },
-              { icon: <Target className="text-brand-gold" />, title: "Precision", desc: "Targeted energy that destroys hair follicles without affecting skin." }
-            ].map((benefit, i) => (
-              <motion.div 
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="flex flex-col items-start gap-4"
-              >
-                <div className="w-12 h-12 rounded-2xl bg-brand-cream flex items-center justify-center">
-                  {benefit.icon}
-                </div>
-                <h3 className="text-xl font-primary font-bold  uppercase tracking-tight">{benefit.title}</h3>
-                <p className="/50 leading-relaxed text-sm uppercase tracking-tight font-medium">{benefit.desc}</p>
-              </motion.div>
-            ))}
+      {/* SECTION 1: HERO (TWO COLUMN) */}
+      <section className="max-w-7xl mx-auto px-6 pb-24">
+        <div className="flex flex-col lg:flex-row gap-16 items-center">
+          <div className="w-full lg:w-1/2">
+            <motion.span
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-[10px] md:text-[12px] font-primary font-bold uppercase tracking-[0.4em] text-brand-gold mb-6 block"
+            >
+              REMOVE . REDUCE . LIBERATE
+            </motion.span>
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1, duration: 0.8 }}
+              className="text-4xl md:text-6xl lg:text-[64px] font-primary font-normal text-brand-dark leading-[1.1] mb-8 uppercase tracking-tighter"
+            >
+              Laser hair reduction — permanent reduction for <br /> <span className="text-brand-gold italic font-normal text-5xl md:text-[56px]">smooth, hair-free skin</span>
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.8 }}
+              className="font-sans text-[16px] md:text-[18px] text-brand-dark/70 leading-[1.7] mb-10 max-w-xl"
+            >
+              Laser hair reduction is the most effective long-term solution for unwanted hair on the face and body. Using advanced laser technology that targets the hair follicle at its root, it permanently reduces hair growth — leaving skin smooth, soft, and hair-free without the pain, irritation, or regrowth of waxing, threading, or shaving.
+            </motion.p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button onClick={scrollToBooking} className="btn-primary">Book free consultation</button>
+              <a href="tel:+919810305086" className="px-8 py-4 border-2 border-brand-dark rounded-full text-xs font-bold uppercase tracking-widest hover:bg-brand-dark hover:text-white transition-all font-primary flex items-center justify-center gap-2">
+                <Phone size={14} /> Call us now
+              </a>
+            </div>
+          </div>
+          <div className="w-full lg:w-1/2">
+            <div className="aspect-[4/5] bg-[#E5E1DA] rounded-[24px] overflow-hidden relative border border-brand-muted/30 group">
+              <img 
+                src={skinHero} 
+                alt="Laser Hair Reduction Treatment" 
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-br from-brand-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Process Section */}
-      <section className="py-24 bg-brand-cream px-6">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
-          <div className="lg:w-1/2">
-            <h2 className="text-4xl md:text-5xl font-primary font-bold  mb-8 uppercase tracking-tighter">The Procedure</h2>
-            <div className="space-y-8">
-              {[
-                { step: "01", title: "Skin Assessment", desc: "Our experts analyze your skin type and hair growth patterns." },
-                { step: "02", title: "Patch Test", desc: "Ensuring your skin reacts perfectly to the laser settings." },
-                { step: "03", title: "The Session", desc: "Quick and efficient laser pulses targeting the hair follicles." },
-                { step: "04", title: "Aftercare", desc: "Soothing gels and personalized advice for long-lasting results." }
-              ].map((item, i) => (
-                <div key={i} className="flex gap-6 group">
-                  <span className="text-2xl font-primary font-bold text-brand-gold/30 group-hover:text-brand-gold transition-colors">{item.step}</span>
-                  <div>
-                    <h4 className="text-lg font-primary font-bold  uppercase tracking-tight mb-2">{item.title}</h4>
-                    <p className="/40 text-sm uppercase tracking-tight font-medium leading-relaxed">{item.desc}</p>
+      {/* SECTION 2: WHY DERMALIFE (DARK BACKGROUND) */}
+      <section className="bg-brand-accent py-24 border-y border-white/5">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col lg:flex-row gap-16">
+            <div className="w-full lg:w-1/2 text-white">
+              <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.4em] mb-6 block">WHY DERMALIFE</span>
+              <h2 className="text-3xl md:text-5xl font-primary font-bold uppercase tracking-tighter leading-tight mb-8 text-white">
+                Permanent reduction. <br /> Not just temporary removal.
+              </h2>
+              <p className="font-sans text-[16px] md:text-[18px] text-white/60 leading-[1.7] mb-8">
+                Laser hair reduction on Indian skin requires precise calibration of wavelength, energy, and pulse duration to effectively target the hair follicle while keeping the surrounding skin safe. At Dermalife, every laser hair reduction treatment is assessed and performed by our certified dermatologists using FDA-approved laser devices — ensuring safe, effective, and permanent reduction for all Indian skin tones and hair types.
+              </p>
+              <div className="flex flex-col sm:flex-row items-center gap-6">
+                <button onClick={scrollToBooking} className="px-12 py-5 bg-brand-gold text-brand-dark font-bold rounded-full hover:bg-white transition-all uppercase tracking-widest text-sm shadow-xl w-full sm:w-auto text-center border-none">
+                  Book free consultation
+                </button>
+                <Link to="#" className="text-white/60 hover:text-brand-gold text-[10px] font-bold uppercase tracking-widest flex items-center gap-2 group">
+                  How it works <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            </div>
+            <div className="w-full lg:w-1/2 flex items-center">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 w-full">
+                {[
+                  { text: "Permanent hair reduction over sessions", icon: <ShieldCheck className="text-brand-gold" size={20} /> },
+                  { text: "Safe for all Indian skin tones", icon: <Zap className="text-brand-gold" size={20} /> },
+                  { text: "Face and full body treatment available", icon: <Target className="text-brand-gold" size={20} /> },
+                  { text: "Dermatologist-assessed and supervised", icon: <Activity className="text-brand-gold" size={20} /> }
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-4 p-5 rounded-xl bg-white/5 border border-white/10 hover:border-brand-gold/30 transition-all group">
+                    <div className="mt-1 group-hover:scale-110 transition-transform duration-300">{item.icon}</div>
+                    <span className="font-sans font-bold text-white text-sm leading-tight">{item.text}</span>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
-          <div className="lg:w-1/2 w-full aspect-square bg-white rounded-[3rem] shadow-2xl flex items-center justify-center p-12 overflow-hidden relative">
-            <div className="absolute inset-0 bg-brand-accent/5" />
-            <div className="relative z-10 text-center">
-                <Star className="w-16 h-16 text-brand-gold mx-auto mb-6 animate-pulse" />
-                <h3 className="text-3xl font-primary font-bold  uppercase tracking-tighter mb-4">99% Satisfaction</h3>
-                <p className="/50 text-sm uppercase font-bold tracking-widest">Across 10,000+ sessions</p>
-            </div>
+        </div>
+      </section>
+
+      {/* SECTION 4: BOTTOM CTA */}
+      <section className="py-24 bg-brand-cream relative overflow-hidden text-center border-t border-brand-muted/30" id="booking-section">
+        {/* Background Accents */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-brand-gold/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-accent/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+
+        <div className="max-w-4xl mx-auto px-6 relative z-10">
+          <h2 className="text-3xl md:text-[56px] font-primary font-bold text-brand-dark leading-[1.1] mb-6 uppercase tracking-tighter text-black">
+            Ready for permanently <br /> <span className="text-brand-gold italic font-normal text-5xl md:text-[56px]">smooth, hair-free skin?</span>
+          </h2>
+          <p className="font-sans text-base md:text-lg text-brand-dark/60 mb-12 max-w-2xl mx-auto">
+            Book a free consultation — our dermatologist will assess your skin tone, hair type, and recommend the right laser hair reduction protocol for you.
+          </p>
+          <button onClick={scrollToBooking} className="btn-primary min-w-[300px]">
+            Book free consultation
+          </button>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+            <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-brand-dark/30 font-bold flex items-center gap-2">
+              <Check size={12} className="text-brand-gold" />
+              Takes 2 minutes
+            </span>
+            <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-brand-dark/30 font-bold flex items-center gap-2">
+              <Check size={12} className="text-brand-gold" />
+              No commitment
+            </span>
+            <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-brand-dark/30 font-bold flex items-center gap-2">
+              <Check size={12} className="text-brand-gold" />
+              Expert-led advice
+            </span>
           </div>
         </div>
       </section>
