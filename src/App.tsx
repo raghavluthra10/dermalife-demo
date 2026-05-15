@@ -44,6 +44,13 @@ import Botox from './pages/Botox';
 import CollagenThreads from './pages/CollagenThreads';
 import SkinBooster from './pages/SkinBooster';
 import MesoBotox from './pages/MesoBotox';
+import BrighteningFacial from './pages/BrighteningFacial';
+import DetoxFacial from './pages/DetoxFacial';
+import HydraFacial from './pages/HydraFacial';
+import KoreanGlassFacial from './pages/KoreanGlassFacial';
+import StemCellFacial from './pages/StemCellFacial';
+import LineCorrectionFacial from './pages/LineCorrectionFacial';
+import DeepRepairFacial from './pages/DeepRepairFacial';
 import NotFound from './pages/NotFound';
 
 import WhatsAppButton from './components/WhatsAppButton';
@@ -101,6 +108,13 @@ export default function App() {
             <Route path="/aesthetics/collagen-threads" element={<CollagenThreads />} />
             <Route path="/aesthetics/skin-booster" element={<SkinBooster />} />
             <Route path="/aesthetics/meso-botox" element={<MesoBotox />} />
+            <Route path="/facials/brightening-facial" element={<BrighteningFacial />} />
+            <Route path="/facials/detox-facial" element={<DetoxFacial />} />
+            <Route path="/facials/hydra-facial" element={<HydraFacial />} />
+            <Route path="/facials/korean-glass-facial" element={<KoreanGlassFacial />} />
+            <Route path="/facials/stem-cell-facial" element={<StemCellFacial />} />
+            <Route path="/facials/line-correction-facial" element={<LineCorrectionFacial />} />
+            <Route path="/facials/deep-repair-facial" element={<DeepRepairFacial />} />
             <Route path="/slimming" element={<Slimming />} />
             <Route path="/aesthetics" element={<Aesthetics />} />
             <Route path="/facials" element={<Facials />} />

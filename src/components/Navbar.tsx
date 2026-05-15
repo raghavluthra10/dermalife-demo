@@ -40,9 +40,13 @@ const servicesData: Record<string, { name: string; href: string }[]> = {
     { name: "Meso Botox", href: "/aesthetics/meso-botox" }
   ],
   Facials: [
-    { name: "Hydrafacial", href: "/facials" },
-    { name: "Carbon Facial", href: "/facials" },
-    { name: "Dermalife Signature", href: "/facials" }
+    { name: "Brightening Facial", href: "/facials/brightening-facial" },
+    { name: "Detox Facial", href: "/facials/detox-facial" },
+    { name: "Hydra Facial", href: "/facials/hydra-facial" },
+    { name: "Korean Glass Facial", href: "/facials/korean-glass-facial" },
+    { name: "Stem Cell Facial", href: "/facials/stem-cell-facial" },
+    { name: "Line Correction Facial", href: "/facials/line-correction-facial" },
+    { name: "Deep Repair Facial", href: "/facials/deep-repair-facial" }
   ]
 };
 
