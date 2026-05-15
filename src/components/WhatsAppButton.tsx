@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 
 const WhatsAppButton = () => {
   // Placeholder number - to be updated by user later
-  const phoneNumber = "910000000000"; 
+  const phoneNumber = "919810305086"; 
   const whatsappUrl = `https://wa.me/${phoneNumber}`;
 
   return (

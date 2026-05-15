@@ -74,7 +74,7 @@ const ContactUs = () => {
                     <input 
                       type="tel" 
                       required
-                      placeholder="+91-0000000000"
+                      placeholder="+91-9810305086"
                       className="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-4 text-white placeholder:text-white/30 focus:outline-none focus:border-brand-gold transition-colors font-medium"
                     />
                   </div>
@@ -100,7 +100,7 @@ const ContactUs = () => {
                 <div className="bg-white p-8 rounded-3xl shadow-sm border border-brand-muted hover:shadow-md transition-shadow">
                   <Phone className="text-brand-gold mb-4" size={24} />
                   <h4 className="font-primary font-bold  uppercase tracking-tight mb-2">Phone</h4>
-                  <p className="/60 text-sm font-medium">+91-8882047047</p>
+                  <a href="tel:+919810305086" className="text-brand-dark/60 text-sm font-medium hover:text-brand-gold transition-colors">+91 98103 05086</a>
                 </div>
                 <div className="bg-white p-8 rounded-3xl shadow-sm border border-brand-muted hover:shadow-md transition-shadow">
                   <Mail className="text-brand-gold mb-4" size={24} />

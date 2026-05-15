@@ -3,7 +3,7 @@ import { Phone } from 'lucide-react';
 
 const PhoneButton = () => {
   // Placeholder number - to be updated by user later
-  const phoneNumber = ""; 
+  const phoneNumber = "+919810305086"; 
   const telUrl = `tel:${phoneNumber}`;
 
   return (

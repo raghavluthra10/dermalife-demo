@@ -62,8 +62,8 @@ const Footer = () => {
               India's leading aesthetic clinic. Redefining medical excellence with a touch of luxury.
             </p>
             <div className="flex items-center gap-5">
-              <a href="#" className="p-3.5 bg-white/5 rounded-2xl text-white hover:bg-brand-gold hover:text-brand-dark transition-all shadow-sm"><Instagram size={20} /></a>
-              <a href="#" className="p-3.5 bg-white/5 rounded-2xl text-white hover:bg-brand-gold hover:text-brand-dark transition-all shadow-sm"><Facebook size={20} /></a>
+              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="p-3.5 bg-white/5 rounded-2xl text-white hover:bg-brand-gold hover:text-brand-dark transition-all shadow-sm"><Instagram size={20} /></a>
+              <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="p-3.5 bg-white/5 rounded-2xl text-white hover:bg-brand-gold hover:text-brand-dark transition-all shadow-sm"><Facebook size={20} /></a>
             </div>
           </div>
 
@@ -96,7 +96,7 @@ const Footer = () => {
               </div>
               <div className="min-w-0 flex-1">
                 <p className="hidden md:block text-[10px] text-white/40 uppercase font-extrabold tracking-[0.3em] mb-1">Call Us</p>
-                <p className="font-primary font-bold text-[9px] md:text-lg text-white tracking-tight break-words">+91 91234 56789</p>
+                <a href="tel:+919810305086" className="font-primary font-bold text-[9px] md:text-lg text-white tracking-tight hover:text-brand-gold transition-colors">+91 98103 05086</a>
               </div>
            </div>
            <div className="flex flex-col md:flex-row items-center md:items-start gap-3 md:gap-6 text-center md:text-left">
@@ -105,7 +105,7 @@ const Footer = () => {
               </div>
               <div className="min-w-0 flex-1">
                 <p className="hidden md:block text-[10px] text-white/40 uppercase font-extrabold tracking-[0.3em] mb-1">Email Us</p>
-                <p className="font-primary font-bold text-[9px] md:text-lg text-white tracking-tight break-all">hello@dermalife.in</p>
+                <a href="mailto:hello@dermalife.in" className="font-primary font-bold text-[9px] md:text-lg text-white tracking-tight hover:text-brand-gold transition-colors">hello@dermalife.in</a>
               </div>
            </div>
            <a 
