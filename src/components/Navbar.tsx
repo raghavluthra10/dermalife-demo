@@ -19,7 +19,7 @@ const servicesData: Record<string, { name: string; href: string }[]> = {
   ],
   Hair: [
     { name: "Laser Hair Reduction", href: "/services/laser-hair-reduction" },
-    { name: "PRP & GFC Therapy", href: "/hair" },
+    { name: "PRP & GFC Therapy", href: "/hair/prp-treatment" },
     { name: "QR678 Treatment", href: "/hair/qr678-treatment" },
     { name: "Exosome Therapy", href: "/hair/exosome-treatment" }
   ],

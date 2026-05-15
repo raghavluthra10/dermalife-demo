@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ArrowUpRight, Check, Phone, Target, Sparkles, Activity, Clock, ShieldCheck, ChevronRight } from 'lucide-react';
+import { Check, Phone, Target, Sparkles, Activity, Clock, ShieldCheck, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Ondacool = () => {
@@ -169,10 +169,6 @@ const Ondacool = () => {
               <div className="flex flex-col sm:flex-row items-center gap-6">
                 <button onClick={scrollToBooking} className="px-12 py-5 bg-brand-gold text-brand-dark font-bold rounded-full hover:bg-white transition-all uppercase tracking-widest text-sm shadow-xl w-full sm:w-auto text-center">
                   Book free consultation
-                </button>
-                <button className="inline-flex items-center gap-2 text-[10px] font-primary font-bold uppercase tracking-widest text-brand-gold group">
-                  How it works
-                  <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </button>
               </div>
             </div>

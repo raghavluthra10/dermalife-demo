@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { ArrowUpRight, Check, Phone, Activity, Target, Sparkles, HeartPulse, ShieldCheck, Clock, Zap } from 'lucide-react';
+import { Check, Phone, Activity, Target, Sparkles, HeartPulse, ShieldCheck, Clock, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const PrpHair = () => {
@@ -80,7 +80,6 @@ const PrpHair = () => {
                 <button onClick={scrollToBooking} className="px-12 py-5 bg-brand-gold text-brand-dark font-bold rounded-full hover:bg-white transition-all uppercase tracking-widest text-sm shadow-xl w-full sm:w-auto text-center border-none">
                   Book free consultation
                 </button>
-
               </div>
             </div>
             <div className="w-full lg:w-1/2 flex items-center">

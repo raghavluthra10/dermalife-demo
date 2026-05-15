@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { ArrowUpRight, Check, Phone, Clock, ShieldCheck, Sparkles, Target, Zap, Activity, Layers } from 'lucide-react';
+import { Check, Phone, Clock, ShieldCheck, Sparkles, Target, Zap, Activity, Layers } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const FaceBrighteningAcnePeel = () => {

@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { ArrowUpRight, Check, Phone, ArrowRight, ShieldCheck, Sparkles, Activity, Target, Zap, Clock, Heart, Droplets, RefreshCw, Sun, LayoutGrid, AlertCircle, TrendingUp, Layers, HelpCircle } from 'lucide-react';
+import { Check, Phone, ArrowRight, ShieldCheck, Sparkles, Activity, Target, Zap, Clock, Heart, Droplets, RefreshCw, Sun, LayoutGrid, AlertCircle, TrendingUp, Layers, HelpCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Skin = () => {

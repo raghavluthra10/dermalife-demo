@@ -19,7 +19,7 @@ const Footer = () => {
       title: "Hair & Slimming", 
       links: [
         { name: "Laser Hair Reduction", href: "/services/laser-hair-reduction" },
-        { name: "PRP & GFC Therapy", href: "/hair" },
+        { name: "PRP & GFC Therapy", href: "/hair/prp-treatment" },
         { name: "Ondacool", href: "/slimming/ondacool" },
         { name: "Lipolasere", href: "/slimming/lipolasere" },
         { name: "M-sculpt", href: "/slimming/m-sculpt" },
