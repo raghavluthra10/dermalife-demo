@@ -3,7 +3,7 @@ import { Phone } from 'lucide-react';
 
 const PhoneButton = () => {
   // Placeholder number - to be updated by user later
-  const phoneNumber = "+919810305086"; 
+  const phoneNumber = "+919810305086";
   const telUrl = `tel:${phoneNumber}`;
 
   return (
@@ -17,9 +17,9 @@ const PhoneButton = () => {
       aria-label="Call us"
     >
       <Phone className="w-6 h-6 text-white" />
-      
+
       {/* Tooltip */}
-      <span className="absolute right-full mr-4 px-3 py-1 bg-white  text-[10px] font-bold uppercase tracking-widest rounded-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-xl pointer-events-none">
+      <span className="absolute right-full mr-4 px-3 py-1 bg-white text-black text-[10px] font-bold uppercase tracking-widest rounded-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-xl pointer-events-none">
         Call us
       </span>
     </motion.a>

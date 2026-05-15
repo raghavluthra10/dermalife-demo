@@ -51,7 +51,7 @@ const Lipolasere = () => {
             </motion.p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button onClick={scrollToBooking} className="btn-primary">Book free consultation</button>
-              <a href="tel:+919810305086" className="px-8 py-4 border-2 border-brand-dark rounded-full text-xs font-bold uppercase tracking-widest hover:bg-brand-dark hover:text-white transition-all font-primary flex items-center justify-center gap-2">
+              <a href="tel:+919810305086" className="px-8 py-4 border-2 border-brand-dark rounded-full text-xs font-bold uppercase tracking-widest hover:bg-brand-gold hover:text-brand-dark transition-all font-primary flex items-center justify-center gap-2">
                 <Phone size={14} /> Call us now
               </a>
             </div>
