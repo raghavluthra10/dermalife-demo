@@ -9,6 +9,7 @@ import FounderSection from '../components/FounderSection';
 import PressSection from '../components/PressSection';
 import BookingForm from '../components/BookingForm';
 import MapSection from '../components/MapSection';
+import WhyChooseUs from '../components/WhyChooseUs';
 
 const Home = () => {
   return (
@@ -17,8 +18,9 @@ const Home = () => {
       <ConsultationCTA />
       <TrustedExpertise />
       {/* <TopTreatments /> */}
-      <StatsSection />
+      {/* <StatsSection /> */}
       <BrandPillars />
+      {/* <WhyChooseUs /> */}
       <GoogleReviews />
       {/* Add galery */}
       {/* <PressSection /> */}

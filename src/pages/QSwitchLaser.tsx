@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { Check, Phone, Target, Zap, Activity, ShieldCheck, Sparkles, Layers } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import BookingForm from '../components/BookingForm';
+import skinHero from '../assets/skin_page_hero_image.png';
 
 const QSwitchLaser = () => {
   const scrollToBooking = () => {
@@ -57,8 +58,13 @@ const QSwitchLaser = () => {
             </div>
           </div>
           <div className="w-full lg:w-1/2">
-            <div className="aspect-[4/5] bg-[#E5E1DA] rounded-[24px] overflow-hidden relative border border-brand-muted/30">
-              <div className="absolute inset-0 flex items-center justify-center text-brand-dark/10 uppercase tracking-widest text-[10px] font-bold">Q-Switch Image Placeholder</div>
+            <div className="aspect-[4/5] bg-[#E5E1DA] rounded-[24px] overflow-hidden relative border border-brand-muted/30 group">
+              <img 
+                src={skinHero} 
+                alt="Q-Switch Laser Treatment" 
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-br from-brand-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
             </div>
           </div>
         </div>

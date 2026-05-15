@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { Check, Phone, ArrowRight, ShieldCheck, Sparkles, Activity, Target, Zap, Clock, Heart, Droplets, RefreshCw, Sun, LayoutGrid, AlertCircle, TrendingUp, Layers, HelpCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import BookingForm from '../components/BookingForm';
+import skinHero from '../assets/skin_page_hero_image.png';
 
 const Skin = () => {
   const scrollToBooking = () => {
@@ -59,31 +60,35 @@ const Skin = () => {
       {/* Main Two-Column Layout */}
       <section className="max-w-7xl mx-auto px-6 pb-24">
         <div className="flex flex-col min-[929px]:flex-row gap-12 lg:gap-24 items-start">
-          
+
           {/* Left Column (40%) */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             className="w-full min-[929px]:w-[40%] sticky top-[140px]"
           >
             <div className="aspect-[2/3] bg-[#E5E1DA] rounded-[12px] border border-brand-muted/30 flex items-center justify-center overflow-hidden relative group">
+              <img 
+                src={skinHero} 
+                alt="Skin Treatment" 
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+              />
               <div className="absolute inset-0 bg-gradient-to-br from-brand-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-              <p className="text-brand-dark/20 uppercase tracking-widest text-[10px] font-bold">Image Placeholder</p>
             </div>
           </motion.div>
 
           {/* Right Column (60%) */}
           <div className="w-full min-[929px]:w-[60%] flex flex-col pt-4">
-            <motion.span 
+            <motion.span
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               className="text-[10px] md:text-[12px] font-primary font-bold uppercase tracking-[0.3em] text-brand-gold mb-6 block"
             >
               Treatments for all skin types
             </motion.span>
-            
-            <motion.h1 
+
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.8 }}
@@ -92,7 +97,7 @@ const Skin = () => {
               Skin treatments for every concern, every tone, every age.
             </motion.h1>
 
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
@@ -109,8 +114,8 @@ const Skin = () => {
 
               <div className="grid grid-cols-2 gap-x-4 md:gap-x-8 gap-y-4">
                 {concerns.map((concern, i) => (
-                  <motion.div 
-                    key={i} 
+                  <motion.div
+                    key={i}
                     initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
@@ -152,7 +157,7 @@ const Skin = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             {treatments.map((treatment, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 whileHover={{ y: -5 }}
                 className="p-8 rounded-[12px] border border-brand-muted/40 hover:border-brand-gold/30 hover:shadow-xl hover:shadow-brand-gold/5 transition-all duration-500 bg-brand-cream/10"
@@ -163,12 +168,12 @@ const Skin = () => {
                 <p className="font-sans text-[15px] text-brand-dark/60 leading-relaxed mb-6">
                   {treatment.desc}
                 </p>
-                <Link 
+                <Link
                   to={
-                    treatment.name === "Face brightening & acne peel" 
-                      ? "/skin/face-brightening-acne-peel" 
-                      : treatment.name === "HIFU" 
-                        ? "/skin/hifu" 
+                    treatment.name === "Face brightening & acne peel"
+                      ? "/skin/face-brightening-acne-peel"
+                      : treatment.name === "HIFU"
+                        ? "/skin/hifu"
                         : treatment.name === "Pico laser"
                           ? "/skin/pico-laser"
                           : treatment.name === "Fractional laser"
@@ -186,7 +191,7 @@ const Skin = () => {
                                       : treatment.name === "Q-switch laser & carbon toning"
                                         ? "/skin/q-switch-laser"
                                         : "/skin"
-                  } 
+                  }
                   className="inline-flex items-center gap-2 text-[10px] font-primary font-bold uppercase tracking-widest text-brand-gold group"
                 >
                   Learn more
@@ -228,7 +233,7 @@ const Skin = () => {
               { name: "InMode Morpheus8", type: "Fractional RF", use: "Deep Remodelling" },
               { name: "Lumenis M22", type: "Multi-Platform", use: "Skin Resurfacing & Vascular" },
             ].map((tech, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -245,7 +250,7 @@ const Skin = () => {
                 <div className="p-8 relative">
                   {/* Tech Accents */}
                   <div className="absolute -top-4 -right-4 w-24 h-24 bg-brand-gold/5 rounded-full blur-2xl group-hover:bg-brand-gold/20 transition-all duration-500" />
-                  
+
                   <span className="text-brand-gold text-[9px] font-bold uppercase tracking-widest mb-4 block opacity-60">
                     {tech.type}
                   </span>
@@ -269,73 +274,13 @@ const Skin = () => {
         </div>
       </section>
 
-      {/* Before & After Testimonials Section */}
-      <section className="py-24 bg-white border-t border-brand-muted/20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <span className="text-brand-gold text-[10px] font-primary font-bold uppercase tracking-[0.3em] mb-4 block">
-              Real Transformations
-            </span>
-            <h2 className="text-3xl md:text-5xl font-primary font-bold text-brand-dark uppercase tracking-tighter">
-              Clinical Results
-            </h2>
-          </div>
-
-          <div className="flex overflow-x-auto no-scrollbar snap-x snap-mandatory lg:grid lg:grid-cols-3 gap-8 pb-4 lg:pb-0">
-            {[
-              { title: "Acne Scar Revision", patient: "Anjali K.", treatment: "Fractional Laser + PRP" },
-              { title: "Jawline Contouring", patient: "Rohan M.", treatment: "HIFU + Morpheus8" },
-              { title: "Pigmentation Clearance", patient: "Priya S.", treatment: "PicoPlus + Skin Boosters" },
-            ].map((result, i) => (
-              <motion.div 
-                key={i}
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ delay: i * 0.1, duration: 0.5 }}
-                className="flex flex-col bg-brand-cream/10 rounded-3xl overflow-hidden border border-brand-muted/30 shadow-sm hover:border-brand-gold/20 transition-all duration-300 min-w-[85%] lg:min-w-0 snap-center h-full"
-              >
-                {/* Before/After Split Placeholder */}
-                <div className="flex aspect-video bg-[#E5E1DA]">
-                  <div className="flex-1 border-r border-white/20 flex flex-col items-center justify-center relative group overflow-hidden">
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-brand-dark/30 z-10">Before</span>
-                    <div className="absolute inset-0 bg-brand-dark/5 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </div>
-                  <div className="flex-1 flex flex-col items-center justify-center relative group overflow-hidden">
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-brand-dark/30 z-10">After</span>
-                    <div className="absolute inset-0 bg-brand-gold/5 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </div>
-                </div>
-
-                <div className="p-8">
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-xl font-primary font-bold text-brand-dark uppercase tracking-tight">
-                      {result.title}
-                    </h3>
-                    <span className="text-[10px] font-bold text-brand-gold uppercase tracking-widest">
-                      Verified Result
-                    </span>
-                  </div>
-                  <p className="text-brand-dark/60 text-sm font-sans mb-6 leading-relaxed">
-                    "The difference is night and day. My skin hasn't felt this healthy in years. The team at Dermalife is truly expert."
-                  </p>
-                  <div className="pt-4 border-t border-brand-muted/30 flex justify-between items-center">
-                    <span className="text-[11px] font-bold text-brand-dark uppercase tracking-wider">{result.patient}</span>
-                    <span className="text-[10px] text-brand-dark/40 italic font-sans">{result.treatment}</span>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Bottom CTA Section */}
       <section className="py-24 bg-brand-cream relative overflow-hidden">
         {/* Background Accents */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-brand-gold/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-accent/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
-        
+
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
           <h2 className="text-3xl md:text-[48px] font-primary font-bold text-brand-dark leading-[1.1] mb-6 uppercase tracking-tighter">
             Not sure which skin treatment <br className="hidden md:block" /> is right for you?
@@ -343,11 +288,11 @@ const Skin = () => {
           <p className="font-sans text-base md:text-lg text-brand-dark/60 mb-12 max-w-2xl mx-auto">
             Book a free consultation — our dermatologist will analyse your skin and recommend the right plan. No pressure, no commitment.
           </p>
-          
+
           <button onClick={scrollToBooking} className="btn-primary min-w-[280px]">
             Book free consultation
           </button>
-          
+
           <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
             <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-brand-dark/30 font-bold flex items-center gap-2">
               <Check size={12} className="text-brand-gold" />
@@ -368,5 +313,3 @@ const Skin = () => {
     </div>
   );
 };
-
-export default Skin;

@@ -235,66 +235,6 @@ const Slimming = () => {
         </div>
       </section>
 
-      {/* Clinical Results Section */}
-      <section className="py-24 bg-white border-t border-brand-muted/20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <span className="text-brand-gold text-[10px] font-primary font-bold uppercase tracking-[0.3em] mb-4 block">
-              Real Transformations
-            </span>
-            <h2 className="text-3xl md:text-5xl font-primary font-bold text-brand-dark uppercase tracking-tighter">
-              Clinical Results
-            </h2>
-          </div>
-
-          <div className="flex overflow-x-auto no-scrollbar snap-x snap-mandatory lg:grid lg:grid-cols-3 gap-8 pb-4 lg:pb-0">
-            {/* Stabilized cards to prevent wobbling */}
-            {[
-              { title: "Abdominal Inch Loss", patient: "Rajesh K.", treatment: "Ondacool + M-Sculpt" },
-              { title: "Post-Pregnancy Sculpting", patient: "Priya V.", treatment: "Body Trim + Lipolasere" },
-              { title: "Double Chin Reduction", patient: "Sanya M.", treatment: "Ondacool Face" },
-            ].map((result, i) => (
-              <motion.div 
-                key={i}
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ delay: i * 0.1, duration: 0.5 }}
-                className="flex flex-col bg-brand-cream/10 rounded-3xl overflow-hidden border border-brand-muted/30 shadow-sm hover:border-brand-gold/20 transition-all duration-300 min-w-[85%] lg:min-w-0 snap-center h-full"
-              >
-                <div className="flex aspect-video bg-[#E5E1DA]">
-                  <div className="flex-1 border-r border-white/20 flex flex-col items-center justify-center relative group overflow-hidden">
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-brand-dark/30 z-10">Before</span>
-                    <div className="absolute inset-0 bg-brand-dark/5 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </div>
-                  <div className="flex-1 flex flex-col items-center justify-center relative group overflow-hidden">
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-brand-dark/30 z-10">After</span>
-                    <div className="absolute inset-0 bg-brand-gold/5 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </div>
-                </div>
-
-                <div className="p-8">
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-xl font-primary font-bold text-brand-dark uppercase tracking-tight">
-                      {result.title}
-                    </h3>
-                    <span className="text-[10px] font-bold text-brand-gold uppercase tracking-widest">
-                      Verified Result
-                    </span>
-                  </div>
-                  <p className="text-brand-dark/60 text-sm font-sans mb-6 leading-relaxed">
-                    "The inch loss was visible after just a few sessions. More importantly, the skin feels tighter and the muscle definition is actually showing now."
-                  </p>
-                  <div className="pt-4 border-t border-brand-muted/30 flex justify-between items-center">
-                    <span className="text-[11px] font-bold text-brand-dark uppercase tracking-wider">{result.patient}</span>
-                    <span className="text-[10px] text-brand-dark/40 italic font-sans">{result.treatment}</span>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Bottom CTA Section */}
       <section className="py-24 bg-brand-cream relative overflow-hidden">
