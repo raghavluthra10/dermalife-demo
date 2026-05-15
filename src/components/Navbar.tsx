@@ -19,7 +19,8 @@ const servicesData: Record<string, { name: string; href: string }[]> = {
   ],
   Hair: [
     { name: "Laser Hair Reduction", href: "/services/laser-hair-reduction" },
-    { name: "PRP & GFC Therapy", href: "/hair/prp-treatment" },
+    { name: "PRP Hair Treatment", href: "/hair/prp-treatment" },
+    { name: "GFC Hair Treatment", href: "/hair/gfc-treatment" },
     { name: "QR678 Treatment", href: "/hair/qr678-treatment" },
     { name: "Exosome Therapy", href: "/hair/exosome-treatment" }
   ],
@@ -89,13 +90,12 @@ const Navbar = () => {
   ];
 
   return (
-    <nav 
+    <nav
       id="main-nav"
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 border-none ${
-        isScrolled 
-          ? 'bg-brand-cream/85 backdrop-blur-md py-3 shadow-none' 
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 border-none ${isScrolled
+          ? 'bg-brand-cream/85 backdrop-blur-md py-3 shadow-none'
           : 'bg-brand-cream/30 backdrop-blur-md py-6'
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <div className="flex items-center gap-12">
@@ -107,8 +107,8 @@ const Navbar = () => {
           {/* Left Desktop Links */}
           <div className="hidden min-[1100px]:flex items-center gap-6 h-full">
             {leftNavLinks.map((link) => (
-              <div 
-                key={link.name} 
+              <div
+                key={link.name}
                 className="relative h-full py-4"
                 onMouseEnter={() => setActiveMegaMenu(link.name)}
                 onMouseLeave={() => setActiveMegaMenu(null)}
@@ -162,8 +162,8 @@ const Navbar = () => {
               </Link>
             ))}
           </div>
-          
-          <button 
+
+          <button
             onClick={scrollToBooking}
             className="px-6 py-2.5 bg-brand-accent text-white text-[11px] font-bold rounded-full hover:bg-brand-accent/90 transition-all shadow-md active:scale-95 font-primary uppercase tracking-widest whitespace-nowrap"
           >
@@ -172,7 +172,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Toggle */}
-        <button 
+        <button
           className="lg:hidden p-2 "
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
@@ -199,7 +199,7 @@ const Navbar = () => {
                     {link.name}
                     <ChevronDown size={20} className={`transition-transform duration-300 ${activeMegaMenu === link.name ? 'rotate-180 text-brand-gold' : ''}`} />
                   </button>
-                  
+
                   <AnimatePresence>
                     {activeMegaMenu === link.name && (
                       <motion.div
@@ -223,7 +223,7 @@ const Navbar = () => {
                   </AnimatePresence>
                 </div>
               ))}
-              
+
               {rightNavLinks.map((link) => (
                 <Link
                   key={link.name}
@@ -236,7 +236,7 @@ const Navbar = () => {
               ))}
 
               <div className="flex flex-col gap-3 mt-8 pb-12">
-                <button 
+                <button
                   onClick={scrollToBooking}
                   className="w-full py-5 bg-brand-accent text-white font-bold rounded-full uppercase tracking-widest font-primary shadow-lg text-sm"
                 >

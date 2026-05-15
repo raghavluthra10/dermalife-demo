@@ -17,7 +17,7 @@ const LaserHairReduction = () => {
         <nav className="text-[10px] md:text-xs uppercase tracking-[0.2em] font-bold text-brand-dark/40">
           <Link to="/" className="hover:text-brand-gold transition-colors">Home</Link>
           <span className="mx-2 text-brand-gold">›</span>
-          <Link to="/skin" className="hover:text-brand-gold transition-colors">Skin</Link>
+          <Link to="/hair" className="hover:text-brand-gold transition-colors">Hair</Link>
           <span className="mx-2 text-brand-gold">›</span>
           <span className="text-brand-dark uppercase tracking-widest">Laser Hair Reduction</span>
         </nav>

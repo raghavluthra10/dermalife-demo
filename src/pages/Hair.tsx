@@ -45,6 +45,11 @@ const Hair = () => {
       name: "Exosome hair treatment", 
       desc: "Next-generation regenerative therapy using stem cell-derived exosomes to deeply restore hair follicle health.",
       href: "/hair/exosome-treatment"
+    },
+    { 
+      name: "Laser hair reduction", 
+      desc: "Permanent reduction of unwanted hair for smooth, hair-free skin using medical-grade laser technology.",
+      href: "/services/laser-hair-reduction"
     }
   ];
 

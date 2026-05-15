@@ -190,7 +190,9 @@ const Skin = () => {
                                       ? "/skin/morpheus"
                                       : treatment.name === "Q-switch laser & carbon toning"
                                         ? "/skin/q-switch-laser"
-                                        : "/skin"
+                                        : treatment.name === "Laser hair reduction"
+                                          ? "/services/laser-hair-reduction"
+                                          : "/skin"
                   }
                   className="inline-flex items-center gap-2 text-[10px] font-primary font-bold uppercase tracking-widest text-brand-gold group"
                 >
