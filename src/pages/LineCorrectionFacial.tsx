@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
-import { Check, Phone, Target, Activity, Zap, ShieldCheck } from 'lucide-react';
+import { Check, Phone, Target, Activity, ShieldCheck, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import BookingForm from '../components/BookingForm';
 
 const LineCorrectionFacial = () => {
   const scrollToBooking = () => {
@@ -133,6 +134,7 @@ const LineCorrectionFacial = () => {
           </div>
         </div>
       </section>
+      <BookingForm />
     </div>
   );
 };

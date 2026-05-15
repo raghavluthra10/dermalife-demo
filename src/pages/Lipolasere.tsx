@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { Check, Phone, Target, Sparkles, Activity, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import BookingForm from '../components/BookingForm';
 
 const Lipolasere = () => {
   const scrollToBooking = () => {
@@ -132,6 +133,7 @@ const Lipolasere = () => {
           </div>
         </div>
       </section>
+      <BookingForm />
     </div>
   );
 };

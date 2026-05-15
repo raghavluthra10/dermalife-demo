@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Check, Phone, Target, Activity, ShieldCheck, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import BookingForm from '../components/BookingForm';
 
 const PicoLaser = () => {
   const [activeTab, setActiveTab] = useState<'Toning' | 'Brightening'>('Toning');
@@ -224,6 +225,7 @@ const PicoLaser = () => {
           </div>
         </div>
       </section>
+      <BookingForm />
     </div>
   );
 };

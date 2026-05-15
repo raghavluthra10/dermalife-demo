@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
-import { Check, Phone, Target, Activity, Sparkles, Clock } from 'lucide-react';
+import { Check, Phone, Target, Activity, ShieldCheck, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import BookingForm from '../components/BookingForm';
 
 const BodyTrim = () => {
   const scrollToBooking = () => {
@@ -132,6 +133,7 @@ const BodyTrim = () => {
           </div>
         </div>
       </section>
+      <BookingForm />
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { Check, Phone, Target, Activity, Zap, ShieldCheck, Clock, Heart, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import BookingForm from '../components/BookingForm';
 
 const HydraFacial = () => {
   const scrollToBooking = () => {
@@ -159,6 +160,7 @@ const HydraFacial = () => {
           </div>
         </div>
       </section>
+      <BookingForm />
     </div>
   );
 };

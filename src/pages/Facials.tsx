@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { ArrowRight, Check, Phone, Activity, Target, Layers, ShieldCheck, Sparkles, HeartPulse, Zap, Clock, Droplets } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import BookingForm from '../components/BookingForm';
 
 const Facials = () => {
   const scrollToBooking = () => {
@@ -218,6 +219,7 @@ const Facials = () => {
           </div>
         </div>
       </section>
+      <BookingForm />
     </div>
   );
 };

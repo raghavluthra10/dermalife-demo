@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
-import { Check, Phone, Target, Sparkles, ShieldCheck, Layers, HeartPulse } from 'lucide-react';
+import { Check, Phone, Target, Zap, Activity, ShieldCheck, HeartPulse, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import BookingForm from '../components/BookingForm';
 
 const FacePrp = () => {
   const scrollToBooking = () => {
@@ -132,6 +133,7 @@ const FacePrp = () => {
           </div>
         </div>
       </section>
+      <BookingForm />
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
-import { Check, Phone, ClipboardList, Target, TrendingUp, ShieldCheck, ArrowRight, UserPlus, Zap, Calendar, HeartPulse } from 'lucide-react';
+import { Check, Phone, Target, Activity, ShieldCheck, Zap, ArrowRight, UserPlus, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import BookingForm from '../components/BookingForm';
 
 const WeightLoss = () => {
   const scrollToBooking = () => {
@@ -192,6 +193,7 @@ const WeightLoss = () => {
           </div>
         </div>
       </section>
+      <BookingForm />
     </div>
   );
 };

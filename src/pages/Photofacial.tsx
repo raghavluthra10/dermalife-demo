@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
-import { Check, Phone, Target, Sparkles, ShieldCheck, Layers } from 'lucide-react';
+import { Check, Phone, Target, Zap, Activity, ShieldCheck, Sun, Sparkles, Layers } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import BookingForm from '../components/BookingForm';
 
 const Photofacial = () => {
   const scrollToBooking = () => {
@@ -132,6 +133,7 @@ const Photofacial = () => {
           </div>
         </div>
       </section>
+      <BookingForm />
     </div>
   );
 };

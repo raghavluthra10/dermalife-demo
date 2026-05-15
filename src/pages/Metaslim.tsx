@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { Check, Phone, Zap, TrendingUp, Sparkles, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import BookingForm from '../components/BookingForm';
 
 const Metaslim = () => {
   const scrollToBooking = () => {
@@ -133,6 +134,7 @@ const Metaslim = () => {
           </div>
         </div>
       </section>
+      <BookingForm />
     </div>
   );
 };

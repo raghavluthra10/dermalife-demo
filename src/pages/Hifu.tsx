@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Check, Phone, Target, Zap, ShieldCheck, Activity } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import BookingForm from '../components/BookingForm';
 
 const Hifu = () => {
   const [activeTab, setActiveTab] = useState<'Face' | 'Neck'>('Face');
@@ -223,6 +224,7 @@ const Hifu = () => {
           </div>
         </div>
       </section>
+      <BookingForm />
     </div>
   );
 };

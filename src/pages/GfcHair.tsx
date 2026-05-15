@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { Check, Phone, Activity, Zap, Target, HeartPulse } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import BookingForm from '../components/BookingForm';
 
 const GfcHair = () => {
   const scrollToBooking = () => {
@@ -133,6 +134,7 @@ const GfcHair = () => {
           </div>
         </div>
       </section>
+      <BookingForm />
     </div>
   );
 };

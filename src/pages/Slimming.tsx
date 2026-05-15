@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { ArrowRight, Check, Phone, Activity, Target, Layers, ShieldCheck, Sparkles, Zap, TrendingUp, Heart, Droplets } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import BookingForm from '../components/BookingForm';
 
 const Slimming = () => {
   const scrollToBooking = () => {
@@ -329,6 +330,7 @@ const Slimming = () => {
           </div>
         </div>
       </section>
+      <BookingForm />
     </div>
   );
 };

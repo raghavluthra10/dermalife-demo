@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { Check, Phone, Target, Layers, Sparkles, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import BookingForm from '../components/BookingForm';
 
 const DermalFillers = () => {
   const scrollToBooking = () => {
@@ -133,6 +134,7 @@ const DermalFillers = () => {
           </div>
         </div>
       </section>
+      <BookingForm />
     </div>
   );
 };

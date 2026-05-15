@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Check, Phone, Target, Sparkles, Activity, Clock, ShieldCheck, ChevronRight } from 'lucide-react';
+import { Check, Phone, Target, Sparkles, Activity, Clock, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import BookingForm from '../components/BookingForm';
 
 const Ondacool = () => {
   const [activeTab, setActiveTab] = useState<'Face' | 'Body'>('Face');
@@ -223,6 +224,7 @@ const Ondacool = () => {
           </div>
         </div>
       </section>
+      <BookingForm />
     </div>
   );
 };

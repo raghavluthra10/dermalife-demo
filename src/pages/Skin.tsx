@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { Check, Phone, ArrowRight, ShieldCheck, Sparkles, Activity, Target, Zap, Clock, Heart, Droplets, RefreshCw, Sun, LayoutGrid, AlertCircle, TrendingUp, Layers, HelpCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import BookingForm from '../components/BookingForm';
 
 const Skin = () => {
   const scrollToBooking = () => {
@@ -363,6 +364,7 @@ const Skin = () => {
           </div>
         </div>
       </section>
+      <BookingForm />
     </div>
   );
 };

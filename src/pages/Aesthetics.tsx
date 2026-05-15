@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { ArrowRight, Check, Phone, Activity, Target, Layers, ShieldCheck, Sparkles, HeartPulse, Zap, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import BookingForm from '../components/BookingForm';
 
 const Aesthetics = () => {
   const scrollToBooking = () => {
@@ -208,6 +209,7 @@ const Aesthetics = () => {
           </div>
         </div>
       </section>
+      <BookingForm />
     </div>
   );
 };

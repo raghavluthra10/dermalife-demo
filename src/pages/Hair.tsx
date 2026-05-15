@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
-import { ArrowRight, Check, Phone, Activity, Target, Layers, ShieldCheck, Sparkles, RefreshCw, HeartPulse, Zap, Clock } from 'lucide-react';
+import { ArrowRight, Check, Phone, Activity, Target, Layers, ShieldCheck, Sparkles, RefreshCw, HeartPulse, Zap, Clock, HelpCircle, AlertCircle, TrendingUp, Sun, LayoutGrid, Droplets, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import BookingForm from '../components/BookingForm';
 
 const Hair = () => {
   const scrollToBooking = () => {
@@ -342,6 +343,7 @@ const Hair = () => {
           </div>
         </div>
       </section>
+      <BookingForm />
     </div>
   );
 };

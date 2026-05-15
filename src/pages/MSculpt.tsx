@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
-import { Check, Phone, Zap, Activity, Sparkles, Clock, Target } from 'lucide-react';
+import { Check, Phone, Zap, Activity, Clock, Target } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import BookingForm from '../components/BookingForm';
 
 const MSculpt = () => {
   const scrollToBooking = () => {
@@ -133,6 +134,7 @@ const MSculpt = () => {
           </div>
         </div>
       </section>
+      <BookingForm />
     </div>
   );
 };

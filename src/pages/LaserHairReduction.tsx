@@ -1,9 +1,10 @@
 import { motion } from 'motion/react';
 import { ShieldCheck, Sparkles, Target, Star } from 'lucide-react';
+import BookingForm from '../components/BookingForm';
 
 const LaserHairReduction = () => {
   return (
-    <>
+    <div className="bg-brand-cream min-h-screen">
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 px-6 overflow-hidden">
@@ -97,7 +98,8 @@ const LaserHairReduction = () => {
           </div>
         </div>
       </section>
-    </>
+      <BookingForm />
+    </div>
   );
 };
 

@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
-import { Check, Phone, Sparkles, HeartPulse, ShieldCheck, Zap } from 'lucide-react';
+import { Check, Phone, Target, Activity, ShieldCheck, Zap, Sparkles, HeartPulse } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import BookingForm from '../components/BookingForm';
 
 const SkinBooster = () => {
   const scrollToBooking = () => {
@@ -133,6 +134,7 @@ const SkinBooster = () => {
           </div>
         </div>
       </section>
+      <BookingForm />
     </div>
   );
 };

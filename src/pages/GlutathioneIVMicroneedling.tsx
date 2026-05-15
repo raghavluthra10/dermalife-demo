@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { Check, Phone, Target, Sparkles, ShieldCheck, Layers, Droplets } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import BookingForm from '../components/BookingForm';
 
 const GlutathioneIVMicroneedling = () => {
   const scrollToBooking = () => {
@@ -132,6 +133,7 @@ const GlutathioneIVMicroneedling = () => {
           </div>
         </div>
       </section>
+      <BookingForm />
     </div>
   );
 };

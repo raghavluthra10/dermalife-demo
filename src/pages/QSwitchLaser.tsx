@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
-import { Check, Phone, Target, Sparkles, ShieldCheck, Layers, Zap } from 'lucide-react';
+import { Check, Phone, Target, Zap, Activity, ShieldCheck, Sparkles, Layers } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import BookingForm from '../components/BookingForm';
 
 const QSwitchLaser = () => {
   const scrollToBooking = () => {
@@ -132,6 +133,7 @@ const QSwitchLaser = () => {
           </div>
         </div>
       </section>
+      <BookingForm />
     </div>
   );
 };

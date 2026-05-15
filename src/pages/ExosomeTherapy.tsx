@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
-import { Check, Phone, Target, Sparkles, ShieldCheck, Layers, RefreshCw } from 'lucide-react';
+import { Check, Phone, Target, Zap, Activity, ShieldCheck, HeartPulse, Sparkles, Layers, RefreshCw } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import BookingForm from '../components/BookingForm';
 
 const ExosomeTherapy = () => {
   const scrollToBooking = () => {
@@ -132,6 +133,7 @@ const ExosomeTherapy = () => {
           </div>
         </div>
       </section>
+      <BookingForm />
     </div>
   );
 };
