@@ -55,7 +55,7 @@ const Specialities = () => {
           </motion.h2>
         </div>
 
-        <div className="flex overflow-x-auto md:grid md:grid-cols-2 gap-6 md:gap-8 snap-x snap-mandatory pb-8 md:pb-0 no-scrollbar -mx-6 px-6 md:mx-0 md:px-0">
+        <div className="flex overflow-x-auto md:grid md:grid-cols-2 gap-6 md:gap-8 snap-x snap-mandatory pb-12 no-scrollbar -mx-6 px-6 md:mx-0 md:px-4 md:-mx-4">
           {specialties.map((spec, index) => (
             <motion.div
               key={spec.number}
