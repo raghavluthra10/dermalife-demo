@@ -33,18 +33,17 @@ const AboutUs = () => {
 
       {/* Philosophy Section */}
       <section className="py-24 bg-white px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+          <div className="max-w-4xl mx-auto text-center">
             <motion.div 
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="space-y-8"
             >
-              <h2 className="text-4xl md:text-5xl font-primary font-bold  uppercase tracking-tighter leading-tight">
+              <h2 className="text-4xl md:text-6xl font-primary font-bold  uppercase tracking-tighter leading-tight">
                 A Nurturing Environment <br /> for Transformation
               </h2>
-              <div className="prose prose-lg text-brand-dark/60 font-sans font-medium uppercase tracking-tight leading-relaxed">
+              <div className="prose prose-lg text-brand-dark/60 font-sans font-medium uppercase tracking-tight leading-relaxed max-w-2xl mx-auto">
                 <p>
                   Every experience at Dermalife is crafted to help you shine inside and out. From advanced skincare treatments to holistic wellness practices, we create a sanctuary where you can relax, recharge, and renew.
                 </p>
@@ -53,35 +52,7 @@ const AboutUs = () => {
                 </p>
               </div>
             </motion.div>
-            
-            <div className="grid grid-cols-2 gap-4">
-               <div className="space-y-4">
-                  <div className="aspect-[4/5] bg-brand-cream rounded-3xl overflow-hidden shadow-2xl relative group">
-                    <div className="absolute inset-0 bg-brand-accent/20 group-hover:bg-brand-accent/0 transition-all duration-700" />
-                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80" alt="Clinic Ambience" className="w-full h-full object-cover" />
-                  </div>
-                  <div className="aspect-square bg-brand-gold rounded-3xl flex items-center justify-center p-8 text-white">
-                      <div className="text-center">
-                          <h4 className="text-4xl font-primary font-bold">10k+</h4>
-                          <p className="text-[10px] font-bold uppercase tracking-widest mt-2">Happy Clients</p>
-                      </div>
-                  </div>
-               </div>
-               <div className="space-y-4 pt-12">
-                  <div className="aspect-square bg-brand-accent rounded-3xl flex items-center justify-center p-8 text-white">
-                      <div className="text-center">
-                          <h4 className="text-4xl font-primary font-bold">15+</h4>
-                          <p className="text-[10px] font-bold uppercase tracking-widest mt-2">Years of Excellence</p>
-                      </div>
-                  </div>
-                  <div className="aspect-[4/5] bg-brand-cream rounded-3xl overflow-hidden shadow-2xl relative group">
-                    <div className="absolute inset-0 bg-brand-accent/20 group-hover:bg-brand-accent/0 transition-all duration-700" />
-                    <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc2069?auto=format&fit=crop&q=80" alt="Treatment Room" className="w-full h-full object-cover" />
-                  </div>
-               </div>
-            </div>
           </div>
-        </div>
       </section>
 
       {/* Pillars Section */}
