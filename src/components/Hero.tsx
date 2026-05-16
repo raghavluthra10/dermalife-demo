@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { Search, Star } from 'lucide-react';
-import newHero from '../assets/new_hero_1.png';
+import newHero from '../assets/newHero.jpg';
 
 const Hero = () => {
   const stats = [
@@ -41,13 +41,12 @@ const Hero = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
               <h3 className="text-4xl min-[929px]:text-6xl font-primary font-extrabold  leading-[1.1] mb-6 uppercase tracking-tighter">
-                Skin that tells <br />
-                <span className="text-brand-gold">your best story.</span> <br />
+                Skin That Glows. <br />
+                <span className="text-brand-gold">Body That Sculpts.</span> <br />
               </h3>
               <p className="text-base min-[929px]:text-xl text-brand-dark/70 mb-8 max-w-md font-sans leading-relaxed">
-                Expert dermatology and aesthetics for every
-                skin type, tone, and concern. Real results,
-                right here in Gurugram.
+                Expert dermatology, body contouring and medical weight loss -
+                all under one roof. Real results, right here in Gurugram.
               </p>
 
             </motion.div>

@@ -38,12 +38,12 @@ const ConsultationCTA = () => {
             className="flex-1 text-center md:text-left"
           >
             <h2 className="text-4xl sm:text-3xl max-[900px]:text-3xl md:text-4xl lg:text-5xl min-[1101px]:text-6xl font-primary font-extrabold  leading-[1.1] mb-4 md:mb-8 uppercase tracking-tighter">
-              <span className="text-brand-dark">Not sure</span> <br />
-              <span className="text-brand-gold">where to start?</span>
+              <span className="text-brand-dark">NOT SURE</span> <br />
+              <span className="text-brand-gold">WHERE TO START?</span>
             </h2>
             <p className="text-sm sm:text-base max-[900px]:text-base md:text-lg min-[1101px]:text-xl text-brand-dark/70 mb-6 md:mb-10 font-sans leading-relaxed font-medium">
-              Book a free skin consultation — our dermatologists
-              will map the right plan for you. <br className="hidden md:block" />
+              Whether it's clearer skin, a slimmer waist or a sculpted body - book a free consultation and our doctors will map the right plan for you.
+              <br className="hidden md:block" />
               No pressure, no commitment.
             </p>
             <button

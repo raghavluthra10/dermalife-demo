@@ -32,11 +32,16 @@ const Specialities = () => {
     }
   ];
 
+  const scrollToBooking = () => {
+    const el = document.getElementById('booking-section');
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <section className="py-24 bg-[#f8f7f2] px-6">
+    <section className="py-12 bg-[#f8f7f2] px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <motion.span 
+          <motion.span
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -44,7 +49,7 @@ const Specialities = () => {
           >
             Our Specialities
           </motion.span>
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -68,8 +73,8 @@ const Specialities = () => {
               <div className="absolute top-8 right-8 text-7xl md:text-8xl font-primary font-extrabold text-brand-dark/[0.03] group-hover:text-brand-gold/10 transition-colors duration-500">
                 {spec.number}
               </div>
-              
-              <div className="relative z-10">
+
+              <div className="relative z-10 h-full flex flex-col">
                 <span className="text-[10px] font-bold text-brand-gold uppercase tracking-[0.2em] mb-6 block">
                   {spec.category}
                 </span>
@@ -79,9 +84,9 @@ const Specialities = () => {
                 <p className="text-brand-dark/60 font-sans text-xs md:text-base leading-relaxed mb-8 md:mb-10 max-w-sm">
                   {spec.description}
                 </p>
-                <div className="flex flex-wrap gap-2 md:gap-3">
+                <div className="flex flex-wrap gap-2 md:gap-3 mb-8">
                   {spec.tags.map(tag => (
-                    <span 
+                    <span
                       key={tag}
                       className="px-3 md:px-4 py-1.5 md:py-2 bg-brand-cream border border-brand-muted/40 rounded-full text-[8px] md:text-[10px] font-bold uppercase tracking-widest text-brand-dark/70"
                     >
@@ -89,10 +94,18 @@ const Specialities = () => {
                     </span>
                   ))}
                 </div>
+                <button
+                  onClick={scrollToBooking}
+                  className="w-full py-4 bg-brand-dark text-white font-primary font-bold uppercase tracking-[0.2em] text-[10px] rounded-full hover:bg-brand-gold transition-all duration-300 active:scale-95 flex items-center justify-center gap-2 mt-auto"
+                >
+                  Book Consultation
+                </button>
               </div>
             </motion.div>
           ))}
         </div>
+
+
       </div>
     </section>
   );

@@ -3,8 +3,8 @@ import { ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import skinImg from '../assets/skin.png';
 import hairImg from '../assets/hair_home_page.png';
-import slimmingImg from '../assets/slimming_and_body_contouring.png';
-import aestheticsImg from '../assets/aesthetics_home.png';
+import slimmingImg from '../assets/slimming.jpg';
+import aestheticsImg from '../assets/aesthetics_01.jpg';
 import facialsImg from '../assets/facial_home.png';
 
 const TrustedExpertise = () => {
@@ -29,34 +29,28 @@ const TrustedExpertise = () => {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className={`group relative aspect-[3/4] bg-[#E8E4DE] rounded-[12px] overflow-hidden ${className}`}
+      className={`group flex flex-col ${className}`}
     >
-      <Link to={path} className="block w-full h-full">
-        {/* Image Rendering */}
-        {image ? (
-          <>
+      <Link to={path} className="block w-full">
+        {/* Image Container */}
+        <div className="relative aspect-[3/4] bg-[#E8E4DE] rounded-[12px] overflow-hidden mb-4">
+          {image ? (
             <img 
               src={image} 
               alt={label} 
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
             />
-          </>
-        ) : (
-          <div className="absolute inset-0 w-full h-full" />
-        )}
-        
-        {/* Label - Bottom Left */}
-        <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 z-20">
-          <span className="font-primary text-base md:text-[18px] font-bold text-black uppercase tracking-tight">
-            {label}
-          </span>
+          ) : (
+            <div className="absolute inset-0 w-full h-full" />
+          )}
         </div>
 
-        {/* Arrow Icon - Bottom Right */}
-        <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 z-20">
-          <div className="w-7 h-7 md:w-9 md:h-9 rounded-full bg-white flex items-center justify-center text-brand-dark shadow-sm group-hover:bg-brand-gold group-hover:text-white transition-all duration-300">
-            <ArrowUpRight className="w-4 h-4 md:w-5 md:h-5" />
-          </div>
+        {/* Label and Arrow - Below Image */}
+        <div className="px-1 flex items-center justify-between group/label">
+          <span className="font-primary text-sm md:text-[15px] font-bold text-black uppercase tracking-tight group-hover:text-brand-gold transition-colors duration-300">
+            {label}
+          </span>
+          <ArrowUpRight className="w-4 h-4 text-black group-hover:text-brand-gold group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
         </div>
       </Link>
     </motion.div>

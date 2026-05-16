@@ -16,16 +16,11 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <ConsultationCTA />
-      <Specialities />
       <TrustedExpertise />
-      {/* <TopTreatments /> */}
-      {/* <StatsSection /> */}
+      <Specialities />
+      <ConsultationCTA />
       <BrandPillars />
-      {/* <WhyChooseUs /> */}
       <GoogleReviews />
-      {/* Add galery */}
-      {/* <PressSection /> */}
       <BookingForm />
       <MapSection />
     </>
