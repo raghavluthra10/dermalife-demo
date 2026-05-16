@@ -10,12 +10,14 @@ import PressSection from '../components/PressSection';
 import BookingForm from '../components/BookingForm';
 import MapSection from '../components/MapSection';
 import WhyChooseUs from '../components/WhyChooseUs';
+import Specialities from '../components/Specialities';
 
 const Home = () => {
   return (
     <>
       <Hero />
       <ConsultationCTA />
+      <Specialities />
       <TrustedExpertise />
       {/* <TopTreatments /> */}
       {/* <StatsSection /> */}
