@@ -105,7 +105,7 @@ const Navbar = () => {
           </Link>
 
           {/* Left Desktop Links */}
-          <div className="hidden min-[1100px]:flex items-center gap-6 h-full">
+          <div className="hidden min-[1200px]:flex items-center gap-6 h-full">
             {leftNavLinks.map((link) => (
               <div
                 key={link.name}
@@ -149,7 +149,7 @@ const Navbar = () => {
         </div>
 
         {/* Right Desktop Section */}
-        <div className="hidden lg:flex items-center gap-8">
+        <div className="hidden min-[1200px]:flex items-center gap-8">
           <div className="flex items-center gap-6">
             {rightNavLinks.map((link) => (
               <Link
@@ -173,7 +173,7 @@ const Navbar = () => {
 
         {/* Mobile Toggle */}
         <button
-          className="lg:hidden p-2 "
+          className="min-[1200px]:hidden p-2 "
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -187,7 +187,7 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="lg:hidden fixed top-[80px] left-0 w-full h-[calc(100vh-80px)] bg-brand-cream border-t border-brand-muted p-6 shadow-2xl overflow-y-auto z-[100]"
+            className="min-[1200px]:hidden fixed top-[80px] left-0 w-full h-[calc(100vh-80px)] bg-brand-cream border-t border-brand-muted p-6 shadow-2xl overflow-y-auto z-[100]"
           >
             <div className="flex flex-col gap-2">
               {leftNavLinks.map((link) => (
