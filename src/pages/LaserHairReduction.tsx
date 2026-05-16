@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 import { Check, Phone, Target, Activity, ShieldCheck, Zap, HeartPulse, Sparkles, Layers, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import BookingForm from '../components/BookingForm';
-import skinHero from '../assets/skin_page_hero_image.png';
+import skinHero from '../assets/hair_laser_reduction.png';
 
 const LaserHairReduction = () => {
   const scrollToBooking = () => {
