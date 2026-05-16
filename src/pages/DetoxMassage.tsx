@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 import { Check, Phone, Droplets, Activity, RefreshCw, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import BookingForm from '../components/BookingForm';
-import detoxHero from '../assets/Detox and Massage .png';
+import detoxHero from '../assets/Detox and Massage .jpg';
 
 const DetoxMassage = () => {
   const scrollToBooking = () => {
@@ -59,10 +59,10 @@ const DetoxMassage = () => {
           </div>
           <div className="w-full lg:w-1/2">
             <div className="aspect-[4/5] bg-[#E5E1DA] rounded-[24px] overflow-hidden relative border border-brand-muted/30 group">
-              <img 
-                src={detoxHero} 
-                alt="Detox & Deep Tissue Massage" 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+              <img
+                src={detoxHero}
+                alt="Detox & Deep Tissue Massage"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-br from-brand-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
             </div>

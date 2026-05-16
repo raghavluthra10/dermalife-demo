@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 import { ArrowRight, Check, Phone, Activity, Target, Layers, ShieldCheck, Sparkles, HeartPulse, Zap, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import BookingForm from '../components/BookingForm';
-import aestheticsHero from '../assets/aesthetics_home.png';
+import aestheticsHero from '../assets/aesthetics_home.jpg';
 
 const Aesthetics = () => {
   const scrollToBooking = () => {
@@ -26,28 +26,28 @@ const Aesthetics = () => {
   ];
 
   const treatments = [
-    { 
-      name: "Dermal fillers", 
+    {
+      name: "Dermal fillers",
       desc: "Restore lost volume, define features, and smooth deep lines with precision-placed hyaluronic acid fillers.",
       href: "/aesthetics/dermal-fillers"
     },
-    { 
-      name: "Botox", 
+    {
+      name: "Botox",
       desc: "Relax fine lines and wrinkles for a refreshed, natural appearance — without looking done.",
       href: "/aesthetics/botox"
     },
-    { 
-      name: "Collagen threads", 
+    {
+      name: "Collagen threads",
       desc: "Non-surgical face lift using dissolvable threads that lift, tighten, and stimulate collagen simultaneously.",
       href: "/aesthetics/collagen-threads"
     },
-    { 
-      name: "Skin booster", 
+    {
+      name: "Skin booster",
       desc: "Deep hydration injected directly into the skin for lasting plumpness, glow, and elasticity.",
       href: "/aesthetics/skin-booster"
     },
-    { 
-      name: "Meso Botox", 
+    {
+      name: "Meso Botox",
       desc: "Micro-injections of diluted Botox that refine pores, control oil, and give the skin a smooth, glassy finish.",
       href: "/aesthetics/meso-botox"
     }
@@ -67,19 +67,19 @@ const Aesthetics = () => {
       {/* Main Two-Column Layout */}
       <section className="max-w-7xl mx-auto px-6 pb-24">
         <div className="flex flex-col min-[929px]:flex-row gap-12 lg:gap-24 items-start">
-          
+
           {/* Left Column (40%) */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             className="w-full min-[929px]:w-[40%] sticky top-[140px]"
           >
             <div className="aspect-[2/3] bg-[#E5E1DA] rounded-[12px] border border-brand-muted/30 flex items-center justify-center overflow-hidden relative group">
-              <img 
-                src={aestheticsHero} 
-                alt="Aesthetics Treatment" 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+              <img
+                src={aestheticsHero}
+                alt="Aesthetics Treatment"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-br from-brand-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
             </div>
@@ -87,15 +87,15 @@ const Aesthetics = () => {
 
           {/* Right Column (60%) */}
           <div className="w-full min-[929px]:w-[60%] flex flex-col pt-4">
-            <motion.span 
+            <motion.span
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               className="text-[10px] md:text-[12px] font-primary font-bold uppercase tracking-[0.3em] text-brand-gold mb-6 block"
             >
               INJECTABLES & AESTHETIC TREATMENTS
             </motion.span>
-            
-            <motion.h1 
+
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.8 }}
@@ -104,7 +104,7 @@ const Aesthetics = () => {
               Look refreshed, natural, <br /> <span className="text-brand-gold italic font-normal text-4xl md:text-5xl lg:text-[52px]">and exactly like yourself.</span>
             </motion.h1>
 
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
@@ -114,7 +114,7 @@ const Aesthetics = () => {
             </motion.p>
 
             {/* Treatable Concerns Section */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
@@ -123,7 +123,7 @@ const Aesthetics = () => {
               <div className="inline-block bg-brand-accent/5 text-brand-dark text-[10px] font-bold px-6 py-2 rounded-full uppercase tracking-[0.2em] mb-10">
                 Treatable Concerns
               </div>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-5">
                 {concerns.map((concern, i) => (
                   <div key={i} className="flex items-center gap-4 group">
@@ -136,7 +136,7 @@ const Aesthetics = () => {
               </div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
@@ -160,10 +160,10 @@ const Aesthetics = () => {
               Every aesthetic treatment at Dermalife is performed exclusively by certified dermatologists — never a technician or beautician. Your safety and natural results are our priority.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {treatments.map((treatment, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}

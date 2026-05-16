@@ -1,11 +1,11 @@
 import { motion } from 'motion/react';
 import { ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import skinImg from '../assets/skin.png';
-import hairImg from '../assets/hair_home_page.png';
+import skinImg from '../assets/skin.jpg';
+import hairImg from '../assets/hair_home_page.jpg';
 import slimmingImg from '../assets/slimming.jpg';
 import aestheticsImg from '../assets/aesthetics_01.jpg';
-import facialsImg from '../assets/facial_home.png';
+import facialsImg from '../assets/facial_home.jpg';
 
 const TrustedExpertise = () => {
   const row1Services = [
@@ -35,10 +35,10 @@ const TrustedExpertise = () => {
         {/* Image Container */}
         <div className="relative aspect-[3/4] bg-[#E8E4DE] rounded-[12px] overflow-hidden mb-4">
           {image ? (
-            <img 
-              src={image} 
-              alt={label} 
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+            <img
+              src={image}
+              alt={label}
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
           ) : (
             <div className="absolute inset-0 w-full h-full" />
@@ -94,7 +94,7 @@ const TrustedExpertise = () => {
 
         {/* Centered CTA Button */}
         <div className="flex justify-center mt-10">
-          <button 
+          <button
             onClick={scrollToBooking}
             className="btn-primary"
           >

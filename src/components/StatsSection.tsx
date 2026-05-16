@@ -1,9 +1,9 @@
-import img1 from '../card_photos/magnific__make-a-before-after-of-pigmentation-before-should-__97181.png';
-import img2 from '../card_photos/magnific__make-a-before-after-of-pigmentation-before-should-__97182.png';
-import img3 from '../card_photos/magnific__a-south-asian-woman-with-dark-hair-wearing-a-light__97183.png';
-import img4 from '../card_photos/magnific__a-south-asian-woman-with-auburn-hair-dyed-wearing-__97184.png';
-import img5 from '../card_photos/magnific__an-indian-woman-with-shoulderlength-wavy-dark-hair__97185.png';
-import img6 from '../card_photos/magnific__extreme-closeup-of-an-indian-womans-face-midtreatm__67813.png';
+import img1 from '../card_photos/magnific__make-a-before-after-of-pigmentation-before-should-__97181.jpg';
+import img2 from '../card_photos/magnific__make-a-before-after-of-pigmentation-before-should-__97182.jpg';
+import img3 from '../card_photos/magnific__a-south-asian-woman-with-dark-hair-wearing-a-light__97183.jpg';
+import img4 from '../card_photos/magnific__a-south-asian-woman-with-auburn-hair-dyed-wearing-__97184.jpg';
+import img5 from '../card_photos/magnific__an-indian-woman-with-shoulderlength-wavy-dark-hair__97185.jpg';
+import img6 from '../card_photos/magnific__extreme-closeup-of-an-indian-womans-face-midtreatm__67813.jpg';
 
 const StatsSection = () => {
   const stats = [

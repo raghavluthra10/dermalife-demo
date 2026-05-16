@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { Search, Star } from 'lucide-react';
-import newHero from '../assets/newHero001.jpg';
+import hero01 from '../assets/hero01.jpg';
 
 const Hero = () => {
   const stats = [
@@ -22,7 +22,7 @@ const Hero = () => {
       {/* Hero Image Container */}
       <div className="relative h-[60vh] min-[929px]:absolute min-[929px]:inset-0 min-[929px]:h-full w-full z-0">
         <img
-          src={newHero}
+          src={hero01}
           alt="Dermalife Aesthetic Care"
           className="w-full h-full object-cover max-[465px]:object-[85%_center] object-right min-[929px]:object-right"
         />

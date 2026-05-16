@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 import { ArrowRight, Check, Phone, Activity, Target, Layers, ShieldCheck, Sparkles, Zap, TrendingUp, Heart, Droplets } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import BookingForm from '../components/BookingForm';
-import slimmingHero from '../assets/slimming_and_body_contouring.png';
+import slimmingHero from '../assets/slimming_and_body_contouring.jpg';
 
 const Slimming = () => {
   const scrollToBooking = () => {
@@ -49,19 +49,19 @@ const Slimming = () => {
       {/* Main Two-Column Layout */}
       <section className="max-w-7xl mx-auto px-6 pb-24">
         <div className="flex flex-col min-[929px]:flex-row gap-12 lg:gap-24 items-start">
-          
+
           {/* Left Column (40%) */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             className="w-full min-[929px]:w-[40%] sticky top-[140px]"
           >
             <div className="aspect-[2/3] bg-[#E5E1DA] rounded-[12px] border border-brand-muted/30 flex items-center justify-center overflow-hidden relative group">
-              <img 
-                src={slimmingHero} 
-                alt="Slimming & Body Contouring" 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+              <img
+                src={slimmingHero}
+                alt="Slimming & Body Contouring"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-br from-brand-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
             </div>
@@ -69,15 +69,15 @@ const Slimming = () => {
 
           {/* Right Column (60%) */}
           <div className="w-full min-[929px]:w-[60%] flex flex-col pt-4">
-            <motion.span 
+            <motion.span
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               className="text-[10px] md:text-[12px] font-primary font-bold uppercase tracking-[0.3em] text-brand-gold mb-6 block"
             >
               NON-SURGICAL BODY CONTOURING & SLIMMING
             </motion.span>
-            
-            <motion.h1 
+
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.8 }}
@@ -86,7 +86,7 @@ const Slimming = () => {
               Lose inches. Tone up. <br /> No surgery, no downtime.
             </motion.h1>
 
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
@@ -103,8 +103,8 @@ const Slimming = () => {
 
               <div className="grid grid-cols-2 gap-x-4 md:gap-x-8 gap-y-4">
                 {concerns.map((concern, i) => (
-                  <motion.div 
-                    key={i} 
+                  <motion.div
+                    key={i}
                     initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
@@ -146,7 +146,7 @@ const Slimming = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             {treatments.map((treatment, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 whileHover={{ y: -5 }}
                 className="p-8 rounded-[12px] border border-brand-muted/40 hover:border-brand-gold/30 hover:shadow-xl hover:shadow-brand-gold/5 transition-all duration-500 bg-brand-cream/10"
@@ -157,8 +157,8 @@ const Slimming = () => {
                 <p className="font-sans text-[15px] text-brand-dark/60 leading-relaxed mb-6">
                   {treatment.desc}
                 </p>
-                <Link 
-                  to={treatment.href} 
+                <Link
+                  to={treatment.href}
                   className="inline-flex items-center gap-2 text-[10px] font-primary font-bold uppercase tracking-widest text-brand-gold group"
                 >
                   Learn more
@@ -200,7 +200,7 @@ const Slimming = () => {
               { name: "M-Sculpt EMS", type: "Electromagnetic Stimulation", use: "Muscle Building & Fat Loss" },
               { name: "Metaslim Analyzer", type: "Body Composition", use: "Precise Diagnosis" },
             ].map((tech, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -216,7 +216,7 @@ const Slimming = () => {
 
                 <div className="p-8 relative">
                   <div className="absolute -top-4 -right-4 w-24 h-24 bg-brand-gold/5 rounded-full blur-2xl group-hover:bg-brand-gold/20 transition-all duration-500" />
-                  
+
                   <span className="text-brand-gold text-[9px] font-bold uppercase tracking-widest mb-4 block opacity-60">
                     {tech.type}
                   </span>
@@ -246,7 +246,7 @@ const Slimming = () => {
         {/* Background Accents */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-brand-gold/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-accent/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
-        
+
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
           <h2 className="text-3xl md:text-[48px] font-primary font-bold text-brand-dark leading-[1.1] mb-6 uppercase tracking-tighter text-black">
             Not sure which slimming treatment <br className="hidden md:block" /> is right for you?
@@ -254,11 +254,11 @@ const Slimming = () => {
           <p className="font-sans text-base md:text-lg text-brand-dark/60 mb-12 max-w-2xl mx-auto">
             Book a free consultation — our dermatologist will assess your body, understand your goals, and recommend the right treatment plan. No pressure, no commitment.
           </p>
-          
+
           <button onClick={scrollToBooking} className="btn-primary min-w-[280px]">
             Book free consultation
           </button>
-          
+
           <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
             <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-brand-dark/30 font-bold flex items-center gap-2">
               <Check size={12} className="text-brand-gold" />

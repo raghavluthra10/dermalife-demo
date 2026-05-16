@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 import { ArrowRight, Check, Phone, Activity, Target, Layers, ShieldCheck, Sparkles, HeartPulse, Zap, Clock, Droplets } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import BookingForm from '../components/BookingForm';
-import facialHero from '../assets/facial_home.png';
+import facialHero from '../assets/facial_home.jpg';
 
 const Facials = () => {
   const scrollToBooking = () => {
@@ -26,38 +26,38 @@ const Facials = () => {
   ];
 
   const treatments = [
-    { 
-      name: "Dermal skin brightening facial", 
+    {
+      name: "Dermal skin brightening facial",
       desc: "A professional brightening treatment that targets dullness, uneven tone, and pigmentation for instant glow.",
       href: "/facials/brightening-facial"
     },
-    { 
-      name: "Dermalife detox facial", 
+    {
+      name: "Dermalife detox facial",
       desc: "A deep cleansing and detoxifying facial that purifies congested skin and restores clarity.",
       href: "/facials/detox-facial"
     },
-    { 
-      name: "Hydra facial", 
+    {
+      name: "Hydra facial",
       desc: "Multi-step hydration and cleansing treatment for instantly plumper, smoother, glowing skin.",
       href: "/facials/hydra-facial"
     },
-    { 
-      name: "Korean glass facial", 
+    {
+      name: "Korean glass facial",
       desc: "Achieve the coveted Korean glass skin — poreless, translucent, and lit from within.",
       href: "/facials/korean-glass-facial"
     },
-    { 
-      name: "Stem cell anti-ageing facial", 
+    {
+      name: "Stem cell anti-ageing facial",
       desc: "Advanced anti-ageing facial using stem cell technology to reverse visible signs of ageing.",
       href: "/facials/stem-cell-facial"
     },
-    { 
-      name: "Line correction facial", 
+    {
+      name: "Line correction facial",
       desc: "Targeted treatment to visibly soften fine lines and restore youthful skin texture.",
       href: "/facials/line-correction-facial"
     },
-    { 
-      name: "Deep repair facial", 
+    {
+      name: "Deep repair facial",
       desc: "An intensive skin repair treatment for damaged, stressed, or compromised skin.",
       href: "/facials/deep-repair-facial"
     }
@@ -77,19 +77,19 @@ const Facials = () => {
       {/* Main Two-Column Layout */}
       <section className="max-w-7xl mx-auto px-6 pb-24">
         <div className="flex flex-col min-[929px]:flex-row gap-12 lg:gap-24 items-start">
-          
+
           {/* Left Column (40%) */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             className="w-full min-[929px]:w-[40%] sticky top-[140px]"
           >
             <div className="aspect-[2/3] bg-[#E5E1DA] rounded-[12px] border border-brand-muted/30 flex items-center justify-center overflow-hidden relative group">
-              <img 
-                src={facialHero} 
-                alt="Facial Treatments" 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+              <img
+                src={facialHero}
+                alt="Facial Treatments"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-br from-brand-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
             </div>
@@ -97,15 +97,15 @@ const Facials = () => {
 
           {/* Right Column (60%) */}
           <div className="w-full min-[929px]:w-[60%] flex flex-col pt-4">
-            <motion.span 
+            <motion.span
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               className="text-[10px] md:text-[12px] font-primary font-bold uppercase tracking-[0.3em] text-brand-gold mb-6 block"
             >
               PROFESSIONAL FACIALS & SKIN TREATMENTS
             </motion.span>
-            
-            <motion.h1 
+
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.8 }}
@@ -114,7 +114,7 @@ const Facials = () => {
               Facials that actually <br /> <span className="text-brand-gold italic font-normal text-4xl md:text-5xl lg:text-[52px]">transform your skin.</span>
             </motion.h1>
 
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
@@ -124,7 +124,7 @@ const Facials = () => {
             </motion.p>
 
             {/* Treatable Concerns Section */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
@@ -133,7 +133,7 @@ const Facials = () => {
               <div className="inline-block bg-brand-accent/5 text-brand-dark text-[10px] font-bold px-6 py-2 rounded-full uppercase tracking-[0.2em] mb-10">
                 Treatable Concerns
               </div>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-5">
                 {concerns.map((concern, i) => (
                   <div key={i} className="flex items-center gap-4 group">
@@ -146,7 +146,7 @@ const Facials = () => {
               </div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
@@ -170,10 +170,10 @@ const Facials = () => {
               Every clinical facial at Dermalife is performed using medical-grade equipment and advanced formulations to deliver results you can see and feel instantly.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {treatments.map((treatment, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}

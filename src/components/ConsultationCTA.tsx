@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import docImg from '../assets/doc_home_page.png';
+import docImg from '../assets/doc_home_page.jpg';
 
 const ConsultationCTA = () => {
   const scrollToBooking = () => {
