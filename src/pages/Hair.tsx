@@ -194,69 +194,7 @@ const Hair = () => {
         </div>
       </section>
 
-      {/* Advanced Technologies Section */}
-      <section className="py-24 bg-brand-dark">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-            <div className="max-w-2xl text-left">
-              <span className="text-brand-gold text-[10px] font-primary font-bold uppercase tracking-[0.3em] mb-4 block">
-                World-Class Medical Devices
-              </span>
-              <h2 className="text-3xl md:text-5xl font-primary font-bold text-white uppercase tracking-tighter leading-tight">
-                Our Advanced <br /> Technologies
-              </h2>
-            </div>
-            <p className="text-white/40 text-sm md:text-base max-w-sm mb-2">
-              We invest in the most advanced, medically-validated diagnostic and treatment platforms to ensure your hair restoration results.
-            </p>
-          </div>
 
-          <div className="flex overflow-x-auto no-scrollbar snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 pb-4 md:pb-0">
-            {[
-              { name: "QR 678 Injection", type: "Growth Factor Therapy", use: "Hair Density & Regrowth" },
-              { name: "High-Speed Centrifuge", type: "PRP Processing", use: "Pure Plasma Concentration" },
-              { name: "Scalp Analysis Pro", type: "Digital Diagnostics", use: "Root Cause Identification" },
-              { name: "Micro-Needling RF", type: "Follicle Stimulation", use: "Enhanced Drug Delivery" },
-            ].map((tech, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="group relative flex flex-col rounded-2xl bg-white/5 border border-white/10 hover:border-brand-gold/50 transition-all duration-500 overflow-hidden min-w-[85%] md:min-w-0 snap-center"
-              >
-                {/* Tech Image Placeholder */}
-                <div className="aspect-square bg-white/5 border-b border-white/10 flex items-center justify-center relative group-hover:bg-white/10 transition-colors duration-500 overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-brand-gold/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                  <p className="text-white/10 uppercase tracking-widest text-[8px] font-bold">Machine Image</p>
-                </div>
-
-                <div className="p-8 relative">
-                  <div className="absolute -top-4 -right-4 w-24 h-24 bg-brand-gold/5 rounded-full blur-2xl group-hover:bg-brand-gold/20 transition-all duration-500" />
-
-                  <span className="text-brand-gold text-[9px] font-bold uppercase tracking-widest mb-4 block opacity-60">
-                    {tech.type}
-                  </span>
-                  <h3 className="text-xl font-primary font-bold text-white uppercase tracking-tight mb-4 leading-tight group-hover:text-brand-gold transition-colors">
-                    {tech.name}
-                  </h3>
-                  <div className="h-px w-8 bg-brand-gold/30 mb-4 group-hover:w-full transition-all duration-500" />
-                  <p className="text-white/40 text-[11px] uppercase tracking-wider font-bold">
-                    Key Application: <span className="text-white/60">{tech.use}</span>
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          <div className="flex justify-center mt-12 md:mt-16">
-            <button onClick={scrollToBooking} className="px-12 py-5 bg-brand-gold text-brand-dark font-bold rounded-full hover:bg-white transition-all uppercase tracking-widest text-sm shadow-xl">
-              Book free consultation
-            </button>
-          </div>
-        </div>
-      </section>
 
 
       {/* Bottom CTA Section */}
