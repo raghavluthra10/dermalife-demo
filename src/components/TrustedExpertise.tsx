@@ -10,8 +10,8 @@ import facialsImg from '../assets/facial_home.png';
 const TrustedExpertise = () => {
   const row1Services = [
     { label: 'Skin', path: '/skin', image: skinImg },
-    { label: 'Hair', path: '/hair', image: hairImg },
     { label: 'Slimming and Body Contouring', path: '/slimming', image: slimmingImg },
+    { label: 'Hair', path: '/hair', image: hairImg },
   ];
 
   const row2Services = [

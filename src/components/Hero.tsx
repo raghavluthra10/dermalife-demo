@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { Search, Star } from 'lucide-react';
-import newHero from '../assets/newHero.jpg';
+import newHero from '../assets/newHero001.jpg';
 
 const Hero = () => {
   const stats = [
