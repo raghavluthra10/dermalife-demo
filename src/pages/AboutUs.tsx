@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
-import { Leaf, Heart, Sparkles, Target, Users, ShieldCheck } from 'lucide-react';
+import { Leaf, Heart, Sparkles, Target, Users, ShieldCheck, Check } from 'lucide-react';
+import BookingForm from '../components/BookingForm';
 
 const AboutUs = () => {
   return (
@@ -169,6 +170,36 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
+
+      {/* Bottom CTA Section */}
+      <section className="py-24 bg-brand-cream relative overflow-hidden text-center border-t border-brand-muted/30">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-brand-gold/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-accent/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+
+        <div className="max-w-4xl mx-auto px-6 relative z-10">
+          <h2 className="text-3xl md:text-[56px] font-primary font-bold text-brand-dark leading-[1.1] mb-6 uppercase tracking-tighter text-black">
+            Ready to start <br /> <span className="text-brand-gold italic font-normal text-4xl md:text-5xl lg:text-[52px]">your transformation?</span>
+          </h2>
+          <p className="font-sans text-base md:text-lg text-brand-dark/60 mb-12 max-w-2xl mx-auto leading-relaxed">
+            Book a free consultation — our specialists will assess your concerns and recommend the right treatment protocol for you.
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+            <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-brand-dark/30 font-bold flex items-center gap-2 text-black">
+              <Check size={12} className="text-brand-gold" />
+              Takes 2 minutes
+            </span>
+            <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-brand-dark/30 font-bold flex items-center gap-2 text-black">
+              <Check size={12} className="text-brand-gold" />
+              No commitment
+            </span>
+            <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-brand-dark/30 font-bold flex items-center gap-2 text-black">
+              <Check size={12} className="text-brand-gold" />
+              Expert-led advice
+            </span>
+          </div>
+        </div>
+      </section>
+      <BookingForm />
     </main>
   );
 };
