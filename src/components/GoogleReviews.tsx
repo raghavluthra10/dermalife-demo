@@ -3,6 +3,8 @@ import { Star } from 'lucide-react';
 
 const GoogleReviews = () => {
   const [reviews] = useState([
+    { author_name: "Reena Agarwal", text: "Post pregnancy mera weight bahut badh gaya tha and nothing was working. Someone referred me to Dermalife and I am so glad they did. The inch loss treatment is genuinely effective. Staff is also very warm and non-judgmental which matters a lot.", rating: 5, relative_time_description: "2 days ago" },
+    { author_name: "Megha Srivastava", text: "3 months ago I was very skeptical about non surgical body contouring. Now I'm a total convert lol. Waist has reduced, arms look more toned and I feel so much more confident. Dr. Priya explained everything very patiently before starting.", rating: 5, relative_time_description: "4 days ago" },
     { author_name: "Rahul Khanna", text: "Best clinic in Golf Course Road Phase 1! The HydraFacial is worth every penny. Professional staff and luxury environment.", rating: 5, relative_time_description: "2 days ago" },
     { author_name: "Anjali Sharma", text: "The anti-ageing treatment actually worked. My skin feels tighter and much more radiant. Dr. Priya is a genius!", rating: 5, relative_time_description: "3 days ago" },
     { author_name: "Meera Singh", text: "Saw visible results in just 2 sessions of Laser Hair Reduction. Highly recommend Dr. Priya for personalised advice.", rating: 5, relative_time_description: "1 week ago" },
