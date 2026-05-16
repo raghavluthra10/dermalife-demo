@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 import { Star } from 'lucide-react';
 
 const BookingForm = () => {
-  const [formData, setFormData] = useState({ name: '', phone: '', service: '', city: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', phone: '', service: '' });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -74,7 +74,18 @@ const BookingForm = () => {
                         className="w-full bg-brand-cream border-2 border-transparent p-4 md:p-5 rounded-xl md:rounded-2xl focus:border-brand-gold focus:outline-none transition-all placeholder:/20 font-bold uppercase tracking-widest text-[10px] md:text-xs"
                       />
                     </div>
-                    <div className="col-span-2 sm:col-span-1">
+                    <div className="col-span-2">
+                      <label className="text-[9px] md:text-[10px] uppercase font-extrabold text-brand-dark/40 tracking-[0.3em] block mb-2 md:mb-3 px-1">Email Address</label>
+                      <input
+                        required
+                        type="email"
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        placeholder="Ex: ananya@example.com"
+                        className="w-full bg-brand-cream border-2 border-transparent p-4 md:p-5 rounded-xl md:rounded-2xl focus:border-brand-gold focus:outline-none transition-all placeholder:/20 font-bold uppercase tracking-widest text-[10px] md:text-xs"
+                      />
+                    </div>
+                    <div className="col-span-2">
                       <label className="text-[9px] md:text-[10px] uppercase font-extrabold text-brand-dark/40 tracking-[0.3em] block mb-2 md:mb-3 px-1">Phone Number</label>
                       <input
                         required
@@ -85,36 +96,15 @@ const BookingForm = () => {
                         className="w-full bg-brand-cream border-2 border-transparent p-4 md:p-5 rounded-xl md:rounded-2xl focus:border-brand-gold focus:outline-none transition-all placeholder:/20 font-bold uppercase tracking-widest text-[10px] md:text-xs"
                       />
                     </div>
-                    <div className="col-span-2 sm:col-span-1">
-                      <label className="text-[9px] md:text-[10px] uppercase font-extrabold text-brand-dark/40 tracking-[0.3em] block mb-2 md:mb-3 px-1">Your City</label>
-                      <select
-                        required
-                        value={formData.city}
-                        onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                        className="w-full bg-brand-cream border-2 border-transparent p-4 md:p-5 rounded-xl md:rounded-2xl focus:border-brand-gold focus:outline-none transition-all appearance-none cursor-pointer font-bold uppercase tracking-widest text-[10px] md:text-xs "
-                      >
-                        <option value="">Select City</option>
-                        <option>Delhi NCR</option>
-                        <option>Mumbai</option>
-                        <option>Bangalore</option>
-                        <option>Hyderabad</option>
-                      </select>
-                    </div>
                     <div className="col-span-2">
                       <label className="text-[9px] md:text-[10px] uppercase font-extrabold text-brand-dark/40 tracking-[0.3em] block mb-2 md:mb-3 px-1">Service Interested In</label>
-                      <select
+                      <input
                         required
                         value={formData.service}
                         onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                        className="w-full bg-brand-cream border-2 border-transparent p-4 md:p-5 rounded-xl md:rounded-2xl focus:border-brand-gold focus:outline-none transition-all appearance-none cursor-pointer font-bold uppercase tracking-widest text-[10px] md:text-xs "
-                      >
-                        <option value="">Choose Treatment</option>
-                        <option>HydraFacial</option>
-                        <option>Laser Hair Reduction</option>
-                        <option>Body Sculpting</option>
-                        <option>Skin Boosters / PRP</option>
-                        <option>Anti-Ageing / Fillers</option>
-                      </select>
+                        placeholder="Ex: HydraFacial, Weight Loss, etc."
+                        className="w-full bg-brand-cream border-2 border-transparent p-4 md:p-5 rounded-xl md:rounded-2xl focus:border-brand-gold focus:outline-none transition-all placeholder:/20 font-bold uppercase tracking-widest text-[10px] md:text-xs"
+                      />
                     </div>
                   </div>
                   <button
