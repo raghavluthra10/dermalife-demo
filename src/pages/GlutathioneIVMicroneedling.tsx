@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 import { Check, Phone, Target, Sparkles, ShieldCheck, Layers, Droplets } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import BookingForm from '../components/BookingForm';
-import skinHero from '../assets/skin_page_hero_image.png';
+import skinHero from '../assets/glutathione.png';
 
 const GlutathioneIVMicroneedling = () => {
   const scrollToBooking = () => {

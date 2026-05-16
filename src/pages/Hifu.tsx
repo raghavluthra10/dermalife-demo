@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Check, Phone, Target, Zap, ShieldCheck, Activity } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import BookingForm from '../components/BookingForm';
-import skinHero from '../assets/skin_page_hero_image.png';
+import skinHero from '../assets/hifu.png';
 
 const Hifu = () => {
   const [activeTab, setActiveTab] = useState<'Face' | 'Neck'>('Face');

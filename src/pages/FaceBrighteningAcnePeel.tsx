@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 import { Check, Phone, Clock, ShieldCheck, Sparkles, Target, Zap, Activity, Layers } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import BookingForm from '../components/BookingForm';
-import skinHero from '../assets/skin_page_hero_image.png';
+import skinHero from '../assets/acne_peel.png';
 
 const FaceBrighteningAcnePeel = () => {
   const scrollToBooking = () => {
