@@ -14,7 +14,7 @@ const ContactUs = () => {
       {/* Hero Header */}
       <section className="relative pt-32 pb-16 md:pt-48 md:pb-24 px-6 overflow-hidden">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             className="max-w-3xl mx-auto"
@@ -36,9 +36,9 @@ const ContactUs = () => {
       <section className="pb-24 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
-            
+
             {/* Contact Information & Form */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               className="space-y-12"
@@ -46,15 +46,15 @@ const ContactUs = () => {
               {/* Form */}
               <div className="bg-brand-accent p-10 md:p-12 rounded-[3rem] shadow-2xl relative overflow-hidden">
                 <div className="absolute top-0 right-0 p-8 text-white/5 pointer-events-none">
-                    <MessageSquare size={150} />
+                  <MessageSquare size={150} />
                 </div>
                 <h3 className="text-3xl font-primary font-bold text-white uppercase tracking-tight mb-8">Send a Message</h3>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label className="text-[10px] font-bold text-white/60 uppercase tracking-widest ml-4">Full Name</label>
-                      <input 
-                        type="text" 
+                      <input
+                        type="text"
                         required
                         placeholder="John Doe"
                         className="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-4 text-white placeholder:text-white/30 focus:outline-none focus:border-brand-gold transition-colors font-medium"
@@ -62,8 +62,8 @@ const ContactUs = () => {
                     </div>
                     <div className="space-y-2">
                       <label className="text-[10px] font-bold text-white/60 uppercase tracking-widest ml-4">Email ID</label>
-                      <input 
-                        type="email" 
+                      <input
+                        type="email"
                         required
                         placeholder="john@example.com"
                         className="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-4 text-white placeholder:text-white/30 focus:outline-none focus:border-brand-gold transition-colors font-medium"
@@ -72,8 +72,8 @@ const ContactUs = () => {
                   </div>
                   <div className="space-y-2">
                     <label className="text-[10px] font-bold text-white/60 uppercase tracking-widest ml-4">Phone Number</label>
-                    <input 
-                      type="tel" 
+                    <input
+                      type="tel"
                       required
                       placeholder="+91-9810305086"
                       className="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-4 text-white placeholder:text-white/30 focus:outline-none focus:border-brand-gold transition-colors font-medium"
@@ -81,14 +81,14 @@ const ContactUs = () => {
                   </div>
                   <div className="space-y-2">
                     <label className="text-[10px] font-bold text-white/60 uppercase tracking-widest ml-4">Message</label>
-                    <textarea 
+                    <textarea
                       rows={4}
                       required
                       placeholder="How can we help you?"
                       className="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-4 text-white placeholder:text-white/30 focus:outline-none focus:border-brand-gold transition-colors font-medium resize-none"
                     ></textarea>
                   </div>
-                  <button 
+                  <button
                     type="submit"
                     className="w-full bg-brand-gold text-white font-primary font-bold uppercase tracking-[0.2em] py-5 rounded-2xl hover:bg-white hover: transition-all shadow-xl flex items-center justify-center gap-3 active:scale-[0.98]"
                   >
@@ -101,7 +101,7 @@ const ContactUs = () => {
                 <div className="bg-white p-8 rounded-3xl shadow-sm border border-brand-muted hover:shadow-md transition-shadow">
                   <Phone className="text-brand-gold mb-4" size={24} />
                   <h4 className="font-primary font-bold  uppercase tracking-tight mb-2">Phone</h4>
-                  <a href="tel:+919810305086" className="text-brand-dark/60 text-sm font-medium hover:text-brand-gold transition-colors">+91 98103 05086</a>
+                  <a href="tel:+919212510087" className="text-brand-dark/60 text-sm font-medium hover:text-brand-gold transition-colors">+91 98103 05086</a>
                 </div>
                 <div className="bg-white p-8 rounded-3xl shadow-sm border border-brand-muted hover:shadow-md transition-shadow">
                   <Mail className="text-brand-gold mb-4" size={24} />
@@ -120,7 +120,7 @@ const ContactUs = () => {
             </motion.div>
 
             {/* Google Maps Embed */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               className="h-full min-h-[600px] bg-white rounded-[3rem] shadow-xl border border-brand-muted overflow-hidden relative"
@@ -128,19 +128,19 @@ const ContactUs = () => {
               <div className="absolute top-8 left-8 z-10 bg-white/90 backdrop-blur-md p-6 rounded-2xl shadow-lg border border-brand-muted max-w-[240px]">
                 <h4 className="font-primary font-bold  uppercase tracking-tight mb-2">Visit Our Clinic</h4>
                 <div className="flex gap-2 items-start text-[10px] text-brand-dark/60 font-bold uppercase tracking-tight">
-                    <Clock size={14} className="text-brand-gold shrink-0" />
-                    <span>Mon - Sat: 10AM - 7PM <br /> Sunday: By Appointment</span>
+                  <Clock size={14} className="text-brand-gold shrink-0" />
+                  <span>Mon - Sat: 10AM - 7PM <br /> Sunday: By Appointment</span>
                 </div>
               </div>
-              
+
               {/* Actual Google Maps Iframe for the searched location */}
-              <iframe 
-                src="https://www.google.com/maps?q=Dermalife+Wellness+Clinic+Ground+Floor,+DLF+PHASE+1,+A-14/22,+Gurugram,+Haryana+122002&output=embed" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen={true} 
-                loading="lazy" 
+              <iframe
+                src="https://www.google.com/maps?q=Dermalife+Wellness+Clinic+Ground+Floor,+DLF+PHASE+1,+A-14/22,+Gurugram,+Haryana+122002&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 className="w-full h-full"
               ></iframe>
